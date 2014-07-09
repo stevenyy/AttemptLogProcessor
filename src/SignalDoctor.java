@@ -29,7 +29,7 @@ public interface SignalDoctor{
 	
 	public abstract void check(Map<String, String> map);
 	
-	public abstract Phase createPhase();
+	public abstract AbstractPhase createPhase();
 	
 	/**
 	 * Check line against the skip regex: true if the line is to skip

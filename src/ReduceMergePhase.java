@@ -1,7 +1,7 @@
 
 
 
-public class ReduceMergePhase extends Phase {
+public class ReduceMergePhase extends AbstractPhase {
 
 	private long internalId; // The internal id for the object
 	protected int hash; // The hash value for this object

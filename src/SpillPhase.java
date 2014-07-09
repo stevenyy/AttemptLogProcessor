@@ -3,7 +3,7 @@ import java.util.List;
 
 
 
-public class SpillPhase extends Phase{
+public class SpillPhase extends AbstractPhase{
 	
     private long internalId; // The internal id for the object
     protected int hash; // The hash value for this object

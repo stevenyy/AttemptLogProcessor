@@ -1,6 +1,6 @@
 
 
-public class ReducePhase extends Phase{
+public class ReducePhase extends AbstractPhase{
 	
 	public ReducePhase(){
 		

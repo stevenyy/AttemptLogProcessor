@@ -1,6 +1,6 @@
 
 
-public class ShufflePhase extends Phase{
+public class ShufflePhase extends AbstractPhase{
 	
 	public ShufflePhase(){
 		super();

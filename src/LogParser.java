@@ -38,7 +38,7 @@ public class LogParser implements LogAnnotator {
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private String compressionFormat;
 	private int lineCounter; // Count the line number of the log
-	private Map<String, Phase> phaseMap; // List of phases created
+	private Map<String, AbstractPhase> phaseMap; // List of phases created
 
 	private Pattern skipRegex = null;
 	private Pattern exceptionRegex = null;
@@ -98,7 +98,7 @@ public class LogParser implements LogAnnotator {
 		ignoreMap = new HashMap<String, String>();
 		memoryList = new ArrayList<HashMap<String, String>>();
 		timeSpanList = new ArrayList<String[]>();
-		phaseMap= new HashMap<String, Phase>();
+		phaseMap= new HashMap<String, AbstractPhase>();
 
 		//Initializign SignalDoctors
 		initializeDoctors();
@@ -155,7 +155,7 @@ public class LogParser implements LogAnnotator {
 			}
 			// Ask SignalDoctors to create Phases
 			for (SignalDoctor doctor : doctorMap.values()) {
-				Phase p = doctor.createPhase();
+				AbstractPhase p = doctor.createPhase();
 				phaseMap.put(p.getName(), p);
 			}
 			
@@ -489,7 +489,7 @@ public class LogParser implements LogAnnotator {
 		return Collections.max(sizeList);
 	}
 	
-	public Map<String, Phase> getPhaseMap(){
+	public Map<String, AbstractPhase> getPhaseMap(){
 		return phaseMap;
 	}
 	

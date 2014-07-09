@@ -1,5 +1,5 @@
 
-public class WritePhase extends Phase{
+public class WritePhase extends AbstractPhase{
 	
 	public WritePhase(){
 		

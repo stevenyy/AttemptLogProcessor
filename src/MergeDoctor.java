@@ -78,7 +78,7 @@ public class MergeDoctor implements SignalDoctor{
 	}
 
 	@Override
-	public Phase createPhase() {
+	public AbstractPhase createPhase() {
 		calculateTime();
 		if (mapMerge){
 			MapMergePhase mmp = new MapMergePhase(mergeTime, "MapMergePhase");

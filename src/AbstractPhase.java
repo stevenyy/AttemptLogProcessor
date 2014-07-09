@@ -6,7 +6,7 @@
  * @author Steve Siyang Wang
  * Created on 6/30/14.
  */
-public abstract class Phase {
+public abstract class AbstractPhase {
 
     private long internalId; // The internal id for the object
     protected int hash; // The hash value for this object
@@ -15,7 +15,7 @@ public abstract class Phase {
     /**
      * The default constructor
      */
-    public Phase(){
+    public AbstractPhase(){
         internalId = -1;
         hash = -1;
         inputLog = null;
