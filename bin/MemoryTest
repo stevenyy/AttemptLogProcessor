@@ -1,0 +1,30 @@
+2014-07-01 14:52:54,551 ERROR org.apache.hadoop.hive.ql.stats.jdbc.JDBCStatsPublisher: Error during instantiating JDBC driver org.apache.derby.jdbc.EmbeddedDriver. 
+java.lang.ClassNotFoundException: org.apache.derby.jdbc.EmbeddedDriver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:169)
+	at org.apache.hadoop.hive.ql.stats.jdbc.JDBCStatsPublisher.connect(JDBCStatsPublisher.java:68)
+	at org.apache.hadoop.hive.ql.exec.FileSinkOperator.publishStats(FileSinkOperator.java:1010)
+	at org.apache.hadoop.hive.ql.exec.FileSinkOperator.closeOp(FileSinkOperator.java:907)
+	at org.apache.hadoop.hive.ql.exec.Operator.close(Operator.java:596)
+	at org.apache.hadoop.hive.ql.exec.Operator.close(Operator.java:613)
+	at org.apache.hadoop.hive.ql.exec.mr.ExecReducer.close(ExecReducer.java:305)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:516)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:447)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1408)
+	at org.apache.hadoop.mapred.Child.main(Child.java:262)
+2014-07-01 14:52:54,553 ERROR org.apache.hadoop.hive.ql.exec.FileSinkOperator: StatsPublishing error: cannot connect to database
+2014-07-01 14:52:54,553 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: 1 forwarded 0 rows
+2014-07-01 14:52:54,554 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: TABLE_ID_1_ROWCOUNT:17232085
+2014-07-01 14:52:54,554 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 Close done
+2014-07-01 14:52:54,557 INFO org.apache.hadoop.mapred.Task: Task:attempt_201405200258_319232_r_000000_0 is done. And is in the process of commiting
+2014-07-01 14:52:54,620 INFO org.apache.hadoop.mapred.Task: Task 'attempt_201405200258_319232_r_000000_0' done.
+2014-07-01 14:52:54,623 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1

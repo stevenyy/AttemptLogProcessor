@@ -1,0 +1,820 @@
+2014-07-08 00:48:59,636 INFO org.apache.hadoop.mapred.MapTask: Finished spill 70
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 48000000 rows: used memory = 639716080
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: bufstart = 205506266; bufend = 251124911; bufvoid = 255013696
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671032; kvend = 503259; length = 838860
+2014-07-08 00:49:03,544 INFO org.apache.hadoop.mapred.MapTask: Finished spill 71
+2014-07-08 00:49:06,538 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:06,539 INFO org.apache.hadoop.mapred.MapTask: bufstart = 251124911; bufend = 41737414; bufvoid = 255013689
+2014-07-08 00:49:06,539 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503259; kvend = 335486; length = 838860
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 49000000 rows: used memory = 456977728
+2014-07-08 00:49:07,868 INFO org.apache.hadoop.mapred.MapTask: Finished spill 72
+2014-07-08 00:49:10,627 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:10,628 INFO org.apache.hadoop.mapred.MapTask: bufstart = 41737414; bufend = 87352586; bufvoid = 255013696
+2014-07-08 00:49:10,628 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335486; kvend = 167713; length = 838860
+2014-07-08 00:49:12,015 INFO org.apache.hadoop.mapred.MapTask: Finished spill 73
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 50000000 rows
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 50000000 rows
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 50000000 rows
+2014-07-08 00:49:12,845 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 50000000 rows
+2014-07-08 00:49:12,845 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 50000000 rows: used memory = 370440104
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: bufstart = 87352586; bufend = 132971851; bufvoid = 255013696
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167713; kvend = 838801; length = 838860
+2014-07-08 00:49:15,364 INFO org.apache.hadoop.mapred.MapTask: Finished spill 74
+2014-07-08 00:49:17,561 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 51000000 rows
+2014-07-08 00:49:17,561 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 51000000 rows: used memory = 575711360
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: bufstart = 132971851; bufend = 178597029; bufvoid = 255013696
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838801; kvend = 671028; length = 838860
+2014-07-08 00:49:18,838 INFO org.apache.hadoop.mapred.MapTask: Finished spill 75
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: bufstart = 178597029; bufend = 224212444; bufvoid = 255013696
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671028; kvend = 503255; length = 838860
+2014-07-08 00:49:22,329 INFO org.apache.hadoop.mapred.MapTask: Finished spill 76
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 52000000 rows: used memory = 553778928
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: bufstart = 224212444; bufend = 14803677; bufvoid = 255013696
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503255; kvend = 335482; length = 838860
+2014-07-08 00:49:26,837 INFO org.apache.hadoop.mapred.MapTask: Finished spill 77
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 53000000 rows: used memory = 282586784
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: bufstart = 14803677; bufend = 60419800; bufvoid = 255013696
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335482; kvend = 167709; length = 838860
+2014-07-08 00:49:30,832 INFO org.apache.hadoop.mapred.MapTask: Finished spill 78
+2014-07-08 00:49:33,617 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:33,618 INFO org.apache.hadoop.mapred.MapTask: bufstart = 60419800; bufend = 106026217; bufvoid = 255013696
+2014-07-08 00:49:33,618 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167709; kvend = 838797; length = 838860
+2014-07-08 00:49:34,844 INFO org.apache.hadoop.mapred.MapTask: Finished spill 79
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 54000000 rows: used memory = 366831904
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: bufstart = 106026217; bufend = 151623912; bufvoid = 255013696
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838797; kvend = 671024; length = 838860
+2014-07-08 00:49:38,991 INFO org.apache.hadoop.mapred.MapTask: Finished spill 80
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 55000000 rows: used memory = 445477416
+2014-07-08 00:49:41,540 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:41,541 INFO org.apache.hadoop.mapred.MapTask: bufstart = 151623912; bufend = 197233796; bufvoid = 255013696
+2014-07-08 00:49:41,541 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671024; kvend = 503251; length = 838860
+2014-07-08 00:49:43,078 INFO org.apache.hadoop.mapred.MapTask: Finished spill 81
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: bufstart = 197233796; bufend = 242837415; bufvoid = 255013696
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503251; kvend = 335478; length = 838860
+2014-07-08 00:49:47,621 INFO org.apache.hadoop.mapred.MapTask: Finished spill 82
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 56000000 rows
+2014-07-08 00:49:48,380 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 56000000 rows: used memory = 392299400
+2014-07-08 00:49:50,384 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:50,385 INFO org.apache.hadoop.mapred.MapTask: bufstart = 242837415; bufend = 33424959; bufvoid = 255013688
+2014-07-08 00:49:50,385 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335478; kvend = 167705; length = 838860
+2014-07-08 00:49:51,969 INFO org.apache.hadoop.mapred.MapTask: Finished spill 83
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 57000000 rows: used memory = 359542928
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 finished. closing... 
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 3 finished. closing... 
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 3 forwarded 0 rows
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 4 finished. closing... 
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 4 forwarded 0 rows
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: FILTERED:0
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: PASSED:0
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 5 finished. closing... 
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 5 forwarded 0 rows
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 4 Close done
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 3 Close done
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarded 57003557 rows
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.MapOperator: DESERIALIZE_ERRORS:0
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 finished. closing... 
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarded 57003557 rows
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 finished. closing... 
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarded 57003557 rows
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: FILTERED:0
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: PASSED:57003557
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 finished. closing... 
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarded 57003000 rows
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 Close done
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 Close done
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 Close done
+2014-07-08 00:49:54,616 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processed 57003557 rows: used memory = 363862152
+2014-07-08 00:49:54,623 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2014-07-08 00:49:56,132 INFO org.apache.hadoop.mapred.MapTask: Finished spill 84
+2014-07-08 00:49:56,225 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:56,237 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,249 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,342 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,362 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,378 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,379 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,380 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,380 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,381 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,382 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,382 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,383 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,396 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,396 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,397 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,398 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,398 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,399 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,407 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,408 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,409 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,410 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,411 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,427 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,442 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,443 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,444 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,445 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,446 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,447 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,448 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,448 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,449 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,450 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,451 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,452 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,453 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,454 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,455 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,456 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,457 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,458 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,459 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,460 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,461 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,463 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,464 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,465 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,466 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,467 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,467 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,468 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,469 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,470 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,471 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,472 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,473 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,474 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,475 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,476 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,477 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,478 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,479 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,480 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,481 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,499 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,500 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,501 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,502 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,503 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,504 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,505 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,506 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,506 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,507 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,509 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,509 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,510 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,511 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,512 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,513 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,514 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,515 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,516 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,517 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-08 00:49:56,518 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196957 bytes
+2014-07-08 00:49:56,997 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:57,058 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198746 bytes
+2014-07-08 00:49:57,415 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:57,466 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198134 bytes
+2014-07-08 00:49:57,783 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:57,834 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198540 bytes
+2014-07-08 00:49:58,257 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:58,319 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199124 bytes
+2014-07-08 00:49:58,650 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:58,751 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 203795 bytes
+2014-07-08 00:49:59,169 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:59,229 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200471 bytes
+2014-07-08 00:49:59,646 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:49:59,709 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201492 bytes
+2014-07-08 00:50:00,147 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:00,210 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198191 bytes
+2014-07-08 00:50:00,652 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:00,734 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196481 bytes
+2014-07-08 00:50:01,174 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:01,236 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199057 bytes
+2014-07-08 00:50:01,615 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:01,664 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201699 bytes
+2014-07-08 00:50:02,068 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:02,140 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194828 bytes
+2014-07-08 00:50:02,656 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:02,739 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 206600 bytes
+2014-07-08 00:50:03,360 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:03,457 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196245 bytes
+2014-07-08 00:50:03,754 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:03,804 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201765 bytes
+2014-07-08 00:50:04,101 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:04,180 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198856 bytes
+2014-07-08 00:50:04,495 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:04,599 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199661 bytes
+2014-07-08 00:50:04,983 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:05,077 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194636 bytes
+2014-07-08 00:50:05,355 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:05,400 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195185 bytes
+2014-07-08 00:50:05,766 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:05,809 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196499 bytes
+2014-07-08 00:50:06,088 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:06,135 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199886 bytes
+2014-07-08 00:50:06,533 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:06,577 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 206179 bytes
+2014-07-08 00:50:06,964 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:07,012 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197233 bytes
+2014-07-08 00:50:07,329 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:07,385 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197919 bytes
+2014-07-08 00:50:07,688 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:07,731 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193765 bytes
+2014-07-08 00:50:08,035 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:08,080 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194004 bytes
+2014-07-08 00:50:08,415 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:08,459 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201566 bytes
+2014-07-08 00:50:08,931 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:08,992 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195975 bytes
+2014-07-08 00:50:09,384 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:09,522 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198792 bytes
+2014-07-08 00:50:09,948 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:10,025 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 191467 bytes
+2014-07-08 00:50:10,415 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:10,476 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199697 bytes
+2014-07-08 00:50:10,864 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:10,905 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198559 bytes
+2014-07-08 00:50:11,211 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:11,254 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194708 bytes
+2014-07-08 00:50:11,613 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:11,675 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200994 bytes
+2014-07-08 00:50:12,033 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:12,093 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197344 bytes
+2014-07-08 00:50:12,469 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:12,523 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 191065 bytes
+2014-07-08 00:50:12,813 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:12,855 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200960 bytes
+2014-07-08 00:50:13,230 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:13,286 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195776 bytes
+2014-07-08 00:50:13,601 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:13,692 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197304 bytes
+2014-07-08 00:50:14,017 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:14,074 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196331 bytes
+2014-07-08 00:50:14,508 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:14,562 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193835 bytes
+2014-07-08 00:50:14,939 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:14,981 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198239 bytes
+2014-07-08 00:50:15,285 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:15,327 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201555 bytes
+2014-07-08 00:50:15,761 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:15,875 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198137 bytes
+2014-07-08 00:50:16,182 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:16,223 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196485 bytes
+2014-07-08 00:50:16,574 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:16,633 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197226 bytes
+2014-07-08 00:50:17,055 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:17,106 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200972 bytes
+2014-07-08 00:50:17,562 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:17,619 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199446 bytes
+2014-07-08 00:50:17,939 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:17,987 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198365 bytes
+2014-07-08 00:50:18,316 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:18,367 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198327 bytes
+2014-07-08 00:50:18,740 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:18,819 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195556 bytes
+2014-07-08 00:50:19,222 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:19,288 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196590 bytes
+2014-07-08 00:50:19,690 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:19,746 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199604 bytes
+2014-07-08 00:50:20,148 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:20,202 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196569 bytes
+2014-07-08 00:50:20,603 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:20,642 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199499 bytes
+2014-07-08 00:50:21,010 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:21,059 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199216 bytes
+2014-07-08 00:50:21,476 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:21,516 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201248 bytes
+2014-07-08 00:50:21,957 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:22,021 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 203864 bytes
+2014-07-08 00:50:22,476 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:22,531 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197761 bytes
+2014-07-08 00:50:22,919 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:22,974 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197707 bytes
+2014-07-08 00:50:23,350 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:23,398 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193965 bytes
+2014-07-08 00:50:23,832 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:23,909 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200420 bytes
+2014-07-08 00:50:24,342 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:24,397 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200908 bytes
+2014-07-08 00:50:24,780 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:24,826 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195643 bytes
+2014-07-08 00:50:25,180 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:25,221 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195852 bytes
+2014-07-08 00:50:25,571 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:25,684 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198958 bytes
+2014-07-08 00:50:26,060 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:26,153 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197006 bytes
+2014-07-08 00:50:26,592 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:26,651 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200159 bytes
+2014-07-08 00:50:27,042 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:27,090 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197609 bytes
+2014-07-08 00:50:27,428 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:27,471 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197593 bytes
+2014-07-08 00:50:27,827 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:27,895 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195410 bytes
+2014-07-08 00:50:28,227 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:28,275 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198436 bytes
+2014-07-08 00:50:28,674 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:28,721 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197071 bytes
+2014-07-08 00:50:29,148 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:29,203 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201602 bytes
+2014-07-08 00:50:29,658 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:29,707 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193596 bytes
+2014-07-08 00:50:30,085 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:30,140 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199744 bytes
+2014-07-08 00:50:30,558 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:30,606 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199923 bytes
+2014-07-08 00:50:30,951 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:30,997 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199663 bytes
+2014-07-08 00:50:31,341 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:31,389 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198755 bytes
+2014-07-08 00:50:31,843 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:31,948 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199354 bytes
+2014-07-08 00:50:32,306 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:32,353 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198235 bytes
+2014-07-08 00:50:32,760 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:32,806 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196437 bytes
+2014-07-08 00:50:33,220 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:33,278 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199063 bytes
+2014-07-08 00:50:33,703 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:33,759 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195091 bytes
+2014-07-08 00:50:34,134 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:34,205 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198014 bytes
+2014-07-08 00:50:34,587 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:34,637 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196075 bytes
+2014-07-08 00:50:35,004 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:35,055 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192921 bytes
+2014-07-08 00:50:35,413 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:35,473 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201019 bytes
+2014-07-08 00:50:35,833 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:35,881 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200019 bytes
+2014-07-08 00:50:36,315 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:36,369 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197449 bytes
+2014-07-08 00:50:36,683 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:36,728 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197137 bytes
+2014-07-08 00:50:37,070 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:37,129 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197992 bytes
+2014-07-08 00:50:37,534 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:37,587 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200073 bytes
+2014-07-08 00:50:37,983 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:38,031 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201881 bytes
+2014-07-08 00:50:38,424 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:38,473 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198250 bytes
+2014-07-08 00:50:38,899 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:38,946 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196946 bytes
+2014-07-08 00:50:39,326 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:39,403 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193367 bytes
+2014-07-08 00:50:39,746 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:39,800 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202197 bytes
+2014-07-08 00:50:40,217 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:40,259 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202587 bytes
+2014-07-08 00:50:40,672 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:40,725 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192231 bytes
+2014-07-08 00:50:41,061 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:41,108 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199880 bytes
+2014-07-08 00:50:41,527 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:41,582 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195909 bytes
+2014-07-08 00:50:42,065 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:42,133 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197594 bytes
+2014-07-08 00:50:42,493 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:42,559 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195231 bytes
+2014-07-08 00:50:43,072 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:43,140 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196538 bytes
+2014-07-08 00:50:43,507 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:43,554 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196303 bytes
+2014-07-08 00:50:43,896 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:43,945 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196861 bytes
+2014-07-08 00:50:44,300 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:44,341 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198090 bytes
+2014-07-08 00:50:44,733 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:44,785 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200247 bytes
+2014-07-08 00:50:45,161 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:45,206 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200216 bytes
+2014-07-08 00:50:45,612 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:45,667 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196143 bytes
+2014-07-08 00:50:46,053 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:46,148 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202514 bytes
+2014-07-08 00:50:46,524 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:46,570 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195479 bytes
+2014-07-08 00:50:46,888 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:46,947 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199348 bytes
+2014-07-08 00:50:47,330 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:47,381 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200373 bytes
+2014-07-08 00:50:47,825 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:47,868 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195484 bytes
+2014-07-08 00:50:48,220 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:48,289 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194125 bytes
+2014-07-08 00:50:48,681 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:48,745 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197258 bytes
+2014-07-08 00:50:49,116 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:49,154 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196417 bytes
+2014-07-08 00:50:49,518 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:49,589 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200458 bytes
+2014-07-08 00:50:49,945 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:49,982 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197799 bytes
+2014-07-08 00:50:50,369 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:50,405 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201560 bytes
+2014-07-08 00:50:50,826 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:50,900 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200922 bytes
+2014-07-08 00:50:51,303 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:51,352 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198946 bytes
+2014-07-08 00:50:51,795 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:51,845 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197455 bytes
+2014-07-08 00:50:52,183 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:52,222 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197626 bytes
+2014-07-08 00:50:52,571 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:52,635 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195696 bytes
+2014-07-08 00:50:53,057 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:53,122 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194812 bytes
+2014-07-08 00:50:53,521 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:53,569 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199993 bytes
+2014-07-08 00:50:53,968 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:54,050 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194789 bytes
+2014-07-08 00:50:54,452 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:54,490 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 206194 bytes
+2014-07-08 00:50:54,898 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:54,947 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198453 bytes
+2014-07-08 00:50:55,320 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:55,373 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198515 bytes
+2014-07-08 00:50:55,749 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:55,815 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198883 bytes
+2014-07-08 00:50:56,179 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:56,219 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195246 bytes
+2014-07-08 00:50:56,560 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:56,600 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199128 bytes
+2014-07-08 00:50:56,952 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:56,993 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198928 bytes
+2014-07-08 00:50:57,352 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:57,390 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202537 bytes
+2014-07-08 00:50:57,745 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:57,786 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201310 bytes
+2014-07-08 00:50:58,155 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:58,210 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197190 bytes
+2014-07-08 00:50:58,543 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:58,585 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195689 bytes
+2014-07-08 00:50:58,905 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:58,947 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196141 bytes
+2014-07-08 00:50:59,271 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:59,315 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197098 bytes
+2014-07-08 00:50:59,664 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:50:59,706 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196114 bytes
+2014-07-08 00:51:00,073 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:00,122 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197239 bytes
+2014-07-08 00:51:00,527 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:00,585 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193470 bytes
+2014-07-08 00:51:00,894 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:00,948 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197419 bytes
+2014-07-08 00:51:01,247 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:01,282 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195064 bytes
+2014-07-08 00:51:01,604 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:01,645 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 191413 bytes
+2014-07-08 00:51:01,961 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:02,001 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193185 bytes
+2014-07-08 00:51:02,328 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:02,365 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196814 bytes
+2014-07-08 00:51:02,663 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:02,699 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195734 bytes
+2014-07-08 00:51:02,995 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:03,058 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199249 bytes
+2014-07-08 00:51:03,417 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:03,459 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199239 bytes
+2014-07-08 00:51:03,826 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:03,865 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200548 bytes
+2014-07-08 00:51:04,219 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:04,263 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199157 bytes
+2014-07-08 00:51:04,684 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:04,727 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194453 bytes
+2014-07-08 00:51:05,067 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:05,112 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196734 bytes
+2014-07-08 00:51:05,473 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:05,523 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199348 bytes
+2014-07-08 00:51:05,887 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:05,927 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197322 bytes
+2014-07-08 00:51:06,265 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:06,304 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200341 bytes
+2014-07-08 00:51:06,627 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:06,665 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199262 bytes
+2014-07-08 00:51:07,006 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:07,047 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198700 bytes
+2014-07-08 00:51:07,392 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:07,431 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202297 bytes
+2014-07-08 00:51:07,788 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:07,841 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201151 bytes
+2014-07-08 00:51:08,195 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:08,233 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193778 bytes
+2014-07-08 00:51:08,568 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:08,608 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202611 bytes
+2014-07-08 00:51:08,940 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:08,981 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196257 bytes
+2014-07-08 00:51:09,310 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:09,353 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194726 bytes
+2014-07-08 00:51:09,684 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:09,743 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194333 bytes
+2014-07-08 00:51:10,105 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:10,162 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194145 bytes
+2014-07-08 00:51:10,544 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:10,577 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195120 bytes
+2014-07-08 00:51:10,866 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:10,905 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200440 bytes
+2014-07-08 00:51:11,291 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:11,353 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200530 bytes
+2014-07-08 00:51:11,769 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:11,814 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 203741 bytes
+2014-07-08 00:51:12,211 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:12,262 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196696 bytes
+2014-07-08 00:51:12,603 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:12,639 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194647 bytes
+2014-07-08 00:51:12,934 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:12,969 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198054 bytes
+2014-07-08 00:51:13,333 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:13,368 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199160 bytes
+2014-07-08 00:51:13,724 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:13,761 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195678 bytes
+2014-07-08 00:51:14,076 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:14,127 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195998 bytes
+2014-07-08 00:51:14,448 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:14,489 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201016 bytes
+2014-07-08 00:51:14,844 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:14,880 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196239 bytes
+2014-07-08 00:51:15,283 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:15,331 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197066 bytes
+2014-07-08 00:51:15,733 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:15,767 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197168 bytes
+2014-07-08 00:51:16,131 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:16,192 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200043 bytes
+2014-07-08 00:51:16,619 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:16,660 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198964 bytes
+2014-07-08 00:51:16,984 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:17,023 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198341 bytes
+2014-07-08 00:51:17,381 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:17,420 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200478 bytes
+2014-07-08 00:51:17,774 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:17,813 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202576 bytes
+2014-07-08 00:51:18,145 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:18,204 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196655 bytes
+2014-07-08 00:51:18,567 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:18,607 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197906 bytes
+2014-07-08 00:51:18,966 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:19,003 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194929 bytes
+2014-07-08 00:51:19,305 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:19,344 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198821 bytes
+2014-07-08 00:51:19,671 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:19,707 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200033 bytes
+2014-07-08 00:51:20,057 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:20,126 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202765 bytes
+2014-07-08 00:51:20,428 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:20,463 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201169 bytes
+2014-07-08 00:51:20,820 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:20,856 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199044 bytes
+2014-07-08 00:51:21,233 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:21,272 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197258 bytes
+2014-07-08 00:51:21,733 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:21,807 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197087 bytes
+2014-07-08 00:51:22,126 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:22,165 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199233 bytes
+2014-07-08 00:51:22,513 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:22,555 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201292 bytes
+2014-07-08 00:51:22,941 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:22,989 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196900 bytes
+2014-07-08 00:51:23,291 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:23,328 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202611 bytes
+2014-07-08 00:51:23,665 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:23,730 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198214 bytes
+2014-07-08 00:51:24,108 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:24,144 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196536 bytes
+2014-07-08 00:51:24,474 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:24,510 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197587 bytes
+2014-07-08 00:51:24,826 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:24,862 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197370 bytes
+2014-07-08 00:51:25,225 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:25,297 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193453 bytes
+2014-07-08 00:51:25,625 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:25,663 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193118 bytes
+2014-07-08 00:51:25,999 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:26,046 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199181 bytes
+2014-07-08 00:51:26,398 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:26,434 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200289 bytes
+2014-07-08 00:51:26,776 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:26,812 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199350 bytes
+2014-07-08 00:51:27,126 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:27,161 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200106 bytes
+2014-07-08 00:51:27,469 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:27,503 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194059 bytes
+2014-07-08 00:51:27,810 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:27,849 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196028 bytes
+2014-07-08 00:51:28,163 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:28,210 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198067 bytes
+2014-07-08 00:51:28,651 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:28,713 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200852 bytes
+2014-07-08 00:51:29,157 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:29,220 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199146 bytes
+2014-07-08 00:51:29,661 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:29,701 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200156 bytes
+2014-07-08 00:51:30,035 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:30,093 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194739 bytes
+2014-07-08 00:51:30,439 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:30,487 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 191809 bytes
+2014-07-08 00:51:30,794 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:30,831 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198710 bytes
+2014-07-08 00:51:31,169 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:31,216 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199088 bytes
+2014-07-08 00:51:31,539 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:31,581 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198242 bytes
+2014-07-08 00:51:31,983 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:32,106 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202052 bytes
+2014-07-08 00:51:32,447 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:32,486 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201161 bytes
+2014-07-08 00:51:32,951 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:32,999 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 204067 bytes
+2014-07-08 00:51:33,393 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:33,434 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196709 bytes
+2014-07-08 00:51:33,762 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:33,848 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197391 bytes
+2014-07-08 00:51:34,190 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:34,226 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194698 bytes
+2014-07-08 00:51:34,622 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:34,669 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202438 bytes
+2014-07-08 00:51:35,105 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:35,154 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199673 bytes
+2014-07-08 00:51:35,486 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:35,527 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200235 bytes
+2014-07-08 00:51:35,868 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:35,910 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197832 bytes
+2014-07-08 00:51:36,288 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:36,337 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192517 bytes
+2014-07-08 00:51:36,682 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:36,723 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199513 bytes
+2014-07-08 00:51:37,057 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:37,099 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199272 bytes
+2014-07-08 00:51:37,435 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:37,474 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 206091 bytes
+2014-07-08 00:51:37,814 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:37,856 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 203391 bytes
+2014-07-08 00:51:38,214 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:38,287 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198944 bytes
+2014-07-08 00:51:38,620 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:38,657 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202823 bytes
+2014-07-08 00:51:39,005 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:39,043 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200207 bytes
+2014-07-08 00:51:39,399 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:39,441 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 203023 bytes
+2014-07-08 00:51:39,854 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:39,902 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197153 bytes
+2014-07-08 00:51:40,274 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:40,315 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192973 bytes
+2014-07-08 00:51:40,616 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:40,689 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199961 bytes
+2014-07-08 00:51:41,122 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:41,164 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192711 bytes
+2014-07-08 00:51:41,540 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:41,577 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195776 bytes
+2014-07-08 00:51:41,953 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:42,010 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194392 bytes
+2014-07-08 00:51:42,406 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:42,454 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200425 bytes
+2014-07-08 00:51:42,891 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:42,939 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195863 bytes
+2014-07-08 00:51:43,365 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:43,453 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201753 bytes
+2014-07-08 00:51:43,841 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:43,876 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 191875 bytes
+2014-07-08 00:51:44,224 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:44,264 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 199467 bytes
+2014-07-08 00:51:44,611 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:44,649 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192265 bytes
+2014-07-08 00:51:44,988 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:45,026 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198420 bytes
+2014-07-08 00:51:45,406 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:45,466 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200948 bytes
+2014-07-08 00:51:45,842 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:45,887 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197758 bytes
+2014-07-08 00:51:46,292 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:46,343 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200316 bytes
+2014-07-08 00:51:46,677 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:46,715 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201421 bytes
+2014-07-08 00:51:47,114 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:47,156 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196605 bytes
+2014-07-08 00:51:47,512 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:47,553 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200418 bytes
+2014-07-08 00:51:47,936 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:47,974 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201727 bytes
+2014-07-08 00:51:48,350 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:48,397 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195561 bytes
+2014-07-08 00:51:48,740 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:48,778 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201124 bytes
+2014-07-08 00:51:49,173 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:49,240 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198805 bytes
+2014-07-08 00:51:49,634 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:49,679 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193894 bytes
+2014-07-08 00:51:50,068 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:50,106 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 208351 bytes
+2014-07-08 00:51:50,557 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:50,590 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202209 bytes
+2014-07-08 00:51:50,953 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:50,994 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201209 bytes
+2014-07-08 00:51:51,345 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:51,394 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200183 bytes
+2014-07-08 00:51:51,751 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:51,801 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 192377 bytes
+2014-07-08 00:51:52,074 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:52,110 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196189 bytes
+2014-07-08 00:51:52,411 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:52,445 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198842 bytes
+2014-07-08 00:51:52,791 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:52,830 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194626 bytes
+2014-07-08 00:51:53,186 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:53,225 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197419 bytes
+2014-07-08 00:51:53,666 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:53,702 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201955 bytes
+2014-07-08 00:51:54,150 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:54,212 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197784 bytes
+2014-07-08 00:51:54,629 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:54,675 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 202514 bytes
+2014-07-08 00:51:55,181 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:55,226 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198410 bytes
+2014-07-08 00:51:55,584 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:55,615 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200435 bytes
+2014-07-08 00:51:55,981 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:56,018 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200466 bytes
+2014-07-08 00:51:56,415 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:56,461 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 201617 bytes
+2014-07-08 00:51:56,941 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:57,002 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 195841 bytes
+2014-07-08 00:51:57,555 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:57,595 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198082 bytes
+2014-07-08 00:51:57,969 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:58,013 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197149 bytes
+2014-07-08 00:51:58,399 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:58,432 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 193459 bytes
+2014-07-08 00:51:58,772 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:58,804 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200365 bytes
+2014-07-08 00:51:59,151 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:59,187 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196540 bytes
+2014-07-08 00:51:59,549 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:51:59,610 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198199 bytes
+2014-07-08 00:52:00,053 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:00,090 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200786 bytes
+2014-07-08 00:52:00,431 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:00,465 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200110 bytes
+2014-07-08 00:52:00,842 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:00,878 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194495 bytes
+2014-07-08 00:52:01,216 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:01,248 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 198185 bytes
+2014-07-08 00:52:01,594 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:01,643 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194825 bytes
+2014-07-08 00:52:02,020 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:02,060 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 200626 bytes
+2014-07-08 00:52:02,473 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:02,511 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 197231 bytes
+2014-07-08 00:52:02,886 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:02,917 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 196741 bytes
+2014-07-08 00:52:03,256 INFO org.apache.hadoop.mapred.Merger: Merging 85 sorted segments
+2014-07-08 00:52:03,295 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 85 segments left of total size: 194720 bytes
+2014-07-08 00:52:03,806 INFO org.apache.hadoop.mapred.Task: Task:attempt_201405200258_371918_m_000057_0 is done. And is in the process of commiting
+2014-07-08 00:52:03,869 INFO org.apache.hadoop.mapred.Task: Task 'attempt_201405200258_371918_m_000057_0' done.
+2014-07-08 00:52:03,873 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1

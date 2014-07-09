@@ -1,0 +1,759 @@
+2014-07-01 13:14:36,036 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2014-07-01 13:14:36,978 INFO org.apache.hadoop.mapred.TaskRunner: Creating symlink: /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/distcache/7352860193748786640_686814703_1927890306/inw-hercules-ha/srv/grid-tmp/hive-hdfs/hive_2014-07-01_13-11-39_803_911896900932419421-1/-mr-10004/303883b3-bfba-4320-9872-6b9f80142ca8/map.xml <- /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/work/map.xml
+2014-07-01 13:14:36,991 INFO org.apache.hadoop.mapred.TaskRunner: Creating symlink: /srv/data/disk1/hadoop/mapred/local/taskTracker/hdfs/distcache/-1857339455088010967_1644615735_1927891006/inw-hercules-ha/srv/grid-tmp/hive-hdfs/hive_2014-07-01_13-11-39_803_911896900932419421-1/-mr-10004/303883b3-bfba-4320-9872-6b9f80142ca8/reduce.xml <- /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/work/reduce.xml
+2014-07-01 13:14:37,012 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/job.jar <- /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/work/job.jar
+2014-07-01 13:14:37,034 INFO org.apache.hadoop.filecache.TrackerDistributedCacheManager: Creating symlink: /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/.job.jar.crc <- /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/work/.job.jar.crc
+2014-07-01 13:14:37,137 WARN org.apache.hadoop.conf.Configuration: session.id is deprecated. Instead, use dfs.metrics.session-id
+2014-07-01 13:14:37,139 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=SHUFFLE, sessionId=
+2014-07-01 13:14:37,354 WARN org.apache.hadoop.conf.Configuration: slave.host.name is deprecated. Instead, use dfs.datanode.hostname
+2014-07-01 13:14:38,617 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-07-01 13:14:38,624 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@25474e45
+2014-07-01 13:14:38,908 INFO org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapred.ReduceTask$ReduceCopier
+2014-07-01 13:14:38,956 INFO org.apache.hadoop.mapred.ReduceTask: ShuffleRamManager: MemoryLimit=954466304, MaxSingleShuffleLimit=238616576
+2014-07-01 13:14:38,970 INFO org.apache.hadoop.io.compress.zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+2014-07-01 13:14:38,971 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,972 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,973 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,973 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,974 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,974 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,975 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,975 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,976 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,976 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,986 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,996 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,997 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:38,998 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,000 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,000 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,006 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,007 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,008 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,008 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:14:39,019 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread started: Thread for merging on-disk files
+2014-07-01 13:14:39,020 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:14:39,022 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1314 map output(s) where 0 is already in progress
+2014-07-01 13:14:39,022 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread started: Thread for merging in memory files
+2014-07-01 13:14:39,022 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread started: Thread for polling Map Completion Events
+2014-07-01 13:14:39,023 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:14:39,034 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 16 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:14:41,047 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:14:48,096 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:14:57,106 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:02,120 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:09,144 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:15,157 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:22,176 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:37,246 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:42,483 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1281 map output(s) where 0 is already in progress
+2014-07-01 13:15:42,483 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:45,268 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:50,296 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:15:56,814 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:02,839 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:10,884 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:22,898 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:26,904 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:32,911 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:41,921 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:47,007 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1259 map output(s) where 0 is already in progress
+2014-07-01 13:16:47,008 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:53,965 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:16:59,983 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:06,991 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:15,001 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:20,012 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:27,024 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:33,040 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:48,246 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1243 map output(s) where 0 is already in progress
+2014-07-01 13:17:48,247 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:49,077 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:17:56,085 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:01,091 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:08,138 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:15,162 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:16,397 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new compressor [.deflate]
+2014-07-01 13:18:16,406 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 89 segments...
+2014-07-01 13:18:16,409 INFO org.apache.hadoop.mapred.Merger: Merging 89 sorted segments
+2014-07-01 13:18:16,411 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 89 segments left of total size: 480253079 bytes
+2014-07-01 13:18:22,180 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:28,187 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:35,202 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:37,814 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 89 files in-memory complete. Local file is /srv/data/disk5/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1305.out of size 129047210
+2014-07-01 13:18:37,819 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:18:42,213 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 7 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:50,220 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1214 map output(s) where 0 is already in progress
+2014-07-01 13:18:50,220 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:18:57,227 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:03,235 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:10,243 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:19,278 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:25,307 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:32,319 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:39,362 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:45,402 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:51,122 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1189 map output(s) where 0 is already in progress
+2014-07-01 13:19:51,123 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:52,419 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 6 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:19:58,438 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:05,504 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:05,780 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 47 segments...
+2014-07-01 13:20:05,780 INFO org.apache.hadoop.mapred.Merger: Merging 47 sorted segments
+2014-07-01 13:20:05,780 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 47 segments left of total size: 451808410 bytes
+2014-07-01 13:20:13,547 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 8 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:19,564 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:26,649 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 10 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:29,199 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 47 files in-memory complete. Local file is /srv/data/disk6/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1143.out of size 121818332
+2014-07-01 13:20:29,202 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:20:33,677 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 8 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:40,704 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:47,718 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:52,775 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1138 map output(s) where 0 is already in progress
+2014-07-01 13:20:52,775 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:20:53,726 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:00,735 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 7 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:00,894 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 49 segments...
+2014-07-01 13:21:00,894 INFO org.apache.hadoop.mapred.Merger: Merging 49 sorted segments
+2014-07-01 13:21:00,895 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 49 segments left of total size: 488844295 bytes
+2014-07-01 13:21:07,744 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 8 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:20,775 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:22,361 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 49 files in-memory complete. Local file is /srv/data/disk7/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_920.out of size 131744245
+2014-07-01 13:21:22,367 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:21:23,798 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:30,834 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 11 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:36,853 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:43,863 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 12 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:44,188 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 42 segments...
+2014-07-01 13:21:44,189 INFO org.apache.hadoop.mapred.Merger: Merging 42 sorted segments
+2014-07-01 13:21:44,189 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 42 segments left of total size: 495148747 bytes
+2014-07-01 13:21:53,037 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1085 map output(s) where 1 is already in progress
+2014-07-01 13:21:53,037 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:53,935 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:21:57,942 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 10 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:22:05,619 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 42 files in-memory complete. Local file is /srv/data/disk8/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1003.out of size 133674805
+2014-07-01 13:22:05,622 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:22:57,315 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1070 map output(s) where 0 is already in progress
+2014-07-01 13:22:57,315 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:23:57,318 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1070 map output(s) where 0 is already in progress
+2014-07-01 13:23:57,318 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:24:47,150 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 23 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:24:47,440 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:24:47,440 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:24:47,440 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 484526771 bytes
+2014-07-01 13:24:49,550 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:24:59,756 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 1045 map output(s) where 0 is already in progress
+2014-07-01 13:24:59,756 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 0 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:25:09,526 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk9/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_921.out of size 131488934
+2014-07-01 13:25:09,529 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:25:33,263 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 196 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:25:33,996 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 27 segments...
+2014-07-01 13:25:33,996 INFO org.apache.hadoop.mapred.Merger: Merging 27 sorted segments
+2014-07-01 13:25:33,996 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 27 segments left of total size: 479956957 bytes
+2014-07-01 13:25:39,299 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001259_1'
+2014-07-01 13:25:57,333 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001096_1'
+2014-07-01 13:25:57,920 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 27 files in-memory complete. Local file is /srv/data/disk10/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_813.out of size 129687245
+2014-07-01 13:25:57,925 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:25:57,927 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 44 segments...
+2014-07-01 13:25:57,927 INFO org.apache.hadoop.mapred.Merger: Merging 44 sorted segments
+2014-07-01 13:25:57,927 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 44 segments left of total size: 926898402 bytes
+2014-07-01 13:25:59,336 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000938_1'
+2014-07-01 13:25:59,336 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001002_1'
+2014-07-01 13:26:08,357 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001092_1'
+2014-07-01 13:26:08,357 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000989_1'
+2014-07-01 13:26:08,357 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001098_1'
+2014-07-01 13:26:36,417 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000991_1'
+2014-07-01 13:26:40,427 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 44 files in-memory complete. Local file is /srv/data/disk11/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_501.out of size 253846438
+2014-07-01 13:26:40,469 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:26:40,473 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 52 segments...
+2014-07-01 13:26:40,473 INFO org.apache.hadoop.mapred.Merger: Merging 52 sorted segments
+2014-07-01 13:26:40,473 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 52 segments left of total size: 917783258 bytes
+2014-07-01 13:26:40,801 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 929 map output(s) where 80 is already in progress
+2014-07-01 13:26:40,803 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 119 outputs (0 slow hosts and50 dup hosts)
+2014-07-01 13:26:48,794 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001001_1'
+2014-07-01 13:27:04,973 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000923_1'
+2014-07-01 13:27:04,973 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000869_1'
+2014-07-01 13:27:08,980 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001000_1'
+2014-07-01 13:27:28,102 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 52 files in-memory complete. Local file is /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1037.out of size 251974933
+2014-07-01 13:27:28,113 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:27:28,117 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 41 segments...
+2014-07-01 13:27:28,117 INFO org.apache.hadoop.mapred.Merger: Merging 41 sorted segments
+2014-07-01 13:27:28,117 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 41 segments left of total size: 913716830 bytes
+2014-07-01 13:27:37,348 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000999_1'
+2014-07-01 13:27:47,413 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000924_1'
+2014-07-01 13:27:47,413 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000801_1'
+2014-07-01 13:27:47,413 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000731_1'
+2014-07-01 13:28:00,486 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000796_1'
+2014-07-01 13:28:12,552 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000802_1'
+2014-07-01 13:28:12,552 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000687_1'
+2014-07-01 13:28:12,552 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001134_1'
+2014-07-01 13:28:12,552 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000800_1'
+2014-07-01 13:28:12,552 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000734_1'
+2014-07-01 13:28:18,741 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 41 files in-memory complete. Local file is /srv/data/disk1/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_104.out of size 247622893
+2014-07-01 13:28:18,772 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:28:18,776 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 44 segments...
+2014-07-01 13:28:18,776 INFO org.apache.hadoop.mapred.Merger: Merging 44 sorted segments
+2014-07-01 13:28:18,777 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 44 segments left of total size: 941680578 bytes
+2014-07-01 13:28:56,989 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 810 map output(s) where 80 is already in progress
+2014-07-01 13:28:56,990 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 95 outputs (0 slow hosts and77 dup hosts)
+2014-07-01 13:29:04,475 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 44 files in-memory complete. Local file is /srv/data/disk2/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_668.out of size 257355139
+2014-07-01 13:29:04,481 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:29:04,483 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 43 segments...
+2014-07-01 13:29:04,483 INFO org.apache.hadoop.mapred.Merger: Merging 43 sorted segments
+2014-07-01 13:29:04,483 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 43 segments left of total size: 926255832 bytes
+2014-07-01 13:29:33,013 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000694_1'
+2014-07-01 13:29:43,559 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 43 files in-memory complete. Local file is /srv/data/disk3/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_696.out of size 251472966
+2014-07-01 13:29:43,563 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:29:43,565 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 41 segments...
+2014-07-01 13:29:43,565 INFO org.apache.hadoop.mapred.Merger: Merging 41 sorted segments
+2014-07-01 13:29:43,565 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 41 segments left of total size: 918701985 bytes
+2014-07-01 13:29:46,034 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000738_1'
+2014-07-01 13:29:46,034 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000604_1'
+2014-07-01 13:29:46,035 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000535_1'
+2014-07-01 13:29:53,044 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000767_1'
+2014-07-01 13:29:53,045 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000496_1'
+2014-07-01 13:29:53,045 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000775_1'
+2014-07-01 13:29:53,045 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000780_1'
+2014-07-01 13:29:59,051 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000831_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000675_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000575_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000586_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000432_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000803_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000295_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000352_1'
+2014-07-01 13:29:59,052 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000643_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000655_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000477_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000529_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000330_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000792_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000311_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000441_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000540_1'
+2014-07-01 13:30:08,062 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000309_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000428_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000370_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000167_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000417_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000247_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000440_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000398_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000594_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000716_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000626_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000364_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000774_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000714_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000506_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000322_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000423_1'
+2014-07-01 13:30:08,063 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000673_1'
+2014-07-01 13:30:08,064 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000411_1'
+2014-07-01 13:30:08,064 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000826_1'
+2014-07-01 13:30:08,064 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000676_1'
+2014-07-01 13:30:08,064 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000492_1'
+2014-07-01 13:30:19,592 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 715 map output(s) where 80 is already in progress
+2014-07-01 13:30:19,593 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 115 outputs (0 slow hosts and77 dup hosts)
+2014-07-01 13:30:21,854 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 41 files in-memory complete. Local file is /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_323.out of size 249631593
+2014-07-01 13:30:21,862 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:30:22,031 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 48 segments...
+2014-07-01 13:30:22,031 INFO org.apache.hadoop.mapred.Merger: Merging 48 sorted segments
+2014-07-01 13:30:22,031 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 48 segments left of total size: 921460157 bytes
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000531_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000168_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000251_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000747_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000906_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000415_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000031_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000469_1'
+2014-07-01 13:30:28,500 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000329_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000848_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000983_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000838_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000969_0'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000742_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000059_1'
+2014-07-01 13:30:28,501 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000385_1'
+2014-07-01 13:30:28,502 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000132_1'
+2014-07-01 13:30:59,881 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 48 files in-memory complete. Local file is /srv/data/disk5/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1026.out of size 249217433
+2014-07-01 13:30:59,884 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:30:59,887 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 41 segments...
+2014-07-01 13:30:59,887 INFO org.apache.hadoop.mapred.Merger: Merging 41 sorted segments
+2014-07-01 13:30:59,887 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 41 segments left of total size: 937098879 bytes
+2014-07-01 13:31:03,535 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000547_1'
+2014-07-01 13:31:03,536 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000810_1'
+2014-07-01 13:31:03,536 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000146_1'
+2014-07-01 13:31:03,536 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000293_1'
+2014-07-01 13:31:03,537 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000015_1'
+2014-07-01 13:31:03,537 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000476_1'
+2014-07-01 13:31:37,779 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 41 files in-memory complete. Local file is /srv/data/disk6/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_796.out of size 252213764
+2014-07-01 13:31:37,784 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:31:37,787 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 41 segments...
+2014-07-01 13:31:37,787 INFO org.apache.hadoop.mapred.Merger: Merging 41 sorted segments
+2014-07-01 13:31:37,787 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 41 segments left of total size: 907534324 bytes
+2014-07-01 13:31:39,572 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000202_1'
+2014-07-01 13:31:40,574 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000894_1'
+2014-07-01 13:31:40,575 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000766_1'
+2014-07-01 13:31:51,587 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000258_1'
+2014-07-01 13:31:51,587 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000160_1'
+2014-07-01 13:31:51,587 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000140_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000384_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000652_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000022_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000624_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000162_1'
+2014-07-01 13:31:51,588 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000208_1'
+2014-07-01 13:31:51,589 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000461_1'
+2014-07-01 13:31:51,590 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000640_1'
+2014-07-01 13:31:51,590 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000339_1'
+2014-07-01 13:31:56,741 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000199_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001018_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000045_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000117_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000044_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000856_1'
+2014-07-01 13:31:56,742 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001039_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000971_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000027_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000210_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000166_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000249_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000214_1'
+2014-07-01 13:32:03,750 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000752_1'
+2014-07-01 13:32:03,751 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000158_1'
+2014-07-01 13:32:06,760 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 600 map output(s) where 80 is already in progress
+2014-07-01 13:32:06,762 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 125 outputs (0 slow hosts and117 dup hosts)
+2014-07-01 13:32:09,757 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000057_1'
+2014-07-01 13:32:09,757 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000344_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000957_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000549_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000532_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000588_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000683_1'
+2014-07-01 13:32:09,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000933_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000012_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000008_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000751_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000863_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000771_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000836_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000298_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000950_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000929_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000711_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000042_1'
+2014-07-01 13:32:09,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000145_1'
+2014-07-01 13:32:09,760 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000038_1'
+2014-07-01 13:32:09,760 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000169_1'
+2014-07-01 13:32:09,760 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000176_1'
+2014-07-01 13:32:14,831 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 41 files in-memory complete. Local file is /srv/data/disk7/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_229.out of size 248302305
+2014-07-01 13:32:14,835 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:32:14,838 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 37 segments...
+2014-07-01 13:32:14,839 INFO org.apache.hadoop.mapred.Merger: Merging 37 sorted segments
+2014-07-01 13:32:14,839 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 37 segments left of total size: 908739395 bytes
+2014-07-01 13:32:16,768 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000964_1'
+2014-07-01 13:32:16,769 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000976_1'
+2014-07-01 13:32:16,769 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000452_1'
+2014-07-01 13:32:16,769 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000601_1'
+2014-07-01 13:32:16,769 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000326_1'
+2014-07-01 13:32:16,769 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_001007_1'
+2014-07-01 13:32:24,822 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000846_0'
+2014-07-01 13:32:24,822 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000001_1'
+2014-07-01 13:32:24,822 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000871_1'
+2014-07-01 13:32:24,822 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000582_1'
+2014-07-01 13:32:33,833 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000181_1'
+2014-07-01 13:32:33,833 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000917_1'
+2014-07-01 13:32:43,885 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000922_1'
+2014-07-01 13:32:43,885 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000018_1'
+2014-07-01 13:32:52,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000409_1'
+2014-07-01 13:32:52,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000035_1'
+2014-07-01 13:32:52,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000636_1'
+2014-07-01 13:32:52,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000893_1'
+2014-07-01 13:32:52,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000555_1'
+2014-07-01 13:32:59,838 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000213_1'
+2014-07-01 13:33:06,943 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000753_1'
+2014-07-01 13:33:06,943 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000459_1'
+2014-07-01 13:33:06,943 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000032_1'
+2014-07-01 13:33:06,943 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000881_1'
+2014-07-01 13:33:06,944 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000622_1'
+2014-07-01 13:33:06,944 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000306_1'
+2014-07-01 13:33:11,179 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 37 files in-memory complete. Local file is /srv/data/disk8/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_420.out of size 248258109
+2014-07-01 13:33:11,211 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 36 segments...
+2014-07-01 13:33:11,212 INFO org.apache.hadoop.mapred.Merger: Merging 36 sorted segments
+2014-07-01 13:33:11,212 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:33:11,212 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 36 segments left of total size: 917417193 bytes
+2014-07-01 13:33:17,023 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000762_1'
+2014-07-01 13:33:17,023 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000827_1'
+2014-07-01 13:33:17,023 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000765_1'
+2014-07-01 13:33:17,023 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000462_1'
+2014-07-01 13:33:17,023 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000512_1'
+2014-07-01 13:33:17,024 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000832_1'
+2014-07-01 13:33:38,155 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000764_1'
+2014-07-01 13:33:38,155 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000713_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000817_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000163_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000050_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000455_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000134_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000093_1'
+2014-07-01 13:33:38,156 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000196_1'
+2014-07-01 13:33:38,157 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000130_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000456_0'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000595_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000763_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000578_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000491_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000689_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000592_1'
+2014-07-01 13:33:51,235 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000825_1'
+2014-07-01 13:33:57,862 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 36 files in-memory complete. Local file is /srv/data/disk9/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_553.out of size 249246810
+2014-07-01 13:33:57,866 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:33:57,869 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 36 segments...
+2014-07-01 13:33:57,869 INFO org.apache.hadoop.mapred.Merger: Merging 36 sorted segments
+2014-07-01 13:33:57,870 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 36 segments left of total size: 909601953 bytes
+2014-07-01 13:34:06,269 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000453_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000828_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000351_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000759_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000597_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000115_1'
+2014-07-01 13:34:06,270 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000783_1'
+2014-07-01 13:34:11,334 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000126_1'
+2014-07-01 13:34:11,334 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000442_0'
+2014-07-01 13:34:11,334 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000760_1'
+2014-07-01 13:34:11,335 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000314_1'
+2014-07-01 13:34:19,432 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000778_1'
+2014-07-01 13:34:19,432 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000021_1'
+2014-07-01 13:34:19,432 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000670_1'
+2014-07-01 13:34:19,432 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000378_0'
+2014-07-01 13:34:19,432 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000358_0'
+2014-07-01 13:34:19,433 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000551_1'
+2014-07-01 13:34:19,433 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000720_1'
+2014-07-01 13:34:19,433 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000851_1'
+2014-07-01 13:34:19,433 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000560_1'
+2014-07-01 13:34:26,482 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000299_1'
+2014-07-01 13:34:26,482 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000288_0'
+2014-07-01 13:34:26,482 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000581_1'
+2014-07-01 13:34:35,529 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000111_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000211_0'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000290_0'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000458_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000386_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000677_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000567_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000465_0'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000392_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000508_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000297_1'
+2014-07-01 13:34:35,530 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000556_1'
+2014-07-01 13:34:44,655 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000572_1'
+2014-07-01 13:34:44,655 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000527_1'
+2014-07-01 13:34:49,661 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000263_1'
+2014-07-01 13:34:49,661 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000618_1'
+2014-07-01 13:34:49,661 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000436_1'
+2014-07-01 13:34:50,028 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 36 files in-memory complete. Local file is /srv/data/disk10/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_643.out of size 247546547
+2014-07-01 13:34:50,033 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:34:50,035 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 36 segments...
+2014-07-01 13:34:50,035 INFO org.apache.hadoop.mapred.Merger: Merging 36 sorted segments
+2014-07-01 13:34:50,035 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 36 segments left of total size: 913060468 bytes
+2014-07-01 13:34:56,802 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000305_1'
+2014-07-01 13:34:56,803 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000193_1'
+2014-07-01 13:34:56,803 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000824_1'
+2014-07-01 13:35:01,004 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 475 map output(s) where 80 is already in progress
+2014-07-01 13:35:01,006 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 109 outputs (0 slow hosts and120 dup hosts)
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000377_1'
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000141_0'
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000431_1'
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000206_1'
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000517_1'
+2014-07-01 13:35:03,816 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000726_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000049_0'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000782_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000402_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000122_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000573_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000724_1'
+2014-07-01 13:35:10,824 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000795_1'
+2014-07-01 13:35:17,831 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000185_1'
+2014-07-01 13:35:17,831 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000178_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000570_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000319_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000354_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000561_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000663_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000580_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000265_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000412_1'
+2014-07-01 13:35:17,832 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000227_1'
+2014-07-01 13:35:26,842 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000243_1'
+2014-07-01 13:35:26,842 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000661_1'
+2014-07-01 13:35:26,842 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000086_1'
+2014-07-01 13:35:29,371 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 36 files in-memory complete. Local file is /srv/data/disk11/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_81.out of size 248213739
+2014-07-01 13:35:29,377 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:35:29,380 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 38 segments...
+2014-07-01 13:35:29,380 INFO org.apache.hadoop.mapred.Merger: Merging 38 sorted segments
+2014-07-01 13:35:29,380 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 38 segments left of total size: 920710627 bytes
+2014-07-01 13:35:30,872 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000112_1'
+2014-07-01 13:35:30,872 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000646_1'
+2014-07-01 13:35:44,038 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000087_1'
+2014-07-01 13:35:51,363 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000054_1'
+2014-07-01 13:35:51,363 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000218_1'
+2014-07-01 13:35:51,364 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000666_1'
+2014-07-01 13:35:51,364 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000632_1'
+2014-07-01 13:35:59,420 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000362_1'
+2014-07-01 13:35:59,420 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000173_1'
+2014-07-01 13:35:59,420 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000629_1'
+2014-07-01 13:36:07,429 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000616_1'
+2014-07-01 13:36:07,429 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000047_1'
+2014-07-01 13:36:07,429 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000128_0'
+2014-07-01 13:36:13,436 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000584_1'
+2014-07-01 13:36:20,359 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 38 files in-memory complete. Local file is /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_434.out of size 250073536
+2014-07-01 13:36:20,365 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:36:20,410 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 37 segments...
+2014-07-01 13:36:20,410 INFO org.apache.hadoop.mapred.Merger: Merging 37 sorted segments
+2014-07-01 13:36:20,410 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 37 segments left of total size: 911902814 bytes
+2014-07-01 13:36:20,444 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000009_1'
+2014-07-01 13:36:20,444 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000006_1'
+2014-07-01 13:36:40,551 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000002_1'
+2014-07-01 13:36:47,707 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000207_1'
+2014-07-01 13:37:01,723 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000041_1'
+2014-07-01 13:37:01,723 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000577_1'
+2014-07-01 13:37:01,723 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000347_1'
+2014-07-01 13:37:01,723 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000071_1'
+2014-07-01 13:37:05,044 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 37 files in-memory complete. Local file is /srv/data/disk1/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_1001.out of size 250029246
+2014-07-01 13:37:05,048 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:37:05,050 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 35 segments...
+2014-07-01 13:37:05,050 INFO org.apache.hadoop.mapred.Merger: Merging 35 sorted segments
+2014-07-01 13:37:05,051 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 35 segments left of total size: 906418339 bytes
+2014-07-01 13:37:08,731 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000028_0'
+2014-07-01 13:37:14,860 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 366 map output(s) where 80 is already in progress
+2014-07-01 13:37:14,861 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 82 outputs (0 slow hosts and89 dup hosts)
+2014-07-01 13:37:29,758 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000563_1'
+2014-07-01 13:37:29,759 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000722_1'
+2014-07-01 13:37:36,767 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000016_1'
+2014-07-01 13:37:44,400 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 35 files in-memory complete. Local file is /srv/data/disk2/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_132.out of size 246267688
+2014-07-01 13:37:44,405 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:37:44,407 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 35 segments...
+2014-07-01 13:37:44,407 INFO org.apache.hadoop.mapred.Merger: Merging 35 sorted segments
+2014-07-01 13:37:44,407 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 35 segments left of total size: 911683889 bytes
+2014-07-01 13:37:44,775 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000084_1'
+2014-07-01 13:37:44,775 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000058_1'
+2014-07-01 13:37:57,512 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000427_1'
+2014-07-01 13:37:57,512 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000017_1'
+2014-07-01 13:38:05,574 INFO org.apache.hadoop.mapred.ReduceTask: Ignoring obsolete output of KILLED map-task: 'attempt_201405200258_319232_m_000197_1'
+2014-07-01 13:38:33,385 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 35 files in-memory complete. Local file is /srv/data/disk3/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_889.out of size 247219319
+2014-07-01 13:38:33,391 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:38:33,393 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 36 segments...
+2014-07-01 13:38:33,393 INFO org.apache.hadoop.mapred.Merger: Merging 36 sorted segments
+2014-07-01 13:38:33,394 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 36 segments left of total size: 921243606 bytes
+2014-07-01 13:38:56,301 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 284 map output(s) where 80 is already in progress
+2014-07-01 13:38:56,302 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 50 outputs (0 slow hosts and109 dup hosts)
+2014-07-01 13:39:11,803 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 36 files in-memory complete. Local file is /srv/data/disk4/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_387.out of size 253396182
+2014-07-01 13:39:12,095 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:39:12,118 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:39:12,118 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:39:12,119 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 925629943 bytes
+2014-07-01 13:40:03,144 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk5/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_560.out of size 246803250
+2014-07-01 13:40:03,153 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:40:03,156 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 35 segments...
+2014-07-01 13:40:03,156 INFO org.apache.hadoop.mapred.Merger: Merging 35 sorted segments
+2014-07-01 13:40:03,156 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 35 segments left of total size: 924371448 bytes
+2014-07-01 13:40:08,011 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 233 map output(s) where 79 is already in progress
+2014-07-01 13:40:08,012 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 29 outputs (0 slow hosts and84 dup hosts)
+2014-07-01 13:40:53,588 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 35 files in-memory complete. Local file is /srv/data/disk6/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_521.out of size 252402855
+2014-07-01 13:40:53,595 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:40:53,598 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 35 segments...
+2014-07-01 13:40:53,598 INFO org.apache.hadoop.mapred.Merger: Merging 35 sorted segments
+2014-07-01 13:40:53,598 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 35 segments left of total size: 923224244 bytes
+2014-07-01 13:40:55,830 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 19 outputs (0 slow hosts and85 dup hosts)
+2014-07-01 13:41:25,691 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 178 map output(s) where 72 is already in progress
+2014-07-01 13:41:25,691 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 11 outputs (0 slow hosts and87 dup hosts)
+2014-07-01 13:41:42,817 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 6 outputs (0 slow hosts and86 dup hosts)
+2014-07-01 13:41:48,813 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 35 files in-memory complete. Local file is /srv/data/disk7/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_53.out of size 250646735
+2014-07-01 13:41:48,826 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:41:48,828 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 35 segments...
+2014-07-01 13:41:48,828 INFO org.apache.hadoop.mapred.Merger: Merging 35 sorted segments
+2014-07-01 13:41:48,828 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 35 segments left of total size: 924089872 bytes
+2014-07-01 13:41:51,007 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and79 dup hosts)
+2014-07-01 13:41:56,662 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and82 dup hosts)
+2014-07-01 13:42:27,614 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 140 map output(s) where 57 is already in progress
+2014-07-01 13:42:27,614 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 12 outputs (0 slow hosts and58 dup hosts)
+2014-07-01 13:42:34,281 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and59 dup hosts)
+2014-07-01 13:42:37,712 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and67 dup hosts)
+2014-07-01 13:42:40,360 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 35 files in-memory complete. Local file is /srv/data/disk8/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_263.out of size 251385754
+2014-07-01 13:42:40,365 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:42:40,382 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:42:40,382 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:42:40,382 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 911420855 bytes
+2014-07-01 13:42:40,561 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and65 dup hosts)
+2014-07-01 13:42:44,332 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and64 dup hosts)
+2014-07-01 13:42:51,672 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and62 dup hosts)
+2014-07-01 13:43:14,899 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 9 outputs (0 slow hosts and50 dup hosts)
+2014-07-01 13:43:26,823 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and47 dup hosts)
+2014-07-01 13:43:32,846 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 99 map output(s) where 49 is already in progress
+2014-07-01 13:43:32,847 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and45 dup hosts)
+2014-07-01 13:43:34,825 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk9/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_856.out of size 250360620
+2014-07-01 13:43:34,830 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:43:35,061 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:43:35,061 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:43:35,061 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 921480380 bytes
+2014-07-01 13:43:45,186 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and38 dup hosts)
+2014-07-01 13:44:01,826 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 5 outputs (0 slow hosts and31 dup hosts)
+2014-07-01 13:44:07,216 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and36 dup hosts)
+2014-07-01 13:44:13,612 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and32 dup hosts)
+2014-07-01 13:44:22,854 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk10/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_722.out of size 249051103
+2014-07-01 13:44:22,862 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:44:22,880 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:44:22,880 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:44:22,880 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 924682494 bytes
+2014-07-01 13:44:32,807 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 7 outputs (0 slow hosts and16 dup hosts)
+2014-07-01 13:44:54,421 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Need another 42 map output(s) where 15 is already in progress
+2014-07-01 13:44:54,422 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 9 outputs (0 slow hosts and10 dup hosts)
+2014-07-01 13:44:58,797 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 3 outputs (0 slow hosts and13 dup hosts)
+2014-07-01 13:45:02,754 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and14 dup hosts)
+2014-07-01 13:45:06,110 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and12 dup hosts)
+2014-07-01 13:45:12,136 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk11/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_112.out of size 248928269
+2014-07-01 13:45:12,182 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Thread waiting: Thread for merging on-disk files
+2014-07-01 13:45:12,208 INFO org.apache.hadoop.mapred.ReduceTask: Initiating in-memory merge with 34 segments...
+2014-07-01 13:45:12,208 INFO org.apache.hadoop.mapred.Merger: Merging 34 sorted segments
+2014-07-01 13:45:12,208 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 34 segments left of total size: 915467027 bytes
+2014-07-01 13:45:17,911 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and10 dup hosts)
+2014-07-01 13:45:32,092 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and8 dup hosts)
+2014-07-01 13:45:43,484 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 4 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:45:47,700 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and1 dup hosts)
+2014-07-01 13:45:51,127 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 2 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:45:53,437 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Scheduled 1 outputs (0 slow hosts and0 dup hosts)
+2014-07-01 13:45:54,613 INFO org.apache.hadoop.mapred.ReduceTask: GetMapEventsThread exiting
+2014-07-01 13:45:54,614 INFO org.apache.hadoop.mapred.ReduceTask: getMapsEventsThread joined.
+2014-07-01 13:45:54,614 INFO org.apache.hadoop.mapred.ReduceTask: Closed ram manager
+2014-07-01 13:45:54,615 INFO org.apache.hadoop.mapred.ReduceTask: Interleaved on-disk merge complete: 31 files left.
+2014-07-01 13:45:58,028 INFO org.apache.hadoop.mapred.ReduceTask: attempt_201405200258_319232_r_000000_0 Merge of the 34 files in-memory complete. Local file is /srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/output/map_618.out of size 248197540
+2014-07-01 13:45:58,033 INFO org.apache.hadoop.mapred.ReduceTask: In-memory merge complete: 30 files left.
+2014-07-01 13:45:58,036 INFO org.apache.hadoop.mapred.Merger: Merging 30 sorted segments
+2014-07-01 13:45:58,037 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 30 segments left of total size: 851178708 bytes
+2014-07-01 13:46:35,119 INFO org.apache.hadoop.mapred.ReduceTask: Merged 30 segments, 851178708 bytes to disk to satisfy reduce memory limit
+2014-07-01 13:46:35,661 INFO org.apache.hadoop.mapred.ReduceTask: Merging 33 files, 7508171165 bytes from disk
+2014-07-01 13:46:35,662 INFO org.apache.hadoop.mapred.ReduceTask: Merging 0 segments, 0 bytes from memory into reduce
+2014-07-01 13:46:35,662 INFO org.apache.hadoop.mapred.Merger: Merging 33 sorted segments
+2014-07-01 13:46:36,140 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,159 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,197 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,299 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,350 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,378 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,392 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,457 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,577 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,593 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,641 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,653 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,674 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new decompressor [.deflate]
+2014-07-01 13:46:36,728 INFO org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 33 segments left of total size: 27633989197 bytes
+2014-07-01 13:46:36,865 INFO ExecReducer: maximum memory = 1908932608
+2014-07-01 13:46:36,865 INFO ExecReducer: conf classpath = [file:/srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/classes, file:/srv/data/disk12/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/, file:/srv/data/disk5/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/]
+2014-07-01 13:46:36,866 INFO ExecReducer: thread classpath = [file:/etc/hadoop/conf/, file:/usr/java/jdk1.6.0_33/lib/tools.jar, file:/usr/lib/hadoop-0.20-mapreduce/, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/bytestring.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-compress-1.4.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jline-0.9.94.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/xz-1.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/zookeeper-3.4.5-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-api-2.1.jar, file:/etc/hadoop/conf/, file:/usr/lib/zookeeper/lib/slf4j-log4j12-1.6.1.jar, file:/usr/lib/hadoop/lib/guava-11.0.2.jar, file:/usr/lib/hadoop/lib/avro-1.7.4.jar, file:/usr/lib/hadoop/lib/commons-net-3.1.jar, file:/usr/lib/hadoop/lib/asm-3.2.jar, file:/usr/lib/hadoop/lib/jackson-mapper-asl-1.8.8.jar, file:/usr/lib/hadoop/lib/slf4j-api-1.6.1.jar, file:/usr/lib/hadoop/lib/bytestring.jar, file:/usr/lib/hadoop/lib/jasper-compiler-5.5.23.jar, file:/usr/lib/hadoop/lib/mockito-all-1.8.5.jar, file:/usr/lib/hadoop/lib/jackson-jaxrs-1.8.8.jar, file:/usr/lib/hadoop/lib/jackson-core-asl-1.8.8.jar, file:/usr/lib/hadoop/lib/commons-lang-2.5.jar, file:/usr/lib/hadoop/lib/servlet-api-2.5.jar, file:/usr/lib/hadoop/lib/jersey-core-1.8.jar, file:/usr/lib/hadoop/lib/stax-api-1.0.1.jar, file:/usr/lib/hadoop/lib/jsch-0.1.42.jar, file:/usr/lib/hadoop/lib/commons-digester-1.8.jar, file:/usr/lib/hadoop/lib/commons-logging-1.1.1.jar, file:/usr/lib/hadoop/lib/activation-1.1.jar, file:/usr/lib/hadoop/lib/commons-collections-3.2.1.jar, file:/usr/lib/hadoop/lib/protobuf-java-2.4.0a.jar, file:/usr/lib/hadoop/lib/commons-httpclient-3.1.jar, file:/usr/lib/hadoop/lib/jetty-util-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop/lib/jsr305-1.3.9.jar, file:/usr/lib/hadoop/lib/jettison-1.1.jar, file:/usr/lib/hadoop/lib/paranamer-2.3.jar, file:/usr/lib/hadoop/lib/xz-1.0.jar, file:/usr/lib/hadoop/lib/kfs-0.3.jar, file:/usr/lib/hadoop/lib/commons-el-1.0.jar, file:/usr/lib/hadoop/lib/log4j-1.2.17.jar, file:/usr/lib/hadoop/lib/junit-4.8.2.jar, file:/usr/lib/zookeeper/zookeeper-3.4.5-cdh4.2.0.jar, file:/usr/lib/hadoop/lib/jets3t-0.6.1.jar, file:/usr/lib/hadoop/lib/commons-compress-1.4.1.jar, file:/usr/lib/hadoop/lib/jersey-server-1.8.jar, file:/usr/lib/hadoop/lib/jetty-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop/lib/commons-beanutils-1.7.0.jar, file:/usr/lib/hadoop/lib/jaxb-impl-2.2.3-1.jar, file:/usr/lib/hadoop/lib/jaxb-api-2.2.2.jar, file:/usr/lib/hadoop/lib/xmlenc-0.52.jar, file:/usr/lib/hadoop/lib/commons-codec-1.4.jar, file:/usr/lib/hadoop/lib/jersey-json-1.8.jar, file:/usr/lib/hadoop/lib/jline-0.9.94.jar, file:/usr/lib/hadoop/lib/commons-cli-1.2.jar, file:/usr/lib/hadoop/lib/commons-math-2.1.jar, file:/usr/lib/hadoop/lib/commons-configuration-1.6.jar, file:/usr/lib/hadoop/lib/jasper-runtime-5.5.23.jar, file:/usr/lib/hadoop/lib/jsp-api-2.1.jar, file:/usr/lib/hadoop/lib/snappy-java-1.0.4.1.jar, file:/usr/lib/hadoop/lib/jackson-xc-1.8.8.jar, file:/usr/lib/hadoop/lib/commons-beanutils-core-1.8.0.jar, file:/usr/lib/hadoop/lib/commons-io-2.1.jar, file:/usr/lib/hadoop/hadoop-auth-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop/hadoop-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop/hadoop-common-2.0.0-cdh4.4.0-tests.jar, file:/usr/lib/hadoop/hadoop-annotations-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop/hadoop-auth-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop/hadoop-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop/hadoop-annotations-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-hdfs/, file:/usr/lib/hadoop-hdfs/lib/guava-11.0.2.jar, file:/usr/lib/hadoop-hdfs/lib/asm-3.2.jar, file:/usr/lib/hadoop-hdfs/lib/jackson-mapper-asl-1.8.8.jar, file:/usr/lib/hadoop-hdfs/lib/jackson-core-asl-1.8.8.jar, file:/usr/lib/hadoop-hdfs/lib/commons-lang-2.5.jar, file:/usr/lib/hadoop-hdfs/lib/servlet-api-2.5.jar, file:/usr/lib/hadoop-hdfs/lib/jersey-core-1.8.jar, file:/usr/lib/hadoop-hdfs/lib/commons-daemon-1.0.3.jar, file:/usr/lib/hadoop-hdfs/lib/commons-logging-1.1.1.jar, file:/usr/lib/hadoop-hdfs/lib/protobuf-java-2.4.0a.jar, file:/usr/lib/hadoop-hdfs/lib/jetty-util-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-hdfs/lib/jsr305-1.3.9.jar, file:/usr/lib/hadoop-hdfs/lib/commons-el-1.0.jar, file:/usr/lib/hadoop-hdfs/lib/log4j-1.2.17.jar, file:/usr/lib/hadoop-hdfs/lib/zookeeper-3.4.5-cdh4.4.0.jar, file:/usr/lib/hadoop-hdfs/lib/jersey-server-1.8.jar, file:/usr/lib/hadoop-hdfs/lib/jetty-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-hdfs/lib/xmlenc-0.52.jar, file:/usr/lib/hadoop-hdfs/lib/commons-codec-1.4.jar, file:/usr/lib/hadoop-hdfs/lib/jline-0.9.94.jar, file:/usr/lib/hadoop-hdfs/lib/commons-cli-1.2.jar, file:/usr/lib/hadoop-hdfs/lib/jasper-runtime-5.5.23.jar, file:/usr/lib/hadoop-hdfs/lib/jsp-api-2.1.jar, file:/usr/lib/hadoop-hdfs/lib/commons-io-2.1.jar, file:/usr/lib/hadoop-hdfs/hadoop-hdfs-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-hdfs/hadoop-hdfs-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-hdfs/hadoop-hdfs-2.0.0-cdh4.4.0-tests.jar, file:/usr/lib/hadoop-yarn/lib/avro-1.7.4.jar, file:/usr/lib/hadoop-yarn/lib/netty-3.2.4.Final.jar, file:/usr/lib/hadoop-yarn/lib/asm-3.2.jar, file:/usr/lib/hadoop-yarn/lib/jackson-mapper-asl-1.8.8.jar, file:/usr/lib/hadoop-yarn/lib/aopalliance-1.0.jar, file:/usr/lib/hadoop-yarn/lib/jackson-core-asl-1.8.8.jar, file:/usr/lib/hadoop-yarn/lib/jersey-guice-1.8.jar, file:/usr/lib/hadoop-yarn/lib/jersey-core-1.8.jar, file:/usr/lib/hadoop-yarn/lib/protobuf-java-2.4.0a.jar, file:/usr/lib/hadoop-yarn/lib/paranamer-2.3.jar, file:/usr/lib/hadoop-yarn/lib/guice-servlet-3.0.jar, file:/usr/lib/hadoop-yarn/lib/xz-1.0.jar, file:/usr/lib/hadoop-yarn/lib/log4j-1.2.17.jar, file:/usr/lib/hadoop-yarn/lib/commons-compress-1.4.1.jar, file:/usr/lib/hadoop-yarn/lib/jersey-server-1.8.jar, file:/usr/lib/hadoop-yarn/lib/guice-3.0.jar, file:/usr/lib/hadoop-yarn/lib/javax.inject-1.jar, file:/usr/lib/hadoop-yarn/lib/snappy-java-1.0.4.1.jar, file:/usr/lib/hadoop-yarn/lib/commons-io-2.1.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-api-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-client-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-client-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-resourcemanager-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-site-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-tests-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-web-proxy-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-tests-2.0.0-cdh4.4.0-tests.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-api-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-site-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-nodemanager-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-tests-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-applications-distributedshell-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-common-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-resourcemanager-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-nodemanager-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-server-web-proxy-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-yarn/hadoop-yarn-applications-distributedshell-2.0.0-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/, file:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/bytestring.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/xz-1.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/zookeeper-3.4.5-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-compress-1.4.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jline-0.9.94.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-tools-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-examples-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-examples-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-test-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-ant-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-tools-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-test-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-ant-2.0.0-mr1-cdh4.4.0.jar, file:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.4.0.jar, file:/data/fcdd6f00-f1a4-4e0d-9e79-84e11cf3693b/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/classes, file:/data/fcdd6f00-f1a4-4e0d-9e79-84e11cf3693b/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/jars/job.jar, file:/data/d3729cb9-48f2-4d0c-9725-149bd564471d/hadoop/mapred/local/taskTracker/hdfs/distcache/-9015210986195712017_2121309799_1927926189/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hbase.jar, file:/data/b1bef039-eff8-4da3-8477-14453053a2fe/hadoop/mapred/local/taskTracker/hdfs/distcache/1234961030398045041_-482638234_1927927137/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hive_contrib.jar, file:/data/9926fe9d-cfff-4d90-81b4-2524914bc3dd/hadoop/mapred/local/taskTracker/hdfs/distcache/-32521029008242990_-543447625_1927927671/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hive-hbase-handler.jar, file:/data/0b00e06e-67b0-4e8d-bb02-d36c0effe621/hadoop/mapred/local/taskTracker/hdfs/distcache/-2970824455916191908_1576929321_1927928066/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/mobile.common.jar, file:/data/d4f8b4aa-e5db-4b17-ba36-f2876fd1ecba/hadoop/mapred/local/taskTracker/hdfs/distcache/-6022781383473896304_-1205090799_1927928697/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/rfi-hive-aux.jar, file:/data/d1cb5f7b-8b3e-46b0-adfd-979bd230edaf/hadoop/mapred/local/taskTracker/hdfs/distcache/-2888310000269057098_-1567887500_1927929093/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/zookeeper.jar, file:/data/d3729cb9-48f2-4d0c-9725-149bd564471d/hadoop/mapred/local/taskTracker/hdfs/distcache/-9015210986195712017_2121309799_1927926189/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hbase.jar, file:/data/b1bef039-eff8-4da3-8477-14453053a2fe/hadoop/mapred/local/taskTracker/hdfs/distcache/1234961030398045041_-482638234_1927927137/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hive_contrib.jar, file:/data/9926fe9d-cfff-4d90-81b4-2524914bc3dd/hadoop/mapred/local/taskTracker/hdfs/distcache/-32521029008242990_-543447625_1927927671/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/hive-hbase-handler.jar, file:/data/0b00e06e-67b0-4e8d-bb02-d36c0effe621/hadoop/mapred/local/taskTracker/hdfs/distcache/-2970824455916191908_1576929321_1927928066/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/mobile.common.jar, file:/data/d4f8b4aa-e5db-4b17-ba36-f2876fd1ecba/hadoop/mapred/local/taskTracker/hdfs/distcache/-6022781383473896304_-1205090799_1927928697/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/rfi-hive-aux.jar, file:/data/d1cb5f7b-8b3e-46b0-adfd-979bd230edaf/hadoop/mapred/local/taskTracker/hdfs/distcache/-2888310000269057098_-1567887500_1927929093/inw-hercules-ha/user/hdfs/.staging/job_201405200258_319232/libjars/zookeeper.jar, file:/data/9926fe9d-cfff-4d90-81b4-2524914bc3dd/hadoop/mapred/local/taskTracker/hdfs/jobcache/job_201405200258_319232/attempt_201405200258_319232_r_000000_0/work/]
+2014-07-01 13:46:36,915 INFO org.apache.hadoop.hive.ql.exec.Utilities: <PERFLOG method=deserializePlan>
+2014-07-01 13:46:36,915 INFO org.apache.hadoop.hive.ql.exec.Utilities: Deserializing ReduceWork via kryo
+2014-07-01 13:46:38,299 INFO org.apache.hadoop.hive.ql.exec.Utilities: </PERFLOG method=deserializePlan start=1404236796915 end=1404236798299 duration=1384>
+2014-07-01 13:46:38,401 INFO ExecReducer: 
+<EX>Id =0
+  <Children>
+    <FS>Id =1
+      <Parent>Id = 0 null<\Parent>
+    <\FS>
+  <\Children>
+<\EX>
+2014-07-01 13:46:38,401 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: Initializing Self 0 EX
+2014-07-01 13:46:38,412 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: Operator 0 EX initialized
+2014-07-01 13:46:38,412 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: Initializing children of 0 EX
+2014-07-01 13:46:38,412 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Initializing child 1 FS
+2014-07-01 13:46:38,412 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Initializing Self 1 FS
+2014-07-01 13:46:38,882 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Operator 1 FS initialized
+2014-07-01 13:46:38,882 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Initialization Done 1 FS
+2014-07-01 13:46:38,882 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: Initialization Done 0 EX
+2014-07-01 13:46:38,898 INFO ExecReducer: ExecReducer: processing 1 rows: used memory = 858435000
+2014-07-01 13:46:38,898 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 1 rows
+2014-07-01 13:46:38,898 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Final Path: FS hdfs://inw-hercules-ha:8020/srv/grid-tmp/hive-hdfs/hive_2014-07-01_13-11-39_803_911896900932419421-1/_tmp.-ext-10002/000000_0
+2014-07-01 13:46:38,898 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: Writing to temp file: FS hdfs://inw-hercules-ha:8020/srv/grid-tmp/hive-hdfs/hive_2014-07-01_13-11-39_803_911896900932419421-1/_task_tmp.-ext-10002/_tmp.000000_0
+2014-07-01 13:46:38,899 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: New Final Path: FS hdfs://inw-hercules-ha:8020/srv/grid-tmp/hive-hdfs/hive_2014-07-01_13-11-39_803_911896900932419421-1/_tmp.-ext-10002/000000_0
+2014-07-01 13:46:40,057 INFO org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryStruct: Missing fields! Expected 104 fields but only got 104! Ignoring similar problems.
+2014-07-01 13:46:40,120 INFO ExecReducer: ExecReducer: processing 10 rows: used memory = 875392552
+2014-07-01 13:46:40,120 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 10 rows
+2014-07-01 13:46:40,341 INFO ExecReducer: ExecReducer: processing 100 rows: used memory = 879684840
+2014-07-01 13:46:40,341 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 100 rows
+2014-07-01 13:46:40,719 INFO ExecReducer: ExecReducer: processing 1000 rows: used memory = 915894640
+2014-07-01 13:46:40,719 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 1000 rows
+2014-07-01 13:46:42,459 INFO ExecReducer: ExecReducer: processing 10000 rows: used memory = 1018147536
+2014-07-01 13:46:42,459 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 10000 rows
+2014-07-01 13:46:58,335 INFO ExecReducer: ExecReducer: processing 100000 rows: used memory = 1117900536
+2014-07-01 13:46:58,335 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 100000 rows
+2014-07-01 13:50:32,114 INFO ExecReducer: ExecReducer: processing 1000000 rows: used memory = 1101774912
+2014-07-01 13:50:32,114 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 1000000 rows
+2014-07-01 13:54:44,241 INFO ExecReducer: ExecReducer: processing 2000000 rows: used memory = 682344704
+2014-07-01 13:54:44,246 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 2000000 rows
+2014-07-01 13:59:24,062 INFO ExecReducer: ExecReducer: processing 3000000 rows: used memory = 467493208
+2014-07-01 13:59:24,062 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 3000000 rows
+2014-07-01 14:03:24,956 INFO ExecReducer: ExecReducer: processing 4000000 rows: used memory = 824524584
+2014-07-01 14:03:24,956 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 4000000 rows
+2014-07-01 14:07:19,354 INFO ExecReducer: ExecReducer: processing 5000000 rows: used memory = 871131960
+2014-07-01 14:07:19,354 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 5000000 rows
+2014-07-01 14:11:17,756 INFO ExecReducer: ExecReducer: processing 6000000 rows: used memory = 737472896
+2014-07-01 14:11:17,756 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 6000000 rows
+2014-07-01 14:14:52,603 INFO ExecReducer: ExecReducer: processing 7000000 rows: used memory = 971484288
+2014-07-01 14:14:52,603 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 7000000 rows
+2014-07-01 14:18:44,110 INFO ExecReducer: ExecReducer: processing 8000000 rows: used memory = 840410864
+2014-07-01 14:18:44,111 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 8000000 rows
+2014-07-01 14:22:30,094 INFO ExecReducer: ExecReducer: processing 9000000 rows: used memory = 533622504
+2014-07-01 14:22:30,095 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 9000000 rows
+2014-07-01 14:26:24,190 INFO ExecReducer: ExecReducer: processing 10000000 rows: used memory = 742787784
+2014-07-01 14:26:24,190 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 10000000 rows
+2014-07-01 14:29:48,164 INFO ExecReducer: ExecReducer: processing 11000000 rows: used memory = 603281960
+2014-07-01 14:29:48,164 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 11000000 rows
+2014-07-01 14:33:52,801 INFO ExecReducer: ExecReducer: processing 12000000 rows: used memory = 1096823272
+2014-07-01 14:33:52,801 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 12000000 rows
+2014-07-01 14:38:05,170 INFO ExecReducer: ExecReducer: processing 13000000 rows: used memory = 576986600
+2014-07-01 14:38:05,170 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 13000000 rows
+2014-07-01 14:41:39,323 INFO ExecReducer: ExecReducer: processing 14000000 rows: used memory = 386484984
+2014-07-01 14:41:39,323 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 14000000 rows
+2014-07-01 14:45:14,550 INFO ExecReducer: ExecReducer: processing 15000000 rows: used memory = 156941992
+2014-07-01 14:45:14,550 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 15000000 rows
+2014-07-01 14:48:35,964 INFO ExecReducer: ExecReducer: processing 16000000 rows: used memory = 655875480
+2014-07-01 14:48:35,964 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 16000000 rows
+2014-07-01 14:52:02,587 INFO ExecReducer: ExecReducer: processing 17000000 rows: used memory = 590850176
+2014-07-01 14:52:02,587 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarding 17000000 rows
+2014-07-01 14:52:52,748 INFO ExecReducer: ExecReducer: processed 17232085 rows: used memory = 357310496
+2014-07-01 14:52:52,749 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 finished. closing... 
+2014-07-01 14:52:52,749 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 forwarded 17232085 rows
+2014-07-01 14:52:52,749 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: 1 finished. closing... 
+2014-07-01 14:52:54,551 ERROR org.apache.hadoop.hive.ql.stats.jdbc.JDBCStatsPublisher: Error during instantiating JDBC driver org.apache.derby.jdbc.EmbeddedDriver. 
+java.lang.ClassNotFoundException: org.apache.derby.jdbc.EmbeddedDriver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:169)
+	at org.apache.hadoop.hive.ql.stats.jdbc.JDBCStatsPublisher.connect(JDBCStatsPublisher.java:68)
+	at org.apache.hadoop.hive.ql.exec.FileSinkOperator.publishStats(FileSinkOperator.java:1010)
+	at org.apache.hadoop.hive.ql.exec.FileSinkOperator.closeOp(FileSinkOperator.java:907)
+	at org.apache.hadoop.hive.ql.exec.Operator.close(Operator.java:596)
+	at org.apache.hadoop.hive.ql.exec.Operator.close(Operator.java:613)
+	at org.apache.hadoop.hive.ql.exec.mr.ExecReducer.close(ExecReducer.java:305)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:516)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:447)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1408)
+	at org.apache.hadoop.mapred.Child.main(Child.java:262)
+2014-07-01 14:52:54,553 ERROR org.apache.hadoop.hive.ql.exec.FileSinkOperator: StatsPublishing error: cannot connect to database
+2014-07-01 14:52:54,553 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: 1 forwarded 0 rows
+2014-07-01 14:52:54,554 INFO org.apache.hadoop.hive.ql.exec.FileSinkOperator: TABLE_ID_1_ROWCOUNT:17232085
+2014-07-01 14:52:54,554 INFO org.apache.hadoop.hive.ql.exec.ExtractOperator: 0 Close done
+2014-07-01 14:52:54,557 INFO org.apache.hadoop.mapred.Task: Task:attempt_201405200258_319232_r_000000_0 is done. And is in the process of commiting
+2014-07-01 14:52:54,620 INFO org.apache.hadoop.mapred.Task: Task 'attempt_201405200258_319232_r_000000_0' done.
+2014-07-01 14:52:54,623 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
