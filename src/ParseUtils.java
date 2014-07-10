@@ -126,14 +126,15 @@ public class ParseUtils {
 		String dayAndTime;
 		if (line.split(SPACE).length > 3){
 			map = extractInfo(line);
-			dayAndTime = map.get("DATE") + " " + map.get("TIME");}
+			dayAndTime = map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME);}
 		else{
 			dayAndTime = line;
 		}
-
+//		System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
 		try {
 			d = format.parse(dayAndTime);
 		} catch (ParseException e) {
+			System.err.println("The dayAndTime it tried to convert to Long is " + dayAndTime);
 			e.printStackTrace();
 		}
 

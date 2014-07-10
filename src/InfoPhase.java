@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,14 +26,31 @@ public class InfoPhase extends AbstractPhase {
 	
 	public InfoPhase(){
 		super();
+		initialize();
 	}
 	
 	public InfoPhase(String name){
 		super();
+		initialize();
 //		this.compressLib= compressLib;
 //		this.spillRecord = spillRecord;
 //		this.spillTime = spillTime;
 		this.name = name;
+	}
+	
+	/**
+	 * Called during the constructor to initialize the map to be used later
+	 */
+	private void initialize(){
+		
+		timeSpanList = new ArrayList<String[]>();
+		memoryList = new ArrayList<HashMap<String, String>>();
+		exceptionMap = new HashMap<Integer, String>();
+		warnMap = new HashMap<Integer, String>();
+		errorMap = new HashMap<Integer, String>();
+		codecMap = new HashMap<String, String>();
+		obsoleteOutputMap = new HashMap<String, String>();
+		
 	}
 	
 	public void update(String log){

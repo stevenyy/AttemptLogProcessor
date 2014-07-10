@@ -151,7 +151,7 @@ public class TestAttemptLogProcessor{
 		
 	}
 	
-//	@Test 
+	@Test 
 	public void testSpillDoctor(){
 		
 		

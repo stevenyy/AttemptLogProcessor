@@ -25,6 +25,12 @@ public class TestParseUtils {
 	}
 	
 	@Test
+	public void testGetDate(){
+		String line = "2014-07-08 00:43:49,637 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead";
+		System.out.println("printing the time in long " + ParseUtils.getTime(line));
+	}
+	
+	@Test
 	public void testExtractNumbers(){
 		String message = "kvstart = 0; kvend = 671088; length = 838860";
 		System.out.println();

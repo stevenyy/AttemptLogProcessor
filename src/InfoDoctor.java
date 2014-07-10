@@ -66,6 +66,8 @@ public class InfoDoctor implements SignalDoctor{
 
 	@Override
 	public void check(String line, int lineNum) {
+		this.previousLine = this.line;
+		this.previousNum = this.lineNum;
 		this.lineNum = lineNum;
 		this.line = line;
 		if (!skipLine(line, lineNum)){
@@ -75,6 +77,8 @@ public class InfoDoctor implements SignalDoctor{
 
 	@Override
 	public void check(String line){
+		this.previousLine = this.line;
+		this.previousNum = this.lineNum;
 		check(ParseUtils.extractInfo(line));
 	}
 
@@ -185,9 +189,11 @@ public class InfoDoctor implements SignalDoctor{
 		case ParseUtils.WARN:  
 			ip.updateWarnMap(lineNum, map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME) + " "
 					+  map.get(ParseUtils.LOCATION) + " " + map.get(ParseUtils.MESSAGE) );
+			break;
 		case ParseUtils.ERROR: 
 			ip.updateErrorMap(lineNum, map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME) + " "
 					+  map.get(ParseUtils.LOCATION) + " " + map.get(ParseUtils.MESSAGE) );
+			break;
 		}
 
 	}
@@ -244,8 +250,10 @@ public class InfoDoctor implements SignalDoctor{
 	 * @return List of String Array with format line#, duration, message
 	 */
 	private void checkTimeSpan(String current, String previous, int lineNum){
+		// Make sure previous is not null or un-parsable
 		if (previous != null && !skipLine(previous, lineNum)){ 
-			// Make sure previous is not null or un-parsable
+//			System.out.println("Printing the current line " + current);
+//			System.out.println("Printing the previous line " + previous);
 			long diff = ParseUtils.getTime(current) - ParseUtils.getTime(previous);
 			if (diff > MAX_INTERVAL){
 				// Construct a feedback String array with format: line#, duration, message
