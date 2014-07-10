@@ -102,7 +102,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 //				lineStructureMap = ParseUtils.extractInfo(line, lineNum, logSoFar);
 				//				System.out.println("The current line at which it stopped " + lineCounter);
 				if (ParseUtils.skipLine(line, 0)){
-					System.out.println("Printing the skipped line: " + line);
+//					System.out.println("Printing the skipped line: " + line);
 				}
 				for (SignalDoctor doctor : doctorMap.values()) {
 					doctor.check(line, lineNum);
@@ -114,9 +114,9 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 			// Ask SignalDoctors to create Phases
 			for (SignalDoctor doctor : doctorMap.values()) {
 				AbstractPhase p = doctor.createPhase();
-				System.out.println("Checking the name " + p.getName());
+//				System.out.println("Checking the name " + p.getName());
 				phaseMap.put(p.getName(), p);
-				System.out.println("Checking the size of map " + phaseMap.size());
+//				System.out.println("Checking the size of map " + phaseMap.size());
 				phasesResult.registerPhase(p.getName(), p);
 			}
 

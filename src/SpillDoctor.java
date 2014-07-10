@@ -78,7 +78,7 @@ public class SpillDoctor implements SignalDoctor{
 
 	@Override
 	public SpillPhase createPhase() {
-		System.out.println("createPhase in SpillDoctor called");
+//		System.out.println("createPhase in SpillDoctor called");
 		SpillPhase sp = new SpillPhase("SpillPhase");
 		try{
 			calculateTime();

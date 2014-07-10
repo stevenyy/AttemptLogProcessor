@@ -81,7 +81,7 @@ public class MergeDoctor implements SignalDoctor{
 
 	@Override
 	public AbstractPhase createPhase() {
-		System.out.println("MergeDoctor.createPhase called");
+//		System.out.println("MergeDoctor.createPhase called");
 		try{
 			calculateTime();
 			if (mapMerge){
@@ -101,7 +101,7 @@ public class MergeDoctor implements SignalDoctor{
 	}
 	
 	private void calculateTime(){
-		System.out.println("printing the size of the timeList " + timeList.size());
+//		System.out.println("printing the size of the timeList " + timeList.size());
 		long init = ParseUtils.getTime(timeList.get(0));
 		long end = ParseUtils.getTime(timeList.get(timeList.size() - 1));
 		mergeTime = end - init;

@@ -41,6 +41,7 @@ public class TestAttemptLogProcessor{
 		//ProfileDBManager dao = new ProfileDBManager("org.postgresql.Driver", url);
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		//dao = ProfileDBManager.instance();
+		alp.readAndProcessLog(MAP_LONG);
 	}
 
 	@After
@@ -146,24 +147,18 @@ public class TestAttemptLogProcessor{
 		}
 	}
 	
-//	@Test
-	public void testInfoDoctor(){
-		
-	}
-	
 	@Test 
 	public void testSpillDoctor(){
 		
-		
-		alp.readAndProcessLog(MAP_LONG);
+//		alp.readAndProcessLog(MAP_LONG);
 		SpillPhase sp =  (SpillPhase) alp.getPhaseMap().get("SpillPhase");
 		SpillPhase sp2 =  (SpillPhase) alp.getPhasesResult().getSpillPhase();
 		
 		assertEquals(sp, sp2);
 
 		System.out.println();
-		System.out.println("Printing Test SpillDoctor: the phase name is " + sp.getName());
-		System.out.println("Printing Test SpillDoctor: " + ENTER_RETURN +
+		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
+		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
 				sp.getSpillLength() + " is the max spill length " + ENTER_RETURN 
 				+ sp.getSpillRecord() + " is the total spill record " + ENTER_RETURN + 
 				sp.getSpillTime() + " is the spilled time");
@@ -172,13 +167,25 @@ public class TestAttemptLogProcessor{
 	@Test
 	public void testMergeDoctor(){
 		
-		alp.readAndProcessLog(MAP_LONG);
+//		alp.readAndProcessLog(MAP_LONG);
 		MapMergePhase mmp =  (MapMergePhase) alp.getPhaseMap().get("MapMergePhase");
 
 		System.out.println();
-		System.out.println("Printing Test MergeDoctor: the phase name is " + mmp.getName());
-		System.out.println("Printing Test SignalDoctor: " + ENTER_RETURN +
+		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
+		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
 				mmp.getMergeTime() + " is the the merge time it takes");
+	}
+	
+	@Test 
+	public void testInfoDoctor(){
+//		alp.readAndProcessLog(MAP_LONG);
+		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
+		
+		System.out.println();
+		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
+		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
+				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN);
+		
 	}
 	
 //	@Test

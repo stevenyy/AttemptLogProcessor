@@ -237,8 +237,9 @@ public class InfoDoctor implements SignalDoctor{
 		if (message.contains(ParseUtils.LIBRARY)){
 			String[] splitArray = message.split(ParseUtils.SPACE);
 			compressLib = splitArray[splitArray.length-2];
+//			System.out.println("Printing from infoDoctor : the compressionLib is " + compressLib );
+			ip.setCompressLib(compressLib);
 		}
-		ip.setCompressLib(compressLib);
 		return compressLib;
 	}
 

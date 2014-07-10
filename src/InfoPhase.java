@@ -43,6 +43,8 @@ public class InfoPhase extends AbstractPhase {
 	 */
 	private void initialize(){
 		
+		name = " ";
+		compressLib = " ";
 		timeSpanList = new ArrayList<String[]>();
 		memoryList = new ArrayList<HashMap<String, String>>();
 		exceptionMap = new HashMap<Integer, String>();
