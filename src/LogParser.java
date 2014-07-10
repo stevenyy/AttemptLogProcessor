@@ -39,6 +39,8 @@ public class LogParser implements LogAnnotator {
 	private String compressionFormat;
 	private int lineCounter; // Count the line number of the log
 	private Map<String, AbstractPhase> phaseMap; // List of phases created
+	private PhasesResult phasesResult; // Class that stores all the phases as field/instance, 
+	// as well as other general information 
 
 	private Pattern skipRegex = null;
 	private Pattern exceptionRegex = null;
@@ -80,6 +82,7 @@ public class LogParser implements LogAnnotator {
 	//Instance of SignalDoctors: Instantiated at the constructor of LogParser
 	private SpillDoctor sd;
 	private MergeDoctor md;
+	private InfoDoctor id;
 	private Map<String, SignalDoctor> doctorMap;
 
 	/**
@@ -99,6 +102,7 @@ public class LogParser implements LogAnnotator {
 		memoryList = new ArrayList<HashMap<String, String>>();
 		timeSpanList = new ArrayList<String[]>();
 		phaseMap= new HashMap<String, AbstractPhase>();
+		phasesResult = new PhasesResult();
 
 		//Initializign SignalDoctors
 		initializeDoctors();
@@ -106,10 +110,13 @@ public class LogParser implements LogAnnotator {
 
 	private void initializeDoctors() {
 		doctorMap= new HashMap<String, SignalDoctor>();
-		sd = new SpillDoctor();
-		md = new MergeDoctor();
+		sd = new SpillDoctor("SpillDoctor");
+		md = new MergeDoctor("MergeDoctor");
+		id = new InfoDoctor("InfoDoctor");
+
 		doctorMap.put("SpillDoctor", sd);
 		doctorMap.put("MergeDoctor", md);
+		doctorMap.put("InfoDoctor", id);
 	}
 
 	//	public String readAndProcessLog(MRTaskAttemptInfo attemptInfo, String attemptID){
@@ -143,11 +150,11 @@ public class LogParser implements LogAnnotator {
 					checkObsoleteOutput(lineStructureMap);
 
 					checkWaitTime(lineStructureMap);
-					
+
 					//Ask SignalDoctors to do check
 					for (SignalDoctor doctor : doctorMap.values()) {
 						doctor.check(lineStructureMap, line, lineCounter);
-//						System.out.println("printing from SignalDoc loop");
+						//						System.out.println("printing from SignalDoc loop");
 					}	    
 				}
 				previous = line;
@@ -158,7 +165,7 @@ public class LogParser implements LogAnnotator {
 				AbstractPhase p = doctor.createPhase();
 				phaseMap.put(p.getName(), p);
 			}
-			
+
 			logSoFar = out.toString();
 			//            System.out.println(lastLog);   //Prints the string content read from input stream
 			reader.close();
@@ -182,6 +189,7 @@ public class LogParser implements LogAnnotator {
 	 */
 
 	private void checkWaitTime(Map<String, String> lineStructureMap) {
+		// incomplete
 		Long waitTime = (long) 0;
 		return;
 	}
@@ -227,7 +235,7 @@ public class LogParser implements LogAnnotator {
 	 * @param
 	 * @return warnMap
 	 */
-            private void checkTag(Map<String, String> map){
+	private void checkTag(Map<String, String> map){
 		switch (map.get(MESSAGE_TYPE)){
 		//		case WARN: warnMap.put();
 		case WARN: warnMap.put(lineCounter, map.get(DATE) + " " + map.get(TIME) + " "+  map.get(LOCATION) + " " + map.get(MESSAGE) );
@@ -488,11 +496,11 @@ public class LogParser implements LogAnnotator {
 		}
 		return Collections.max(sizeList);
 	}
-	
+
 	public Map<String, AbstractPhase> getPhaseMap(){
 		return phaseMap;
 	}
-	
+
 	public Map<String, SignalDoctor> getDoctorMap(){
 		return doctorMap;
 	}

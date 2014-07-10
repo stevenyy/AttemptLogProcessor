@@ -86,8 +86,10 @@ public class SpillDoctor implements SignalDoctor{
 		return sp;
 	}
 
+	/**
+	 * Calculate total time on spilling
+	 */
 	private void calculateTime() {
-		// Calculate total time on spilling
 		//		System.out.println("debugging calculateTime");
 		int size = timeList.size();
 		if (size%2 != 0){
@@ -127,10 +129,13 @@ public class SpillDoctor implements SignalDoctor{
 
 	@Override
 	public String getName() {
-		if (name == null)
+		if (name == null){
 			System.out.println("SpillDoctor: you have not set the name of spillDoctor, thus "
-					+ "returning null");				
-		return name;
+					+ "returning null");	
+			return null;
+		}
+		else{
+		return name;}
 	}
 
 }

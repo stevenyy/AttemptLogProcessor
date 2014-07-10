@@ -32,7 +32,7 @@ public class ParseUtils {
 	public static final String LOCATION = "Location";
 	public static final String MESSAGE = "Message";
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
-	private static final String SPACE = "\\s+";
+	public static final String SPACE = "\\s+";
 	
 	
 	/**
@@ -139,5 +139,17 @@ public class ParseUtils {
 
 		return d.getTime();
 	}
+	
+	/*	*//**
+	 * Returns the date in long format given a line of log input
+	 * @param line
+	 * @return
+	 *//*
+	public static Long extractDate(String line){
+		Pattern dateRegex = Pattern.compile("(\\d+)-(\\d+)-(\\d+)" + SPACE + "(\\d+):(\\d+):(\\d+),(\\d+)"); // The '\\d' for digit and '+' for one or more
+		Matcher m = dateRegex.matcher(line);
+		
+		String date =  m.group();
+	}*/
 
 }
