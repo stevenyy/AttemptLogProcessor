@@ -1,0 +1,623 @@
+2014-07-08 00:43:58,804 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:43:58,804 INFO org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 45611920; bufvoid = 255013696
+2014-07-08 00:43:58,804 INFO org.apache.hadoop.mapred.MapTask: kvstart = 0; kvend = 671088; length = 838860
+2014-07-08 00:43:59,456 INFO org.apache.hadoop.io.compress.CodecPool: Got brand-new compressor [.deflate]
+2014-07-08 00:44:01,034 INFO org.apache.hadoop.mapred.MapTask: Finished spill 0
+2014-07-08 00:44:02,213 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 1000000 rows
+2014-07-08 00:44:02,213 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 1000000 rows
+2014-07-08 00:44:02,213 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 1000000 rows
+2014-07-08 00:44:02,213 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 1000000 rows
+2014-07-08 00:44:02,213 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 1000000 rows: used memory = 387525712
+2014-07-08 00:44:04,526 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:04,526 INFO org.apache.hadoop.mapred.MapTask: bufstart = 45611920; bufend = 91550082; bufvoid = 255013696
+2014-07-08 00:44:04,526 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671088; kvend = 503315; length = 838860
+2014-07-08 00:44:06,282 INFO org.apache.hadoop.mapred.MapTask: Finished spill 1
+2014-07-08 00:44:09,628 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 2000000 rows
+2014-07-08 00:44:09,628 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 2000000 rows
+2014-07-08 00:44:09,628 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 2000000 rows
+2014-07-08 00:44:09,629 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 2000000 rows
+2014-07-08 00:44:09,629 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 2000000 rows: used memory = 333607600
+2014-07-08 00:44:09,709 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:09,709 INFO org.apache.hadoop.mapred.MapTask: bufstart = 91550082; bufend = 138451183; bufvoid = 255013696
+2014-07-08 00:44:09,709 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503315; kvend = 335542; length = 838860
+2014-07-08 00:44:11,635 INFO org.apache.hadoop.mapred.MapTask: Finished spill 2
+2014-07-08 00:44:15,378 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:15,378 INFO org.apache.hadoop.mapred.MapTask: bufstart = 138451183; bufend = 185340948; bufvoid = 255013696
+2014-07-08 00:44:15,378 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335542; kvend = 167769; length = 838860
+2014-07-08 00:44:17,174 INFO org.apache.hadoop.mapred.MapTask: Finished spill 3
+2014-07-08 00:44:18,095 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 3000000 rows
+2014-07-08 00:44:18,095 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 3000000 rows
+2014-07-08 00:44:18,095 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 3000000 rows
+2014-07-08 00:44:18,095 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 3000000 rows
+2014-07-08 00:44:18,095 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 3000000 rows: used memory = 529738248
+2014-07-08 00:44:20,112 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:20,112 INFO org.apache.hadoop.mapred.MapTask: bufstart = 185340948; bufend = 232215771; bufvoid = 255013696
+2014-07-08 00:44:20,112 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167769; kvend = 838857; length = 838860
+2014-07-08 00:44:21,521 INFO org.apache.hadoop.mapred.MapTask: Finished spill 4
+2014-07-08 00:44:24,378 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 4000000 rows
+2014-07-08 00:44:24,378 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 4000000 rows
+2014-07-08 00:44:24,378 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 4000000 rows
+2014-07-08 00:44:24,378 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 4000000 rows
+2014-07-08 00:44:24,378 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 4000000 rows: used memory = 408825976
+2014-07-08 00:44:24,537 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:24,538 INFO org.apache.hadoop.mapred.MapTask: bufstart = 232215771; bufend = 24097748; bufvoid = 255013684
+2014-07-08 00:44:24,538 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838857; kvend = 671084; length = 838860
+2014-07-08 00:44:25,932 INFO org.apache.hadoop.mapred.MapTask: Finished spill 5
+2014-07-08 00:44:28,537 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:28,537 INFO org.apache.hadoop.mapred.MapTask: bufstart = 24097748; bufend = 70991772; bufvoid = 255013696
+2014-07-08 00:44:28,537 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671084; kvend = 503311; length = 838860
+2014-07-08 00:44:29,740 INFO org.apache.hadoop.mapred.MapTask: Finished spill 6
+2014-07-08 00:44:30,471 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 5000000 rows
+2014-07-08 00:44:30,471 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 5000000 rows
+2014-07-08 00:44:30,471 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 5000000 rows
+2014-07-08 00:44:30,471 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 5000000 rows
+2014-07-08 00:44:30,471 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 5000000 rows: used memory = 323723032
+2014-07-08 00:44:32,413 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:32,413 INFO org.apache.hadoop.mapred.MapTask: bufstart = 70991772; bufend = 116631846; bufvoid = 255013696
+2014-07-08 00:44:32,413 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503311; kvend = 335538; length = 838860
+2014-07-08 00:44:33,969 INFO org.apache.hadoop.mapred.MapTask: Finished spill 7
+2014-07-08 00:44:36,418 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 6000000 rows
+2014-07-08 00:44:36,418 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 6000000 rows
+2014-07-08 00:44:36,418 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 6000000 rows
+2014-07-08 00:44:36,418 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 6000000 rows
+2014-07-08 00:44:36,418 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 6000000 rows: used memory = 856760112
+2014-07-08 00:44:36,678 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:36,678 INFO org.apache.hadoop.mapred.MapTask: bufstart = 116631846; bufend = 162235678; bufvoid = 255013696
+2014-07-08 00:44:36,678 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335538; kvend = 167765; length = 838860
+2014-07-08 00:44:37,974 INFO org.apache.hadoop.mapred.MapTask: Finished spill 8
+2014-07-08 00:44:40,697 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:40,697 INFO org.apache.hadoop.mapred.MapTask: bufstart = 162235678; bufend = 207835040; bufvoid = 255013696
+2014-07-08 00:44:40,697 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167765; kvend = 838853; length = 838860
+2014-07-08 00:44:42,216 INFO org.apache.hadoop.mapred.MapTask: Finished spill 9
+2014-07-08 00:44:42,808 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 7000000 rows
+2014-07-08 00:44:42,808 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 7000000 rows
+2014-07-08 00:44:42,808 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 7000000 rows
+2014-07-08 00:44:42,808 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 7000000 rows
+2014-07-08 00:44:42,808 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 7000000 rows: used memory = 807073680
+2014-07-08 00:44:44,858 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:44,858 INFO org.apache.hadoop.mapred.MapTask: bufstart = 207835040; bufend = 253431243; bufvoid = 255013696
+2014-07-08 00:44:44,858 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838853; kvend = 671080; length = 838860
+2014-07-08 00:44:46,420 INFO org.apache.hadoop.mapred.MapTask: Finished spill 10
+2014-07-08 00:44:49,096 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 8000000 rows
+2014-07-08 00:44:49,097 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 8000000 rows
+2014-07-08 00:44:49,097 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 8000000 rows
+2014-07-08 00:44:49,097 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 8000000 rows
+2014-07-08 00:44:49,097 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 8000000 rows: used memory = 734202616
+2014-07-08 00:44:49,353 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:49,353 INFO org.apache.hadoop.mapred.MapTask: bufstart = 253431243; bufend = 44021424; bufvoid = 255013689
+2014-07-08 00:44:49,353 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671080; kvend = 503307; length = 838860
+2014-07-08 00:44:50,932 INFO org.apache.hadoop.mapred.MapTask: Finished spill 11
+2014-07-08 00:44:53,864 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:53,864 INFO org.apache.hadoop.mapred.MapTask: bufstart = 44021424; bufend = 89619529; bufvoid = 255013696
+2014-07-08 00:44:53,864 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503307; kvend = 335534; length = 838860
+2014-07-08 00:44:55,373 INFO org.apache.hadoop.mapred.MapTask: Finished spill 12
+2014-07-08 00:44:56,088 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 9000000 rows
+2014-07-08 00:44:56,088 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 9000000 rows
+2014-07-08 00:44:56,088 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 9000000 rows
+2014-07-08 00:44:56,088 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 9000000 rows
+2014-07-08 00:44:56,088 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 9000000 rows: used memory = 750477464
+2014-07-08 00:44:58,144 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:44:58,144 INFO org.apache.hadoop.mapred.MapTask: bufstart = 89619529; bufend = 135225814; bufvoid = 255013696
+2014-07-08 00:44:58,144 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335534; kvend = 167761; length = 838860
+2014-07-08 00:44:59,617 INFO org.apache.hadoop.mapred.MapTask: Finished spill 13
+2014-07-08 00:45:02,092 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 10000000 rows
+2014-07-08 00:45:02,093 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 10000000 rows
+2014-07-08 00:45:02,093 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 10000000 rows
+2014-07-08 00:45:02,093 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 10000000 rows
+2014-07-08 00:45:02,093 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 10000000 rows: used memory = 729943256
+2014-07-08 00:45:02,504 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:02,504 INFO org.apache.hadoop.mapred.MapTask: bufstart = 135225814; bufend = 180834004; bufvoid = 255013696
+2014-07-08 00:45:02,504 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167761; kvend = 838849; length = 838860
+2014-07-08 00:45:04,131 INFO org.apache.hadoop.mapred.MapTask: Finished spill 14
+2014-07-08 00:45:06,671 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:06,672 INFO org.apache.hadoop.mapred.MapTask: bufstart = 180834004; bufend = 226435681; bufvoid = 255013696
+2014-07-08 00:45:06,672 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838849; kvend = 671076; length = 838860
+2014-07-08 00:45:07,859 INFO org.apache.hadoop.mapred.MapTask: Finished spill 15
+2014-07-08 00:45:08,274 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 11000000 rows
+2014-07-08 00:45:08,275 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 11000000 rows
+2014-07-08 00:45:08,275 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 11000000 rows
+2014-07-08 00:45:08,275 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 11000000 rows
+2014-07-08 00:45:08,275 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 11000000 rows: used memory = 769319344
+2014-07-08 00:45:10,197 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:10,197 INFO org.apache.hadoop.mapred.MapTask: bufstart = 226435681; bufend = 17019182; bufvoid = 255013685
+2014-07-08 00:45:10,197 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671076; kvend = 503303; length = 838860
+2014-07-08 00:45:11,510 INFO org.apache.hadoop.mapred.MapTask: Finished spill 16
+2014-07-08 00:45:13,778 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 12000000 rows
+2014-07-08 00:45:13,778 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 12000000 rows
+2014-07-08 00:45:13,778 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 12000000 rows
+2014-07-08 00:45:13,778 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 12000000 rows
+2014-07-08 00:45:13,778 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 12000000 rows: used memory = 303209288
+2014-07-08 00:45:14,185 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:14,185 INFO org.apache.hadoop.mapred.MapTask: bufstart = 17019182; bufend = 62618887; bufvoid = 255013696
+2014-07-08 00:45:14,185 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503303; kvend = 335530; length = 838860
+2014-07-08 00:45:15,585 INFO org.apache.hadoop.mapred.MapTask: Finished spill 17
+2014-07-08 00:45:18,166 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:18,166 INFO org.apache.hadoop.mapred.MapTask: bufstart = 62618887; bufend = 108218115; bufvoid = 255013696
+2014-07-08 00:45:18,167 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335530; kvend = 167757; length = 838860
+2014-07-08 00:45:19,535 INFO org.apache.hadoop.mapred.MapTask: Finished spill 18
+2014-07-08 00:45:19,971 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 13000000 rows
+2014-07-08 00:45:19,971 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 13000000 rows
+2014-07-08 00:45:19,972 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 13000000 rows
+2014-07-08 00:45:19,972 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 13000000 rows
+2014-07-08 00:45:19,972 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 13000000 rows: used memory = 410101600
+2014-07-08 00:45:22,377 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:22,377 INFO org.apache.hadoop.mapred.MapTask: bufstart = 108218115; bufend = 153820319; bufvoid = 255013696
+2014-07-08 00:45:22,377 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167757; kvend = 838845; length = 838860
+2014-07-08 00:45:23,869 INFO org.apache.hadoop.mapred.MapTask: Finished spill 19
+2014-07-08 00:45:26,015 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 14000000 rows
+2014-07-08 00:45:26,015 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 14000000 rows
+2014-07-08 00:45:26,015 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 14000000 rows
+2014-07-08 00:45:26,015 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 14000000 rows
+2014-07-08 00:45:26,015 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 14000000 rows: used memory = 497849832
+2014-07-08 00:45:26,466 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:26,466 INFO org.apache.hadoop.mapred.MapTask: bufstart = 153820319; bufend = 199437073; bufvoid = 255013696
+2014-07-08 00:45:26,466 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838845; kvend = 671072; length = 838860
+2014-07-08 00:45:27,830 INFO org.apache.hadoop.mapred.MapTask: Finished spill 20
+2014-07-08 00:45:30,491 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:30,491 INFO org.apache.hadoop.mapred.MapTask: bufstart = 199437073; bufend = 245048805; bufvoid = 255013696
+2014-07-08 00:45:30,491 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671072; kvend = 503299; length = 838860
+2014-07-08 00:45:31,846 INFO org.apache.hadoop.mapred.MapTask: Finished spill 21
+2014-07-08 00:45:32,252 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 15000000 rows
+2014-07-08 00:45:32,252 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 15000000 rows
+2014-07-08 00:45:32,252 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 15000000 rows
+2014-07-08 00:45:32,252 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 15000000 rows
+2014-07-08 00:45:32,252 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 15000000 rows: used memory = 642603064
+2014-07-08 00:45:34,622 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:34,622 INFO org.apache.hadoop.mapred.MapTask: bufstart = 245048805; bufend = 36496118; bufvoid = 255013683
+2014-07-08 00:45:34,622 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503299; kvend = 335526; length = 838860
+2014-07-08 00:45:36,134 INFO org.apache.hadoop.mapred.MapTask: Finished spill 22
+2014-07-08 00:45:38,330 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 16000000 rows
+2014-07-08 00:45:38,330 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 16000000 rows
+2014-07-08 00:45:38,330 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 16000000 rows
+2014-07-08 00:45:38,330 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 16000000 rows
+2014-07-08 00:45:38,330 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 16000000 rows: used memory = 366925368
+2014-07-08 00:45:38,943 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:38,943 INFO org.apache.hadoop.mapred.MapTask: bufstart = 36496118; bufend = 83399518; bufvoid = 255013696
+2014-07-08 00:45:38,943 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335526; kvend = 167753; length = 838860
+2014-07-08 00:45:40,296 INFO org.apache.hadoop.mapred.MapTask: Finished spill 23
+2014-07-08 00:45:42,981 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:42,982 INFO org.apache.hadoop.mapred.MapTask: bufstart = 83399518; bufend = 130269990; bufvoid = 255013696
+2014-07-08 00:45:42,982 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167753; kvend = 838841; length = 838860
+2014-07-08 00:45:44,489 INFO org.apache.hadoop.mapred.MapTask: Finished spill 24
+2014-07-08 00:45:44,766 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 17000000 rows
+2014-07-08 00:45:44,766 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 17000000 rows
+2014-07-08 00:45:44,766 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 17000000 rows
+2014-07-08 00:45:44,766 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 17000000 rows
+2014-07-08 00:45:44,766 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 17000000 rows: used memory = 563508504
+2014-07-08 00:45:47,457 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:47,457 INFO org.apache.hadoop.mapred.MapTask: bufstart = 130269990; bufend = 177188788; bufvoid = 255013696
+2014-07-08 00:45:47,457 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838841; kvend = 671068; length = 838860
+2014-07-08 00:45:48,820 INFO org.apache.hadoop.mapred.MapTask: Finished spill 25
+2014-07-08 00:45:51,027 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 18000000 rows
+2014-07-08 00:45:51,028 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 18000000 rows
+2014-07-08 00:45:51,028 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 18000000 rows
+2014-07-08 00:45:51,028 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 18000000 rows
+2014-07-08 00:45:51,028 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 18000000 rows: used memory = 386912672
+2014-07-08 00:45:51,578 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:51,578 INFO org.apache.hadoop.mapred.MapTask: bufstart = 177188788; bufend = 224086858; bufvoid = 255013696
+2014-07-08 00:45:51,578 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671068; kvend = 503295; length = 838860
+2014-07-08 00:45:53,229 INFO org.apache.hadoop.mapred.MapTask: Finished spill 26
+2014-07-08 00:45:56,200 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:45:56,200 INFO org.apache.hadoop.mapred.MapTask: bufstart = 224086858; bufend = 15584258; bufvoid = 255013696
+2014-07-08 00:45:56,200 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503295; kvend = 335522; length = 838860
+2014-07-08 00:45:57,689 INFO org.apache.hadoop.mapred.MapTask: Finished spill 27
+2014-07-08 00:45:58,106 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 19000000 rows
+2014-07-08 00:45:58,106 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 19000000 rows
+2014-07-08 00:45:58,106 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 19000000 rows
+2014-07-08 00:45:58,106 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 19000000 rows
+2014-07-08 00:45:58,106 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 19000000 rows: used memory = 319555936
+2014-07-08 00:46:00,957 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:00,957 INFO org.apache.hadoop.mapred.MapTask: bufstart = 15584258; bufend = 61195006; bufvoid = 255013696
+2014-07-08 00:46:00,957 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335522; kvend = 167749; length = 838860
+2014-07-08 00:46:02,337 INFO org.apache.hadoop.mapred.MapTask: Finished spill 28
+2014-07-08 00:46:04,777 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 20000000 rows
+2014-07-08 00:46:04,778 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 20000000 rows
+2014-07-08 00:46:04,778 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 20000000 rows
+2014-07-08 00:46:04,778 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 20000000 rows
+2014-07-08 00:46:04,778 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 20000000 rows: used memory = 549460600
+2014-07-08 00:46:05,485 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:05,485 INFO org.apache.hadoop.mapred.MapTask: bufstart = 61195006; bufend = 106804639; bufvoid = 255013696
+2014-07-08 00:46:05,486 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167749; kvend = 838837; length = 838860
+2014-07-08 00:46:06,884 INFO org.apache.hadoop.mapred.MapTask: Finished spill 29
+2014-07-08 00:46:09,960 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:09,960 INFO org.apache.hadoop.mapred.MapTask: bufstart = 106804639; bufend = 152406879; bufvoid = 255013696
+2014-07-08 00:46:09,960 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838837; kvend = 671064; length = 838860
+2014-07-08 00:46:11,350 INFO org.apache.hadoop.mapred.MapTask: Finished spill 30
+2014-07-08 00:46:11,569 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 21000000 rows
+2014-07-08 00:46:11,569 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 21000000 rows
+2014-07-08 00:46:11,569 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 21000000 rows
+2014-07-08 00:46:11,569 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 21000000 rows
+2014-07-08 00:46:11,570 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 21000000 rows: used memory = 531804240
+2014-07-08 00:46:14,751 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:14,751 INFO org.apache.hadoop.mapred.MapTask: bufstart = 152406879; bufend = 198017595; bufvoid = 255013696
+2014-07-08 00:46:14,751 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671064; kvend = 503291; length = 838860
+2014-07-08 00:46:16,448 INFO org.apache.hadoop.mapred.MapTask: Finished spill 31
+2014-07-08 00:46:18,415 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 22000000 rows
+2014-07-08 00:46:18,415 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 22000000 rows
+2014-07-08 00:46:18,415 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 22000000 rows
+2014-07-08 00:46:18,415 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 22000000 rows
+2014-07-08 00:46:18,415 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 22000000 rows: used memory = 521538808
+2014-07-08 00:46:19,254 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:19,254 INFO org.apache.hadoop.mapred.MapTask: bufstart = 198017595; bufend = 243624179; bufvoid = 255013696
+2014-07-08 00:46:19,254 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503291; kvend = 335518; length = 838860
+2014-07-08 00:46:20,870 INFO org.apache.hadoop.mapred.MapTask: Finished spill 32
+2014-07-08 00:46:23,877 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:23,878 INFO org.apache.hadoop.mapred.MapTask: bufstart = 243624179; bufend = 34213729; bufvoid = 255013696
+2014-07-08 00:46:23,878 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335518; kvend = 167745; length = 838860
+2014-07-08 00:46:25,447 INFO org.apache.hadoop.mapred.MapTask: Finished spill 33
+2014-07-08 00:46:25,525 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 23000000 rows
+2014-07-08 00:46:25,525 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 23000000 rows
+2014-07-08 00:46:25,525 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 23000000 rows
+2014-07-08 00:46:25,525 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 23000000 rows
+2014-07-08 00:46:25,525 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 23000000 rows: used memory = 348708360
+2014-07-08 00:46:28,172 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:28,172 INFO org.apache.hadoop.mapred.MapTask: bufstart = 34213729; bufend = 79828016; bufvoid = 255013696
+2014-07-08 00:46:28,172 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167745; kvend = 838833; length = 838860
+2014-07-08 00:46:29,413 INFO org.apache.hadoop.mapred.MapTask: Finished spill 34
+2014-07-08 00:46:31,300 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 24000000 rows
+2014-07-08 00:46:31,300 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 24000000 rows
+2014-07-08 00:46:31,300 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 24000000 rows
+2014-07-08 00:46:31,300 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 24000000 rows
+2014-07-08 00:46:31,300 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 24000000 rows: used memory = 426714312
+2014-07-08 00:46:32,196 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:32,196 INFO org.apache.hadoop.mapred.MapTask: bufstart = 79828016; bufend = 125430132; bufvoid = 255013696
+2014-07-08 00:46:32,197 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838833; kvend = 671060; length = 838860
+2014-07-08 00:46:33,498 INFO org.apache.hadoop.mapred.MapTask: Finished spill 35
+2014-07-08 00:46:35,757 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:35,757 INFO org.apache.hadoop.mapred.MapTask: bufstart = 125430132; bufend = 171038389; bufvoid = 255013696
+2014-07-08 00:46:35,758 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671060; kvend = 503287; length = 838860
+2014-07-08 00:46:36,871 INFO org.apache.hadoop.mapred.MapTask: Finished spill 36
+2014-07-08 00:46:36,883 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 25000000 rows
+2014-07-08 00:46:36,883 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 25000000 rows
+2014-07-08 00:46:36,883 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 25000000 rows
+2014-07-08 00:46:36,883 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 25000000 rows
+2014-07-08 00:46:36,883 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 25000000 rows: used memory = 376197120
+2014-07-08 00:46:39,475 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:39,475 INFO org.apache.hadoop.mapred.MapTask: bufstart = 171038389; bufend = 216641698; bufvoid = 255013696
+2014-07-08 00:46:39,475 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503287; kvend = 335514; length = 838860
+2014-07-08 00:46:40,833 INFO org.apache.hadoop.mapred.MapTask: Finished spill 37
+2014-07-08 00:46:42,774 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 26000000 rows
+2014-07-08 00:46:42,774 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 26000000 rows
+2014-07-08 00:46:42,774 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 26000000 rows
+2014-07-08 00:46:42,774 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 26000000 rows
+2014-07-08 00:46:42,774 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 26000000 rows: used memory = 346056288
+2014-07-08 00:46:43,704 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:43,704 INFO org.apache.hadoop.mapred.MapTask: bufstart = 216641698; bufend = 7232811; bufvoid = 255013696
+2014-07-08 00:46:43,705 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335514; kvend = 167741; length = 838860
+2014-07-08 00:46:44,985 INFO org.apache.hadoop.mapred.MapTask: Finished spill 38
+2014-07-08 00:46:47,716 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:47,716 INFO org.apache.hadoop.mapred.MapTask: bufstart = 7232811; bufend = 52841189; bufvoid = 255013696
+2014-07-08 00:46:47,716 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167741; kvend = 838829; length = 838860
+2014-07-08 00:46:48,657 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 27000000 rows
+2014-07-08 00:46:48,658 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 27000000 rows
+2014-07-08 00:46:48,658 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 27000000 rows
+2014-07-08 00:46:48,658 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 27000000 rows
+2014-07-08 00:46:48,658 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 27000000 rows: used memory = 398226072
+2014-07-08 00:46:48,892 INFO org.apache.hadoop.mapred.MapTask: Finished spill 39
+2014-07-08 00:46:51,092 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:51,092 INFO org.apache.hadoop.mapred.MapTask: bufstart = 52841189; bufend = 98450768; bufvoid = 255013696
+2014-07-08 00:46:51,092 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838829; kvend = 671056; length = 838860
+2014-07-08 00:46:52,298 INFO org.apache.hadoop.mapred.MapTask: Finished spill 40
+2014-07-08 00:46:53,692 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 28000000 rows
+2014-07-08 00:46:53,692 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 28000000 rows
+2014-07-08 00:46:53,692 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 28000000 rows
+2014-07-08 00:46:53,692 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 28000000 rows
+2014-07-08 00:46:53,692 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 28000000 rows: used memory = 329870112
+2014-07-08 00:46:54,509 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:54,509 INFO org.apache.hadoop.mapred.MapTask: bufstart = 98450768; bufend = 144064220; bufvoid = 255013696
+2014-07-08 00:46:54,509 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671056; kvend = 503283; length = 838860
+2014-07-08 00:46:55,688 INFO org.apache.hadoop.mapred.MapTask: Finished spill 41
+2014-07-08 00:46:57,843 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:46:57,843 INFO org.apache.hadoop.mapred.MapTask: bufstart = 144064220; bufend = 189674211; bufvoid = 255013696
+2014-07-08 00:46:57,843 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503283; kvend = 335510; length = 838860
+2014-07-08 00:46:58,541 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 29000000 rows
+2014-07-08 00:46:58,541 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 29000000 rows
+2014-07-08 00:46:58,541 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 29000000 rows
+2014-07-08 00:46:58,541 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 29000000 rows
+2014-07-08 00:46:58,541 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 29000000 rows: used memory = 445596560
+2014-07-08 00:46:59,137 INFO org.apache.hadoop.mapred.MapTask: Finished spill 42
+2014-07-08 00:47:03,019 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:03,019 INFO org.apache.hadoop.mapred.MapTask: bufstart = 189674211; bufend = 236500316; bufvoid = 255013696
+2014-07-08 00:47:03,019 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335510; kvend = 167737; length = 838860
+2014-07-08 00:47:04,441 INFO org.apache.hadoop.mapred.MapTask: Finished spill 43
+2014-07-08 00:47:06,353 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 30000000 rows
+2014-07-08 00:47:06,353 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 30000000 rows
+2014-07-08 00:47:06,353 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 30000000 rows
+2014-07-08 00:47:06,353 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 30000000 rows
+2014-07-08 00:47:06,353 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 30000000 rows: used memory = 582110192
+2014-07-08 00:47:07,393 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:07,393 INFO org.apache.hadoop.mapred.MapTask: bufstart = 236500316; bufend = 28385971; bufvoid = 255013696
+2014-07-08 00:47:07,393 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167737; kvend = 838825; length = 838860
+2014-07-08 00:47:08,895 INFO org.apache.hadoop.mapred.MapTask: Finished spill 44
+2014-07-08 00:47:11,084 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:11,085 INFO org.apache.hadoop.mapred.MapTask: bufstart = 28385971; bufend = 75256948; bufvoid = 255013696
+2014-07-08 00:47:11,085 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838825; kvend = 671052; length = 838860
+2014-07-08 00:47:11,655 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 31000000 rows
+2014-07-08 00:47:11,655 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 31000000 rows
+2014-07-08 00:47:11,655 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 31000000 rows
+2014-07-08 00:47:11,655 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 31000000 rows
+2014-07-08 00:47:11,655 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 31000000 rows: used memory = 677853336
+2014-07-08 00:47:12,311 INFO org.apache.hadoop.mapred.MapTask: Finished spill 45
+2014-07-08 00:47:15,638 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:15,638 INFO org.apache.hadoop.mapred.MapTask: bufstart = 75256948; bufend = 122150636; bufvoid = 255013696
+2014-07-08 00:47:15,638 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671052; kvend = 503279; length = 838860
+2014-07-08 00:47:17,685 INFO org.apache.hadoop.mapred.MapTask: Finished spill 46
+2014-07-08 00:47:20,020 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 32000000 rows
+2014-07-08 00:47:20,020 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 32000000 rows
+2014-07-08 00:47:20,020 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 32000000 rows
+2014-07-08 00:47:20,020 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 32000000 rows
+2014-07-08 00:47:20,020 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 32000000 rows: used memory = 464127600
+2014-07-08 00:47:21,601 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:21,601 INFO org.apache.hadoop.mapred.MapTask: bufstart = 122150636; bufend = 169058068; bufvoid = 255013696
+2014-07-08 00:47:21,601 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503279; kvend = 335506; length = 838860
+2014-07-08 00:47:23,238 INFO org.apache.hadoop.mapred.MapTask: Finished spill 47
+2014-07-08 00:47:26,997 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:26,997 INFO org.apache.hadoop.mapred.MapTask: bufstart = 169058068; bufend = 215242830; bufvoid = 255013696
+2014-07-08 00:47:26,998 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335506; kvend = 167733; length = 838860
+2014-07-08 00:47:27,903 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 33000000 rows
+2014-07-08 00:47:27,904 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 33000000 rows
+2014-07-08 00:47:27,904 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 33000000 rows
+2014-07-08 00:47:27,904 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 33000000 rows
+2014-07-08 00:47:27,904 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 33000000 rows: used memory = 296327024
+2014-07-08 00:47:28,543 INFO org.apache.hadoop.mapred.MapTask: Finished spill 48
+2014-07-08 00:47:31,416 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:31,416 INFO org.apache.hadoop.mapred.MapTask: bufstart = 215242830; bufend = 5850760; bufvoid = 255013696
+2014-07-08 00:47:31,416 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167733; kvend = 838821; length = 838860
+2014-07-08 00:47:32,731 INFO org.apache.hadoop.mapred.MapTask: Finished spill 49
+2014-07-08 00:47:34,519 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 34000000 rows
+2014-07-08 00:47:34,519 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 34000000 rows
+2014-07-08 00:47:34,519 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 34000000 rows
+2014-07-08 00:47:34,519 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 34000000 rows
+2014-07-08 00:47:34,519 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 34000000 rows: used memory = 510050616
+2014-07-08 00:47:35,963 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:35,963 INFO org.apache.hadoop.mapred.MapTask: bufstart = 5850760; bufend = 51468850; bufvoid = 255013696
+2014-07-08 00:47:35,963 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838821; kvend = 671048; length = 838860
+2014-07-08 00:47:37,196 INFO org.apache.hadoop.mapred.MapTask: Finished spill 50
+2014-07-08 00:47:40,274 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:40,274 INFO org.apache.hadoop.mapred.MapTask: bufstart = 51468850; bufend = 97085514; bufvoid = 255013696
+2014-07-08 00:47:40,274 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671048; kvend = 503275; length = 838860
+2014-07-08 00:47:40,823 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 35000000 rows
+2014-07-08 00:47:40,823 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 35000000 rows
+2014-07-08 00:47:40,823 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 35000000 rows
+2014-07-08 00:47:40,823 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 35000000 rows
+2014-07-08 00:47:40,823 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 35000000 rows: used memory = 391422648
+2014-07-08 00:47:41,580 INFO org.apache.hadoop.mapred.MapTask: Finished spill 51
+2014-07-08 00:47:44,609 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:44,609 INFO org.apache.hadoop.mapred.MapTask: bufstart = 97085514; bufend = 142694947; bufvoid = 255013696
+2014-07-08 00:47:44,609 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503275; kvend = 335502; length = 838860
+2014-07-08 00:47:45,884 INFO org.apache.hadoop.mapred.MapTask: Finished spill 52
+2014-07-08 00:47:47,208 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 36000000 rows
+2014-07-08 00:47:47,209 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 36000000 rows
+2014-07-08 00:47:47,209 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 36000000 rows
+2014-07-08 00:47:47,209 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 36000000 rows
+2014-07-08 00:47:47,209 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 36000000 rows: used memory = 351736368
+2014-07-08 00:47:48,357 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:48,357 INFO org.apache.hadoop.mapred.MapTask: bufstart = 142694947; bufend = 188299655; bufvoid = 255013696
+2014-07-08 00:47:48,357 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335502; kvend = 167729; length = 838860
+2014-07-08 00:47:49,684 INFO org.apache.hadoop.mapred.MapTask: Finished spill 53
+2014-07-08 00:47:52,424 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:52,424 INFO org.apache.hadoop.mapred.MapTask: bufstart = 188299655; bufend = 233913749; bufvoid = 255013696
+2014-07-08 00:47:52,424 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167729; kvend = 838817; length = 838860
+2014-07-08 00:47:52,883 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 37000000 rows
+2014-07-08 00:47:52,883 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 37000000 rows
+2014-07-08 00:47:52,883 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 37000000 rows
+2014-07-08 00:47:52,883 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 37000000 rows
+2014-07-08 00:47:52,883 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 37000000 rows: used memory = 333296024
+2014-07-08 00:47:53,710 INFO org.apache.hadoop.mapred.MapTask: Finished spill 54
+2014-07-08 00:47:56,199 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:47:56,200 INFO org.apache.hadoop.mapred.MapTask: bufstart = 233913749; bufend = 24511617; bufvoid = 255013696
+2014-07-08 00:47:56,200 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838817; kvend = 671044; length = 838860
+2014-07-08 00:47:57,682 INFO org.apache.hadoop.mapred.MapTask: Finished spill 55
+2014-07-08 00:47:59,237 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 38000000 rows
+2014-07-08 00:47:59,238 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 38000000 rows
+2014-07-08 00:47:59,238 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 38000000 rows
+2014-07-08 00:47:59,238 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 38000000 rows
+2014-07-08 00:47:59,238 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 38000000 rows: used memory = 379093120
+2014-07-08 00:48:00,759 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:00,759 INFO org.apache.hadoop.mapred.MapTask: bufstart = 24511617; bufend = 70118885; bufvoid = 255013696
+2014-07-08 00:48:00,759 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671044; kvend = 503271; length = 838860
+2014-07-08 00:48:02,230 INFO org.apache.hadoop.mapred.MapTask: Finished spill 56
+2014-07-08 00:48:05,035 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:05,035 INFO org.apache.hadoop.mapred.MapTask: bufstart = 70118885; bufend = 115729727; bufvoid = 255013696
+2014-07-08 00:48:05,035 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503271; kvend = 335498; length = 838860
+2014-07-08 00:48:05,470 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 39000000 rows
+2014-07-08 00:48:05,470 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 39000000 rows
+2014-07-08 00:48:05,470 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 39000000 rows
+2014-07-08 00:48:05,470 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 39000000 rows
+2014-07-08 00:48:05,470 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 39000000 rows: used memory = 429078152
+2014-07-08 00:48:06,348 INFO org.apache.hadoop.mapred.MapTask: Finished spill 57
+2014-07-08 00:48:09,151 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:09,151 INFO org.apache.hadoop.mapred.MapTask: bufstart = 115729727; bufend = 161344830; bufvoid = 255013696
+2014-07-08 00:48:09,152 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335498; kvend = 167725; length = 838860
+2014-07-08 00:48:10,584 INFO org.apache.hadoop.mapred.MapTask: Finished spill 58
+2014-07-08 00:48:12,071 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 40000000 rows
+2014-07-08 00:48:12,071 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 40000000 rows
+2014-07-08 00:48:12,071 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 40000000 rows
+2014-07-08 00:48:12,071 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 40000000 rows
+2014-07-08 00:48:12,071 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 40000000 rows: used memory = 336546824
+2014-07-08 00:48:13,513 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:13,513 INFO org.apache.hadoop.mapred.MapTask: bufstart = 161344830; bufend = 206960156; bufvoid = 255013696
+2014-07-08 00:48:13,513 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167725; kvend = 838813; length = 838860
+2014-07-08 00:48:15,039 INFO org.apache.hadoop.mapred.MapTask: Finished spill 59
+2014-07-08 00:48:17,804 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:17,804 INFO org.apache.hadoop.mapred.MapTask: bufstart = 206960156; bufend = 252571379; bufvoid = 255013696
+2014-07-08 00:48:17,804 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838813; kvend = 671040; length = 838860
+2014-07-08 00:48:18,222 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 41000000 rows
+2014-07-08 00:48:18,223 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 41000000 rows
+2014-07-08 00:48:18,223 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 41000000 rows
+2014-07-08 00:48:18,223 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 41000000 rows
+2014-07-08 00:48:18,223 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 41000000 rows: used memory = 462985456
+2014-07-08 00:48:19,532 INFO org.apache.hadoop.mapred.MapTask: Finished spill 60
+2014-07-08 00:48:22,167 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:22,167 INFO org.apache.hadoop.mapred.MapTask: bufstart = 252571379; bufend = 43169347; bufvoid = 255013673
+2014-07-08 00:48:22,167 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671040; kvend = 503267; length = 838860
+2014-07-08 00:48:23,463 INFO org.apache.hadoop.mapred.MapTask: Finished spill 61
+2014-07-08 00:48:24,600 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 42000000 rows
+2014-07-08 00:48:24,600 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 42000000 rows
+2014-07-08 00:48:24,600 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 42000000 rows
+2014-07-08 00:48:24,600 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 42000000 rows
+2014-07-08 00:48:24,600 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 42000000 rows: used memory = 297925616
+2014-07-08 00:48:25,831 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:25,832 INFO org.apache.hadoop.mapred.MapTask: bufstart = 43169347; bufend = 88773658; bufvoid = 255013696
+2014-07-08 00:48:25,832 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503267; kvend = 335494; length = 838860
+2014-07-08 00:48:27,055 INFO org.apache.hadoop.mapred.MapTask: Finished spill 62
+2014-07-08 00:48:29,636 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:29,636 INFO org.apache.hadoop.mapred.MapTask: bufstart = 88773658; bufend = 134876073; bufvoid = 255013696
+2014-07-08 00:48:29,636 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335494; kvend = 167721; length = 838860
+2014-07-08 00:48:29,941 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 43000000 rows
+2014-07-08 00:48:29,941 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 43000000 rows
+2014-07-08 00:48:29,942 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 43000000 rows
+2014-07-08 00:48:29,942 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 43000000 rows
+2014-07-08 00:48:29,942 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 43000000 rows: used memory = 336069520
+2014-07-08 00:48:30,962 INFO org.apache.hadoop.mapred.MapTask: Finished spill 63
+2014-07-08 00:48:33,592 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:33,592 INFO org.apache.hadoop.mapred.MapTask: bufstart = 134876073; bufend = 181764375; bufvoid = 255013696
+2014-07-08 00:48:33,592 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167721; kvend = 838809; length = 838860
+2014-07-08 00:48:34,731 INFO org.apache.hadoop.mapred.MapTask: Finished spill 64
+2014-07-08 00:48:35,747 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 44000000 rows
+2014-07-08 00:48:35,747 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 44000000 rows
+2014-07-08 00:48:35,747 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 44000000 rows
+2014-07-08 00:48:35,747 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 44000000 rows
+2014-07-08 00:48:35,747 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 44000000 rows: used memory = 319436008
+2014-07-08 00:48:37,393 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:37,393 INFO org.apache.hadoop.mapred.MapTask: bufstart = 181764375; bufend = 228647744; bufvoid = 255013696
+2014-07-08 00:48:37,393 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838809; kvend = 671036; length = 838860
+2014-07-08 00:48:38,872 INFO org.apache.hadoop.mapred.MapTask: Finished spill 65
+2014-07-08 00:48:41,252 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:41,252 INFO org.apache.hadoop.mapred.MapTask: bufstart = 228647744; bufend = 20525955; bufvoid = 255013696
+2014-07-08 00:48:41,252 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671036; kvend = 503263; length = 838860
+2014-07-08 00:48:41,485 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 45000000 rows
+2014-07-08 00:48:41,485 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 45000000 rows
+2014-07-08 00:48:41,485 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 45000000 rows
+2014-07-08 00:48:41,485 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 45000000 rows
+2014-07-08 00:48:41,485 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 45000000 rows: used memory = 588771056
+2014-07-08 00:48:42,695 INFO org.apache.hadoop.mapred.MapTask: Finished spill 66
+2014-07-08 00:48:45,864 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:45,864 INFO org.apache.hadoop.mapred.MapTask: bufstart = 20525955; bufend = 67416743; bufvoid = 255013696
+2014-07-08 00:48:45,864 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503263; kvend = 335490; length = 838860
+2014-07-08 00:48:47,283 INFO org.apache.hadoop.mapred.MapTask: Finished spill 67
+2014-07-08 00:48:48,367 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 46000000 rows
+2014-07-08 00:48:48,367 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 46000000 rows
+2014-07-08 00:48:48,367 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 46000000 rows
+2014-07-08 00:48:48,367 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 46000000 rows
+2014-07-08 00:48:48,367 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 46000000 rows: used memory = 312677024
+2014-07-08 00:48:49,862 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:49,862 INFO org.apache.hadoop.mapred.MapTask: bufstart = 67416743; bufend = 114274442; bufvoid = 255013696
+2014-07-08 00:48:49,862 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335490; kvend = 167717; length = 838860
+2014-07-08 00:48:51,442 INFO org.apache.hadoop.mapred.MapTask: Finished spill 68
+2014-07-08 00:48:54,182 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:54,183 INFO org.apache.hadoop.mapred.MapTask: bufstart = 114274442; bufend = 159883401; bufvoid = 255013696
+2014-07-08 00:48:54,183 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167717; kvend = 838805; length = 838860
+2014-07-08 00:48:54,352 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 47000000 rows
+2014-07-08 00:48:54,352 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 47000000 rows
+2014-07-08 00:48:54,353 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 47000000 rows
+2014-07-08 00:48:54,353 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 47000000 rows
+2014-07-08 00:48:54,353 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 47000000 rows: used memory = 451510320
+2014-07-08 00:48:55,690 INFO org.apache.hadoop.mapred.MapTask: Finished spill 69
+2014-07-08 00:48:58,045 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:48:58,045 INFO org.apache.hadoop.mapred.MapTask: bufstart = 159883401; bufend = 205506266; bufvoid = 255013696
+2014-07-08 00:48:58,045 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838805; kvend = 671032; length = 838860
+2014-07-08 00:48:59,636 INFO org.apache.hadoop.mapred.MapTask: Finished spill 70
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 48000000 rows
+2014-07-08 00:49:00,699 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 48000000 rows: used memory = 639716080
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: bufstart = 205506266; bufend = 251124911; bufvoid = 255013696
+2014-07-08 00:49:02,104 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671032; kvend = 503259; length = 838860
+2014-07-08 00:49:03,544 INFO org.apache.hadoop.mapred.MapTask: Finished spill 71
+2014-07-08 00:49:06,538 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:06,539 INFO org.apache.hadoop.mapred.MapTask: bufstart = 251124911; bufend = 41737414; bufvoid = 255013689
+2014-07-08 00:49:06,539 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503259; kvend = 335486; length = 838860
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 49000000 rows
+2014-07-08 00:49:06,587 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 49000000 rows: used memory = 456977728
+2014-07-08 00:49:07,868 INFO org.apache.hadoop.mapred.MapTask: Finished spill 72
+2014-07-08 00:49:10,627 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:10,628 INFO org.apache.hadoop.mapred.MapTask: bufstart = 41737414; bufend = 87352586; bufvoid = 255013696
+2014-07-08 00:49:10,628 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335486; kvend = 167713; length = 838860
+2014-07-08 00:49:12,015 INFO org.apache.hadoop.mapred.MapTask: Finished spill 73
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 50000000 rows
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 50000000 rows
+2014-07-08 00:49:12,844 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 50000000 rows
+2014-07-08 00:49:12,845 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 50000000 rows
+2014-07-08 00:49:12,845 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 50000000 rows: used memory = 370440104
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: bufstart = 87352586; bufend = 132971851; bufvoid = 255013696
+2014-07-08 00:49:14,233 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167713; kvend = 838801; length = 838860
+2014-07-08 00:49:15,364 INFO org.apache.hadoop.mapred.MapTask: Finished spill 74
+2014-07-08 00:49:17,561 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 51000000 rows
+2014-07-08 00:49:17,561 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 51000000 rows
+2014-07-08 00:49:17,562 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 51000000 rows: used memory = 575711360
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: bufstart = 132971851; bufend = 178597029; bufvoid = 255013696
+2014-07-08 00:49:17,574 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838801; kvend = 671028; length = 838860
+2014-07-08 00:49:18,838 INFO org.apache.hadoop.mapred.MapTask: Finished spill 75
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: bufstart = 178597029; bufend = 224212444; bufvoid = 255013696
+2014-07-08 00:49:21,132 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671028; kvend = 503255; length = 838860
+2014-07-08 00:49:22,329 INFO org.apache.hadoop.mapred.MapTask: Finished spill 76
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 52000000 rows
+2014-07-08 00:49:23,365 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 52000000 rows: used memory = 553778928
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: bufstart = 224212444; bufend = 14803677; bufvoid = 255013696
+2014-07-08 00:49:25,399 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503255; kvend = 335482; length = 838860
+2014-07-08 00:49:26,837 INFO org.apache.hadoop.mapred.MapTask: Finished spill 77
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 53000000 rows
+2014-07-08 00:49:29,495 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 53000000 rows: used memory = 282586784
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: bufstart = 14803677; bufend = 60419800; bufvoid = 255013696
+2014-07-08 00:49:29,570 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335482; kvend = 167709; length = 838860
+2014-07-08 00:49:30,832 INFO org.apache.hadoop.mapred.MapTask: Finished spill 78
+2014-07-08 00:49:33,617 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:33,618 INFO org.apache.hadoop.mapred.MapTask: bufstart = 60419800; bufend = 106026217; bufvoid = 255013696
+2014-07-08 00:49:33,618 INFO org.apache.hadoop.mapred.MapTask: kvstart = 167709; kvend = 838797; length = 838860
+2014-07-08 00:49:34,844 INFO org.apache.hadoop.mapred.MapTask: Finished spill 79
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 54000000 rows
+2014-07-08 00:49:35,563 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 54000000 rows: used memory = 366831904
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: bufstart = 106026217; bufend = 151623912; bufvoid = 255013696
+2014-07-08 00:49:37,431 INFO org.apache.hadoop.mapred.MapTask: kvstart = 838797; kvend = 671024; length = 838860
+2014-07-08 00:49:38,991 INFO org.apache.hadoop.mapred.MapTask: Finished spill 80
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 55000000 rows
+2014-07-08 00:49:41,406 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 55000000 rows: used memory = 445477416
+2014-07-08 00:49:41,540 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:41,541 INFO org.apache.hadoop.mapred.MapTask: bufstart = 151623912; bufend = 197233796; bufvoid = 255013696
+2014-07-08 00:49:41,541 INFO org.apache.hadoop.mapred.MapTask: kvstart = 671024; kvend = 503251; length = 838860
+2014-07-08 00:49:43,078 INFO org.apache.hadoop.mapred.MapTask: Finished spill 81
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: bufstart = 197233796; bufend = 242837415; bufvoid = 255013696
+2014-07-08 00:49:45,972 INFO org.apache.hadoop.mapred.MapTask: kvstart = 503251; kvend = 335478; length = 838860
+2014-07-08 00:49:47,621 INFO org.apache.hadoop.mapred.MapTask: Finished spill 82
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 56000000 rows
+2014-07-08 00:49:48,379 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 56000000 rows
+2014-07-08 00:49:48,380 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 56000000 rows: used memory = 392299400
+2014-07-08 00:49:50,384 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true
+2014-07-08 00:49:50,385 INFO org.apache.hadoop.mapred.MapTask: bufstart = 242837415; bufend = 33424959; bufvoid = 255013688
+2014-07-08 00:49:50,385 INFO org.apache.hadoop.mapred.MapTask: kvstart = 335478; kvend = 167705; length = 838860
+2014-07-08 00:49:51,969 INFO org.apache.hadoop.mapred.MapTask: Finished spill 83
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 6 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.TableScanOperator: 0 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.FilterOperator: 1 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.ReduceSinkOperator: 2 forwarding 57000000 rows
+2014-07-08 00:49:54,578 INFO org.apache.hadoop.hive.ql.exec.mr.ExecMapper: ExecMapper: processing 57000000 rows: used memory = 359542928
+2014-07-08 00:49:54,615 INFO org.apache.hadoop.hive.ql.exec.MapOperator: 

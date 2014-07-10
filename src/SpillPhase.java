@@ -1,7 +1,11 @@
 
 import java.util.List;
+/**
+ * Class representation of Spill Phase
+ * @author Steve Siyang Wang
+ */
 
-
+//TODO: enable setLog functionality
 
 public class SpillPhase extends AbstractPhase{
 	
@@ -18,10 +22,12 @@ public class SpillPhase extends AbstractPhase{
 	
 	/**
 	 * TODO: SpillPhase, consider changing all the fields to final to restrict later modification 
+	 * @param string 
 	 */
 	
-	public SpillPhase(){
+	public SpillPhase(String string){
 		super();
+		name = string;
 	}
 	
 	public SpillPhase(int spillLength, int spillRecord, Long spillTime, String name){
@@ -32,8 +38,10 @@ public class SpillPhase extends AbstractPhase{
 		this.name = name;
 	}
 	
-	public void update(String log){
-		
+	public void update(Integer length, Integer rec, Long time){
+		spillLength = length;
+		spillRecord = rec;
+		spillTime = time;
 	}
 	
 	@Override 

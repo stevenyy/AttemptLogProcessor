@@ -30,21 +30,30 @@ public class PhasesResult {
 	}
 
 	public void registerPhase(String name, AbstractPhase phase){
-		try{
+		try{ // Uses switch case with string for better performance 
 			switch (name){
-			// Uses it's name to cast back to original type
-			//		case "ReadPhase" : readPhase = (ReadPhase) phase;
-			//		case "MapPhase" : mapPhase = (MapPhase) phase;
-			//		case "CollectPhase" : collectPhase = (CollectPhase) phase;
+			case "SpillPhase" : 
+				spillPhase = (SpillPhase) phase;
+				break;
+			case "MapMergePhase" : 
+				mMergePhase = (MapMergePhase) phase;
+				break;
+			case "ShufflePhase" : 
+				shufflePhase = (ShufflePhase) phase;
+				break;
+			case "ReduceMergePhase" : 
+				rMergePhase = (ReduceMergePhase) phase;
+				break;
+			case "ReducePhase" : 
+				reducePhase = (ReducePhase) phase;
+				break;
+			case "WritePhase" : 
+				writePhase = (WritePhase) phase;
+				break;
 
-			case "SpillPhase" : spillPhase = (SpillPhase) phase;
-			case "MapMergePhase" : mMergePhase = (MapMergePhase) phase;
-			case "ShufflePhase" : shufflePhase = (ShufflePhase) phase;
-			case "ReduceMergePhase" : rMergePhase = (ReduceMergePhase) phase;
-			case "ReducePhase" : reducePhase = (ReducePhase) phase;
-			case "WritePhase" : writePhase = (WritePhase) phase;
-
-			case "InfoPhase" : infoPhase = (InfoPhase) phase;
+			case "InfoPhase" : 
+				infoPhase = (InfoPhase) phase;
+				break;
 			}
 		}
 		catch (Throwable T){

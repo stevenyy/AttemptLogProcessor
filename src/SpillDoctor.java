@@ -42,7 +42,9 @@ public class SpillDoctor implements SignalDoctor{
 	@Override
 	public void check(String line, int lineNum) {
 		this.lineNum = lineNum;
-		check(ParseUtils.extractInfo(line));
+		if (!skipLine(line, lineNum)){
+			check(ParseUtils.extractInfo(line));	
+		}
 	}
 
 	@Override
@@ -52,7 +54,7 @@ public class SpillDoctor implements SignalDoctor{
 
 	@Override
 	public void check(Map<String, String> map){
-		if (!skipLine(line, lineNum)){
+		// Passing in lines that should not be skipped
 			Boolean flag = false;
 			String length = "length"; // target String
 			String spill = "Finished spill"; // target string
@@ -71,18 +73,27 @@ public class SpillDoctor implements SignalDoctor{
 				recordList.add(spillRecord);
 				timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
 				flag = true;
-			}
 		}
 	}
 
 	@Override
 	public SpillPhase createPhase() {
-		calculateTime();
-		//		System.out.println("debugging createPhase and spill time is " + spillTime);
-		SpillPhase sp = new SpillPhase(Collections.max(lengthList),
-				Collections.max(recordList),
-				spillTime,
-				"SpillPhase");
+		System.out.println("createPhase in SpillDoctor called");
+		SpillPhase sp = new SpillPhase("SpillPhase");
+		try{
+			calculateTime();
+			//		System.out.println("debugging createPhase and spill time is " + spillTime);
+			sp.update(
+					Collections.max(lengthList),
+					Collections.max(recordList),
+					spillTime);
+			return sp;
+		} catch (Throwable T){
+			System.err.println("SpillDoctor.createPhase failed, with possible reason "
+					+ "that log parsing incomplete");
+			T.printStackTrace();
+		}
+		System.out.println("SpillPhase created with incomplete fields");
 		return sp;
 	}
 

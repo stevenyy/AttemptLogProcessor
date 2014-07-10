@@ -13,6 +13,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.http.HtmlQuoting;
 
+import com.sun.javafx.scene.EnteredExitedHandler;
+
 
 
 /**
@@ -22,54 +24,20 @@ import org.apache.hadoop.http.HtmlQuoting;
  * Created on 6/30/14.
  */
 
-public class LogParser implements LogAnnotator {
+public class MRAttemptLogProcessor implements LogAnnotator {
 
 	private String logSoFar; // The last log it read
-	// private List<Check> checkList; // List of Doctor
+	
 	private Map<String, String> lineStructureMap; // Structure of each line in log, updated per extractInfo call
-	private Map<String, String> compDecompMap; // Map of Compressor and De-compressor related message
-	private Map<String, String> ignoreMap; // Map of ignoring obsolete input
-
 	private Map<Integer, String> exceptionMap; // Map of exceptions occurred
-	private Map<Integer, String> warnMap; // Map of WARN related message
-	private Map<Integer, String> errorMap; // Map of ERROR related message
-
 	private List<HashMap<String, String>> memoryList; // Map of memory-usage
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private String compressionFormat;
-	private int lineCounter; // Count the line number of the log
+	private int lineNum; // Count the line number of the log
 	private Map<String, AbstractPhase> phaseMap; // List of phases created
 	private PhasesResult phasesResult; // Class that stores all the phases as field/instance, 
-	// as well as other general information 
 
-	private Pattern skipRegex = null;
-	private Pattern exceptionRegex = null;
-	private Pattern exceptionLocationRegex = null;
-	private Pattern shufflePhaseRegex= null;
-	private Pattern treeRegexPhaseRegex = null;
-	private Pattern reduceMergePhaseRegex = null;
-	private Pattern reducePhaseRegex = null;
-	private Pattern writePhaseRegex = null;
-
-	// CONSTANTS: to be put into ParseUtils
-	public static final String WARN = "WARN";
-	public static final String INFO = "INFO";
-	public static final String ERROR = "ERROR";
-	public static final String CODEC_POOL = "CodecPool";
-	public static final String IGNORING = "ignoring";
-	public static final String LIBRARY = "library";
-
-	public static final String DATE = "Date";
-	public static final String TIME = "Time";
-	public static final String MESSAGE_TYPE = "MessageType";
-	public static final String LOCATION = "Location";
-	public static final String MESSAGE = "Message";
-	public static final String ENTER_RETURN = System.getProperty("line.separator");
-	private static final String SPACE = "\\s+";
-
-
-	private static final long MAX_INTERVAL = 60000; // the interval between log time in millisecond, default 1 minute
-	private static final long LOG_WINDOW_SIZE = 10000; 
+	
 	// See: http://eventuallyconsistent.net/2011/08/02/working-with-urlconnection-and-timeouts/
 	private static final int TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS = 5000; // 5 seconds
 	private static final int TASKLOG_FETCH_READ_TIMEOUT_MILLIS = 10000; // 10 seconds
@@ -91,14 +59,10 @@ public class LogParser implements LogAnnotator {
 	 * @return boolean that indicate whether succeeded or not
 	 */
 
-	public LogParser(){
+	public MRAttemptLogProcessor(){
 		logSoFar = null;
 		lineStructureMap = new HashMap<String, String>(); 
 		exceptionMap = new HashMap<Integer, String>();
-		warnMap = new HashMap<Integer, String>();
-		errorMap = new HashMap<Integer, String>();
-		compDecompMap = new HashMap<String, String>();
-		ignoreMap = new HashMap<String, String>();
 		memoryList = new ArrayList<HashMap<String, String>>();
 		timeSpanList = new ArrayList<String[]>();
 		phaseMap= new HashMap<String, AbstractPhase>();
@@ -120,55 +84,44 @@ public class LogParser implements LogAnnotator {
 	}
 
 	//	public String readAndProcessLog(MRTaskAttemptInfo attemptInfo, String attemptID){
-	public String readAndProcessLog(String filePath){
+	public PhasesResult readAndProcessLog(String filePath){
 		//		Map<String, String> lineStructureMap = new HashMap<String, String>();
 		// Read and parse from the local file directory with small file size
 		InputStream in;
 		StringBuilder out = new StringBuilder();
 		String line;
 		String previous = null;
-		lineCounter = 1;
+		lineNum = 1;
 
 		try{
 			in = new FileInputStream(new File(filePath));
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 			while ((line = reader.readLine()) != null) {
-				out.append(line + ENTER_RETURN);
-
+				out.append(line + ParseUtils.ENTER_RETURN);
+				
+//				lineStructureMap = ParseUtils.extractInfo(line, lineNum, logSoFar);
 				//				System.out.println("The current line at which it stopped " + lineCounter);
-
-				if(!checkSkipLine(line)){
-					lineStructureMap = extractInfo(line, lineCounter, logSoFar);
-
-					// Diagnose at the line basis, plug in checks here for future extensions
-					checkCompressionLibrary(line);					
-					checkTimeSpan(line,previous, lineCounter);
-					checkMemoryUsage(lineStructureMap, lineCounter, line);
-
-					checkTag(lineStructureMap);
-					checkCodecPool(lineStructureMap);
-					checkObsoleteOutput(lineStructureMap);
-
-					checkWaitTime(lineStructureMap);
-
-					//Ask SignalDoctors to do check
-					for (SignalDoctor doctor : doctorMap.values()) {
-						doctor.check(lineStructureMap, line, lineCounter);
-						//						System.out.println("printing from SignalDoc loop");
-					}	    
+				if (ParseUtils.skipLine(line, 0)){
+					System.out.println("Printing the skipped line: " + line);
 				}
+				for (SignalDoctor doctor : doctorMap.values()) {
+					doctor.check(line, lineNum);
+//											System.out.println("printing from SignalDoc loop");
+				}				
 				previous = line;
-				lineCounter++;
+				lineNum++;
 			}
 			// Ask SignalDoctors to create Phases
 			for (SignalDoctor doctor : doctorMap.values()) {
 				AbstractPhase p = doctor.createPhase();
+				System.out.println("Checking the name " + p.getName());
 				phaseMap.put(p.getName(), p);
+				System.out.println("Checking the size of map " + phaseMap.size());
 				phasesResult.registerPhase(p.getName(), p);
 			}
 
 			logSoFar = out.toString();
-			//            System.out.println(lastLog);   //Prints the string content read from input stream
+//			            System.out.println("Printing from main loop log so far is "+ logSoFar);   //Prints the string content read from input stream
 			reader.close();
 
 		} catch (FileNotFoundException e) {
@@ -177,7 +130,8 @@ public class LogParser implements LogAnnotator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return logSoFar;
+		
+		return phasesResult;
 
 		// Read and parse from HTTP request
 		// See HiveMRTTaskLogProcessor for detail in HTTP Connect
@@ -193,205 +147,6 @@ public class LogParser implements LogAnnotator {
 		// incomplete
 		Long waitTime = (long) 0;
 		return;
-	}
-
-	/**
-	 * Check line against the skip regex: true if the line is to skip
-	 * @param line
-	 * @return boolean 
-	 */
-	protected boolean checkSkipLine(String line) {
-		skipRegex = Pattern.compile("(\\s*)(<)"); // User-specify the regex at which the pattern is matching
-		exceptionRegex = Pattern.compile("(Exception)"); // 
-		exceptionLocationRegex = Pattern.compile("(\\t)(at)");
-		Matcher sm = skipRegex.matcher(line);
-		Matcher em = exceptionRegex.matcher(line);
-		Matcher elm = exceptionLocationRegex.matcher(line);
-		if (sm.find()){
-			// do something
-			return true;
-		}
-		if (em.find() || elm.find()){
-			checkException(line, lineCounter);
-			return true;
-		}
-		if (line.isEmpty()){
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Put the exception in the 
-	 * @param line
-	 * @param counter
-	 */
-	private void checkException(String line, int counter) {
-		exceptionMap.put(counter, line);
-	}
-
-
-	/**
-	 * Gather all WARN and ERROR tagged log. Called Repeatedly.
-	 * @param
-	 * @return warnMap
-	 */
-	private void checkTag(Map<String, String> map){
-		switch (map.get(MESSAGE_TYPE)){
-		//		case WARN: warnMap.put();
-		case WARN: warnMap.put(lineCounter, map.get(DATE) + " " + map.get(TIME) + " "+  map.get(LOCATION) + " " + map.get(MESSAGE) );
-		case ERROR: errorMap.put(lineCounter, map.get(DATE) + " " + map.get(TIME) + " "+  map.get(LOCATION) + " " + map.get(MESSAGE) );
-		}
-
-	}
-
-
-
-	/**
-	 * TODO: make this a util or static method to allow direct access: Steve
-	 * 
-	 * Take in input string line, and return Map of structured info
-	 * Every line is structured as below: "DATE TIME MESSAGE_TYPE LOCATION MESSAGE"
-	 * @param Variable argument method, default first argument is the line
-	 * @return Map<String, String> Structure
-	 */
-	private Map<String, String> extractInfo(Object ... args){
-		String line = (String) args[0]; // default first argument is the line
-		Map<String, String> map = new HashMap<String, String>();
-		try{
-			String[] tokens = line.split(SPACE);
-			map.put(DATE, tokens[0]);
-			map.put(TIME, tokens[1]);
-			map.put(MESSAGE_TYPE, tokens[2]);
-			map.put(LOCATION, tokens[3]);
-
-			//			System.out.println("Print extractInfo: the token[2] + token[3] is " + tokens[2] + " "+ tokens[3]);
-			String message = line.split(tokens[2] + " "+ tokens[3])[1];
-			map.put(MESSAGE, message);
-			//			System.out.println("Print extractInfo: the message here is " + message);
-		} catch (IndexOutOfBoundsException e){
-			e.printStackTrace();
-			if (args.length == 3){
-				int counter = Integer.parseInt((String) args[1]);
-				String logTillNow = (String) args[2];
-				System.out.println("The line number is " + counter);
-				System.out.println("The file processed so far " + ENTER_RETURN
-						+ logTillNow);
-			}
-		}
-		return map;
-	}
-
-	/**
-	 * Check the interval between two line in log, and return those
-	 * @param current
-	 * @param logCounter
-	 * @return List of String Array with format line#, duration, message
-	 */
-	private List<String[]> checkTimeSpan(String current, String previous, int logCounter){
-		String currentDateTime = lineStructureMap.get(DATE) + " " + lineStructureMap.get(TIME);
-		String previousDateTime = null; Date d1 = null, d2 = null;
-		// establish a date format
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss,SSS");
-		if (previous != null && !checkSkipLine(previous)){ 
-			// Make sure previous is not null or un-parsable
-			previousDateTime = extractInfo(previous).get(DATE) + " " + extractInfo(previous).get(TIME);
-
-			try {
-				d1 = format.parse(previousDateTime);
-				d2 = format.parse(currentDateTime);
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}
-			long diff = d2.getTime() - d1.getTime();
-
-			if (diff > MAX_INTERVAL){
-				// Construct a feedback String array with format: line#, duration, message
-				String[] feedback = {Integer.toString(logCounter), Long.toString(diff), current};
-				timeSpanList.add(feedback);
-				return timeSpanList;
-			}
-			return null;
-		}
-		return null;
-	}
-
-	/**
-	 * Check the memory-usage information reflected in the log being parsed
-	 * @param List of Maps
-	 * @return
-	 */
-	private List<HashMap<String, String>> checkMemoryUsage(Map<String, String> map, int counter, String line) {
-		HashMap<String, String> memoryInfo = new HashMap<String, String>();
-		// Key stored in the sequence of: Line, Rows, Memory, Message
-		String message = map.get(MESSAGE);
-		//		System.out.println("CheckMemoryUsage message is " + message );
-
-		if (message.contains("used memory")){
-			//			System.out.println("Print from checkMemoryUsage : ");
-
-			Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
-			Matcher m = numRegex.matcher(message);
-			List<String> mr = new ArrayList<String>();
-
-			int c = 0;
-			while (m.find()){
-				c++;
-				mr.add(m.group());
-			}
-
-			//			System.out.println("CheckMemoryUsage: the size of mr is " + mr.size());
-
-			memoryInfo.put("Line", Integer.toString(counter));
-			memoryInfo.put("Rows", mr.get(0));
-			memoryInfo.put("Memory", mr.get(1));
-			memoryInfo.put("Message", line);
-			memoryList.add(memoryInfo);
-		}
-		return memoryList;
-	}
-
-
-	/**
-	 * TODO: make this more robust
-	 * Check the compression format
-	 * @param line
-	 * @return String compressionFormat
-	 */
-	private String checkCompressionLibrary(String line){
-
-		if (line.contains(LIBRARY)){
-			String[] splitArray = line.split(SPACE);
-			compressionFormat = splitArray[splitArray.length-2];
-		}
-		return compressionFormat;
-	}
-
-
-	/**
-	 * Gather all information about the compressor and decompressor
-	 * @param map
-	 * @return
-	 */
-	private Map<String, String> checkCodecPool(Map<String, String> map){
-		if (map.get(LOCATION).contains(CODEC_POOL)){
-			compDecompMap.put(map.get(DATE)+ " " + map.get(TIME), map.get(LOCATION)+" "+ map.get(MESSAGE));
-			return compDecompMap;
-		}
-		return null;
-	}
-
-	/**
-	 * Check all information about ignoring obsolete output
-	 * @param map
-	 * @return
-	 */
-	private Map<String, String> checkObsoleteOutput(Map<String,String> map){
-		if (map.get(MESSAGE).contains(IGNORING)){
-			ignoreMap.put(map.get(DATE) + " " + map.get(TIME), map.get(LOCATION)+ " "+map.get(MESSAGE));
-			return ignoreMap;
-		}
-		return null;
 	}
 
 	/**
@@ -466,6 +221,11 @@ public class LogParser implements LogAnnotator {
 	 * Getters and setters created for the purpose of testing
 	 * @return
 	 */
+	
+	public PhasesResult getPhasesResult(){
+		return phasesResult;
+	}
+	
 	public List<String[]> getTimeSpanList() {
 		return timeSpanList;
 	}

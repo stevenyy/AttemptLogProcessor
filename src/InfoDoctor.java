@@ -67,7 +67,10 @@ public class InfoDoctor implements SignalDoctor{
 	@Override
 	public void check(String line, int lineNum) {
 		this.lineNum = lineNum;
-		check(ParseUtils.extractInfo(line));
+		this.line = line;
+		if (!skipLine(line, lineNum)){
+			check(ParseUtils.extractInfo(line));	
+		}
 	}
 
 	@Override
@@ -79,8 +82,6 @@ public class InfoDoctor implements SignalDoctor{
 	@Override
 	public void check(Map<String, String> map){
 
-		if (!skipLine(line, lineNum)){
-
 			checkTimeSpan(line, previousLine, lineNum);
 			checkCompressionLibrary(map.get(ParseUtils.MESSAGE));
 			checkMemoryUsage(map, line, lineNum);
@@ -88,7 +89,6 @@ public class InfoDoctor implements SignalDoctor{
 			checkCodecPool(map);
 			checkObsoleteOutput(map);
 
-		}
 	}
 
 	@Override
@@ -109,13 +109,17 @@ public class InfoDoctor implements SignalDoctor{
 	 */
 	@Override 
 	public boolean skipLine(String line, int lineNum) {
-		Pattern skipRegex = Pattern.compile("(\\s*)(<)"); // User-specify the regex at which the pattern is matching
+		// User-specify the regex at which the pattern is matching
+		// (\\s) for white-space character, * for none or one; \\D for non-digit character, and + for one or more
+		Pattern skipRegex = Pattern.compile("(\\s*)(<)");
 		Pattern exceptionRegex = Pattern.compile("(Exception)"); // 
 		Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
+		Pattern dateRegex = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})(\\s{1})(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})");
 		Matcher sm = skipRegex.matcher(line);
 		Matcher em = exceptionRegex.matcher(line);
 		Matcher elm = exceptionLocationRegex.matcher(line);
-		if (sm.find()){
+		Matcher dm = dateRegex.matcher(line);
+		if (sm.find() && !dm.find()){
 			return true;
 		}
 		if (em.find() || elm.find()){
@@ -123,7 +127,6 @@ public class InfoDoctor implements SignalDoctor{
 			logException(line, previousExceptionNum, lineNum);
 			previousExceptionNum = lineNum;
 			return true;
-
 		}
 		if (line.isEmpty()){
 			return true;

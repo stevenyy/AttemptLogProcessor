@@ -37,22 +37,32 @@ public interface SignalDoctor{
 	 * @return boolean 
 	 */
 	public default boolean skipLine(String line, int lineCounter) {
-		Pattern skipRegex = Pattern.compile("(\\s*)(<)"); // User-specify the regex at which the pattern is matching
-		Pattern exceptionRegex = Pattern.compile("(Exception)"); // 
-		Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
-		Matcher sm = skipRegex.matcher(line);
-		Matcher em = exceptionRegex.matcher(line);
-		Matcher elm = exceptionLocationRegex.matcher(line);
-		if (sm.find()){
-			return true;
-		}
-		if (em.find() || elm.find()){
-			// Do something here
-//			checkException(line, lineCounter);
-			return true;
-		}
-		if (line.isEmpty()){
-			return true;
+		try {
+//			System.out.println("Print Signal Doctor: the line that stopped is " + line);
+			Pattern skipRegex = Pattern.compile("(\\s*)(<)");
+			Pattern exceptionRegex = Pattern.compile("(Exception)"); // 
+			Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
+			Pattern dateRegex = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})(\\s{1})(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})");
+			Matcher sm = skipRegex.matcher(line);
+			Matcher em = exceptionRegex.matcher(line);
+			Matcher elm = exceptionLocationRegex.matcher(line);
+			Matcher dm = dateRegex.matcher(line);
+			if (sm.find() && !dm.find()){
+				return true;
+			}
+			if (em.find() || elm.find()){
+				// Do something here
+				//			checkException(line, lineCounter);
+				return true;
+			}
+			if (line.isEmpty()){
+				return true;
+			}
+			return false;
+		} catch (Throwable T){
+			T.printStackTrace();
+			System.err.println("The line number is " + lineCounter);
+			System.err.println("The line that caused halt is ：" + line);
 		}
 		return false;
 	}

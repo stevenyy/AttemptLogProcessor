@@ -140,6 +140,36 @@ public class ParseUtils {
 		return d.getTime();
 	}
 	
+	/**
+	 * return true if the line matches regex, and is in need of skipping 
+	 * @param line
+	 * @param lineCounter
+	 * @return
+	 */
+	public static boolean skipLine(String line, int lineCounter) {
+		Pattern skipRegex = Pattern.compile("(\\s*)(<)");
+//		Pattern skipRegex = Pattern.compile("(\\s*)(<)(\\D+)(>)");
+		Pattern exceptionRegex = Pattern.compile("(Exception)"); // 
+		Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
+		Pattern dateRegex = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})(\\s{1})(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})");
+		Matcher sm = skipRegex.matcher(line);
+		Matcher em = exceptionRegex.matcher(line);
+		Matcher elm = exceptionLocationRegex.matcher(line);
+		Matcher dm = dateRegex.matcher(line);
+		if (sm.find() && !dm.find()){
+			return true;
+		}
+		if (em.find() || elm.find()){
+			// Do something here
+//			checkException(line, lineCounter);
+			return true;
+		}
+		if (line.isEmpty()){
+			return true;
+		}
+		return false;
+	}
+	
 	/*	*//**
 	 * Returns the date in long format given a line of log input
 	 * @param line

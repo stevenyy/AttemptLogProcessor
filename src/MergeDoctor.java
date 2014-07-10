@@ -42,8 +42,11 @@ public class MergeDoctor implements SignalDoctor{
 	
 	@Override
 	public void check(String line, int lineNum) {
-		check(ParseUtils.extractInfo(line));
 		this.lineNum = lineNum;
+		this.line = line;
+		if (!skipLine(line, lineNum)){
+			check(ParseUtils.extractInfo(line));	
+		}		
 	}
 
 	@Override
@@ -53,7 +56,7 @@ public class MergeDoctor implements SignalDoctor{
 
 	@Override
 	public void check(Map<String, String> map) {
-		if (! skipLine(line, lineNum)){
+
 			Boolean flag = false;
 
 			String mapTask = "MapTask";
@@ -74,19 +77,25 @@ public class MergeDoctor implements SignalDoctor{
 				mapMerge = true;
 			if(map.get(ParseUtils.LOCATION).contains(reduceTask))
 				reduceMerge = true;
-		}
 	}
 
 	@Override
 	public AbstractPhase createPhase() {
-		calculateTime();
-		if (mapMerge){
-			MapMergePhase mmp = new MapMergePhase(mergeTime, "MapMergePhase");
-			return mmp;
-		}
-		if (reduceMerge){
-			ReduceMergePhase rmp = new ReduceMergePhase(mergeTime, "ReduceMergePhase");
-			return rmp;
+		System.out.println("MergeDoctor.createPhase called");
+		try{
+			calculateTime();
+			if (mapMerge){
+				MapMergePhase mmp = new MapMergePhase(mergeTime, "MapMergePhase");
+				return mmp;
+			}
+			if (reduceMerge){
+				ReduceMergePhase rmp = new ReduceMergePhase(mergeTime, "ReduceMergePhase");
+				return rmp;
+			}
+		}catch (Throwable T){
+			System.err.println("MergeDoctor.createPhase failed, with possible reason "
+					+ "that log parsing incomplete");
+			T.printStackTrace();
 		}
 		return null;
 	}
