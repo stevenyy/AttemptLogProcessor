@@ -27,15 +27,20 @@ public class SpillPhase extends AbstractPhase{
 	
 	public SpillPhase(String string){
 		super();
-		name = string;
+		this.name = string;
+		spillLength = 0;
+		spillRecord = 0;
+		spillTime = (long) 0;
+		timeSpanList = null;
+		myLog = null;
 	}
 	
 	public SpillPhase(int spillLength, int spillRecord, Long spillTime, String name){
 		super();
+		this.name = name;
 		this.spillLength = spillLength;
 		this.spillRecord = spillRecord;
 		this.spillTime = spillTime;
-		this.name = name;
 	}
 	
 	public void update(Integer length, Integer rec, Long time){

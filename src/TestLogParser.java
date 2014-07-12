@@ -46,7 +46,7 @@ public class TestLogParser{
 
 	}
 
-//	@Test 
+	@Test 
 	public void testFetchLog(){
 //		String url = "http://unravel.rfiserve.net/workflows/show_by_exec_id/20140624T171819Z-6913431618608607502";
 //		String url = "http://inw-729.rfiserve.net:50060/tasklog?attemptid=attempt_201405200258_352939_m_000001_0&all=true";
@@ -169,6 +169,8 @@ public class TestLogParser{
 		System.out.println("Printing Test SignalDoctor: " + ENTER_RETURN +
 				mmp.getMergeTime() + " is the the merge time it takes");
 	}
+	
+
 	
 //	@Test
 //	public void test

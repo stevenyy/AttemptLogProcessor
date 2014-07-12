@@ -6,6 +6,8 @@ import org.junit.Test;
 import java.io.*;
 import java.util.*;
 
+import javax.sound.midi.MidiDevice.Info;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -31,6 +33,8 @@ public class TestAttemptLogProcessor{
 	public static final String MAP_LONG = FOLDER + "MapLong.txt";
 	public static final String MAP_SHORT = FOLDER + "MapShort.txt";
 	public static final String MAP_VERY_SHORT = FOLDER + "MapVeryShort.txt";
+	public static final String MAP_INCOMPLETE = FOLDER + "MapIncomplete.txt";
+	public static final String REDUCE_INCOMPLETE = FOLDER + "ReduceIncomplete.txt";
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
@@ -48,17 +52,6 @@ public class TestAttemptLogProcessor{
 	public void tearDown() throws Exception {
 
 	}
-
-//	@Test 
-	public void testFetchLog(){
-//		String url = "http://unravel.rfiserve.net/workflows/show_by_exec_id/20140624T171819Z-6913431618608607502";
-//		String url = "http://inw-729.rfiserve.net:50060/tasklog?attemptid=attempt_201405200258_352939_m_000001_0&all=true";
-		String url = "attempt_201405200258_368899_m_000006_0";
-		
-		System.out.println();
-		System.out.println(alp.fetchLog(url));
-	}
-	
 	
 //	@Test
 	public void testTimeSpan(){
@@ -147,7 +140,7 @@ public class TestAttemptLogProcessor{
 		}
 	}
 	
-	@Test 
+//	@Test 
 	public void testSpillDoctor(){
 		
 //		alp.readAndProcessLog(MAP_LONG);
@@ -164,7 +157,7 @@ public class TestAttemptLogProcessor{
 				sp.getSpillTime() + " is the spilled time");
 	}
 	
-	@Test
+//	@Test
 	public void testMergeDoctor(){
 		
 //		alp.readAndProcessLog(MAP_LONG);
@@ -176,7 +169,7 @@ public class TestAttemptLogProcessor{
 				mmp.getMergeTime() + " is the the merge time it takes");
 	}
 	
-	@Test 
+//	@Test 
 	public void testInfoDoctor(){
 //		alp.readAndProcessLog(MAP_LONG);
 		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
@@ -185,6 +178,36 @@ public class TestAttemptLogProcessor{
 		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
 		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
 				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN);
+		
+	}
+	
+//	@Test 
+	public void testFetchLog(){
+//		String url = "http://unravel.rfiserve.net/workflows/show_by_exec_id/20140624T171819Z-6913431618608607502";
+//		String url = "http://inw-729.rfiserve.net:50060/tasklog?attemptid=attempt_201405200258_352939_m_000001_0&all=true";
+		String url = "attempt_201405200258_368899_m_000006_0";
+		
+		System.out.println();
+		System.out.println(alp.fetchLog(url));
+	}
+	
+	
+	@Test 
+	public void testIncompleteLog(){
+		alp.readAndProcessLog(MAP_INCOMPLETE);
+		
+		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
+		
+		System.out.println();
+		System.out.println("Test IncompleteLog: the phase name is " + ip.getName());
+		System.out.println("The compressionLib is :" +ip.getCompressLib()+  ENTER_RETURN +
+				 "The other parameters are listed below:  " + ip.getCodecMap() + ENTER_RETURN +
+				 ip.getInputLog() + ENTER_RETURN + 
+				 ip.getErrorMap() + ENTER_RETURN + 
+				 ip.getExceptionMap() + ENTER_RETURN +
+				 ip.getMemoryList() + ENTER_RETURN +
+				 ip.getObsoleteOutputMap() + ENTER_RETURN + 
+				 ip.getTimeSpanList());
 		
 	}
 	

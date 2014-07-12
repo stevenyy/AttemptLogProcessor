@@ -30,6 +30,7 @@ public class SpillDoctor implements SignalDoctor{
 
 	public SpillDoctor(String name) {
 		this.name= name;
+		
 	}
 
 	@Override 

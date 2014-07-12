@@ -14,19 +14,16 @@ public class MapMergePhase extends AbstractPhase{
 	 * with buffer and 
 	 * @author Steve Siyang Wang 
 	 */
-	public MapMergePhase(){
+	public MapMergePhase(String name){
 		super();
+		this.name = name;
+		mergeTime = (long) 0;
 	}
 	
 	public MapMergePhase(Long time, String name){
 		super();
 		this.mergeTime = time;
 		this.name = name;
-	}
-	
-	@Override
-	public String getName(){
-		return name;
 	}
 	
 
@@ -54,6 +51,11 @@ public class MapMergePhase extends AbstractPhase{
 	 */
 	public Long getMergeTime(){
 		return mergeTime;
+	}
+	
+	@Override
+	public String getName(){
+		return name;
 	}
 
 }

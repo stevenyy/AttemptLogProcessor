@@ -59,6 +59,7 @@ public class PhasesResult {
 		catch (Throwable T){
 			// Should not reach here... 
 			System.err.println("RegisterPhase: register to PhasesResult failed. Check type-casting");
+			System.out.println("the name here is " + name);
 			T.printStackTrace();
 		}
 	}
