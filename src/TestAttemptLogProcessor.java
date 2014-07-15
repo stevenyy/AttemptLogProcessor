@@ -37,6 +37,9 @@ public class TestAttemptLogProcessor{
 	public static final String REDUCE_INCOMPLETE = FOLDER + "ReduceIncomplete.txt";
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	
+	public static final String SPILL = "/Users/Hadoop/Desktop/TestData/Spill/"; 
+	public static final String RECORD_SPILL = SPILL + "RecordSpill.txt";
+	
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
 
 	@Before
@@ -45,7 +48,7 @@ public class TestAttemptLogProcessor{
 		//ProfileDBManager dao = new ProfileDBManager("org.postgresql.Driver", url);
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		//dao = ProfileDBManager.instance();
-		alp.readAndProcessLog(MAP_LONG);
+		alp.readAndProcessLog(RECORD_SPILL);
 	}
 
 	@After
@@ -140,10 +143,11 @@ public class TestAttemptLogProcessor{
 		}
 	}
 	
-//	@Test 
+	@Test 
 	public void testSpillDoctor(){
 		
-//		alp.readAndProcessLog(MAP_LONG);
+//		alp.readAndProcessLog(RECORD_SPILL);
+//		alp.readAndProcessLog(MAP_VERY_SHORT);
 		SpillPhase sp =  (SpillPhase) alp.getPhaseMap().get("SpillPhase");
 		SpillPhase sp2 =  (SpillPhase) alp.getPhasesResult().getSpillPhase();
 		
@@ -152,9 +156,11 @@ public class TestAttemptLogProcessor{
 		System.out.println();
 		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
 		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
-				sp.getSpillLength() + " is the max spill length " + ENTER_RETURN 
-				+ sp.getSpillRecord() + " is the total spill record " + ENTER_RETURN + 
-				sp.getSpillTime() + " is the spilled time");
+				"SpillType is " + sp.getSpillType() + ENTER_RETURN+
+				"Max spill length " + sp.getSpillLength() +  ENTER_RETURN + 
+				"Total spill record " + sp.getSpillRecord() +  ENTER_RETURN + 
+				"Spilled time" + sp.getSpillTime() + ENTER_RETURN + 
+				" ");
 	}
 	
 //	@Test
@@ -192,7 +198,7 @@ public class TestAttemptLogProcessor{
 	}
 	
 	
-	@Test 
+//	@Test 
 	public void testIncompleteLog(){
 		alp.readAndProcessLog(MAP_INCOMPLETE);
 		

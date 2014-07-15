@@ -101,12 +101,14 @@ public class MergeDoctor implements SignalDoctor{
 	}
 	
 	private void calculateTime(){
-//		System.out.println("printing the size of the timeList " + timeList.size());
-		long init = ParseUtils.getTime(timeList.get(0));
-		long end = ParseUtils.getTime(timeList.get(timeList.size() - 1));
-		mergeTime = end - init;
+		//		System.out.println("printing the size of the timeList " + timeList.size());
+		if (timeList.size()!=0){
+			long init = ParseUtils.getTime(timeList.get(0));
+			long end = ParseUtils.getTime(timeList.get(timeList.size() - 1));
+			mergeTime = end - init;
+		}
 	}
-	
+
 
 	@Override
 	public MRTaskAttemptInfo getAttemptInfo() {

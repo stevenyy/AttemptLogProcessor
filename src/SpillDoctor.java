@@ -17,7 +17,8 @@ public class SpillDoctor implements SignalDoctor{
 	private MRTaskAttemptInfo attemptInfo = null;
 	private int lineNum;
 	private String line;
-	private List<Integer> lengthList = new ArrayList<Integer>(), 
+	private List<Integer> memoryList = new ArrayList<Integer>(), 
+			numSpillList = new ArrayList<Integer>(), 
 			recordList = new ArrayList<Integer>();
 	private Long spillTime = (long) 0;
 	private List<String> timeList = new ArrayList<String>();
@@ -61,40 +62,58 @@ public class SpillDoctor implements SignalDoctor{
 		// Passing in lines that should not be skipped
 		Boolean flag = false;
 		String length = "length"; // target String:
-		String spill = "Finished spill"; // target string:
+		String finish = "Finished spill"; // target string:
 		String full = "full = true"; // Target: cause of spill
 		String bufStart = "bufStart";
-		String kvStart = "kvStart";
 		String dataBuffer = "data buffer = ";
 		String recordBuffer = "record buffer = ";
 		
 
 		String message = map.get(ParseUtils.MESSAGE);
+		List<String> list = ParseUtils.extractNumber(message); // TODO: can break potentially
+		if (message.contains(full)){
+			sp.setSpillType(ParseUtils.getWordBefore(message, full));
+			// TODO: IMPROVE THIS, might have multiple full mode 
+			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
+		}
+		if (message.contains(bufStart)){
+			sp.updateBufList(list);
+			memoryList.add(calculateDiffSize(list));
+		}
 		if (message.contains(length)){
 			//			System.out.println("Printing from SpillDoc.check: the spill length is " + ParseUtils.extractNumber(message).get(2));
-			int spillLength = Integer.parseInt(ParseUtils.extractNumber(message).get(2));
-			lengthList.add(spillLength);
+//			int spillLength = Integer.parseInt(ParseUtils.extractNumber(message).get(2));
+			sp.updateKvList(list);
+			recordList.add(calculateDiffSize(list));
+			flag = true;
+		}
+		if (message.contains(finish)){
+			int spillRecord  = Integer.parseInt(list.get(0));
+			numSpillList.add(spillRecord);
 			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
 			flag = true;
 		}
-		if (message.contains(spill)){
-
-			int spillRecord  = Integer.parseInt(ParseUtils.extractNumber(message).get(0));
-			recordList.add(spillRecord);
-			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
-			flag = true;
-		}
-		if (message.contains(bufStart))
-			sp.updateBufList(ParseUtils.extractNumber(message));
-		if (message.contains(kvStart))
-			sp.updateKvList(ParseUtils.extractNumber(message));
 		if (message.contains(dataBuffer))
-			sp.setDataBuffer(ParseUtils.extractNumber(message));
+			sp.setDataBuffer(list);
 		if (message.contains(recordBuffer))
-			sp.setRecordBuffer(ParseUtils.extractNumber(message));
-		if (message.contains(full))
-			sp.setSpillType(ParseUtils.getWordBefore(message, full));
+			sp.setRecordBuffer(list);
 
+	}
+
+	/**
+	 * Calculate the size of spill, both in terms of actual memory and record size
+	 * @param list
+	 * @return int difference
+	 */
+	private int calculateDiffSize(List<String> list) {
+		int start = Integer.parseInt(list.get(0)); 
+		int end = Integer.parseInt(list.get(1));
+		if (end > start) {
+			return (end - start);
+		}
+		else{
+			return (end + Integer.parseInt(list.get(2)) - start);
+		}
 	}
 
 	@Override
@@ -105,16 +124,18 @@ public class SpillDoctor implements SignalDoctor{
 			calculateTime();
 			//		System.out.println("debugging createPhase and spill time is " + spillTime);
 			sp.update(
-					Collections.max(lengthList),
-					Collections.max(recordList),
+					memoryList,
+					recordList,
+					Collections.max(numSpillList),
 					spillTime);
 			return sp;
 		} catch (Throwable T){
 			System.err.println("SpillDoctor.createPhase failed, with possible reason "
-					+ "that log parsing incomplete");
+					+ "that log parsing incomplete" + ParseUtils.ENTER_RETURN + "Check if lengthList, recordList, and SpillTime parameter exists");
+			System.err.println();
 			T.printStackTrace();
 		}
-		System.out.println("SpillPhase created with incomplete fields");
+		System.out.println(ParseUtils.ENTER_RETURN+ "SpillPhase created with incomplete fields");
 		return sp;
 	}
 

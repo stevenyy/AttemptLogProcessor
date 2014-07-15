@@ -66,8 +66,9 @@ public class ParseUtils {
 		return numberList;
 	}
 	
-/*// returns the Integer array version. Consider updating to this in the future refactoring	
- * public static Integer[] extractNumber(String input){
+/*// returns the Integer array version. Consider updating to this in the future refactoring
+	// !!! uncomplete
+	public static int[] extractNumberArray(String input){
 		List<Integer> numberList = new ArrayList<Integer>();
 		Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
 		Matcher m = numRegex.matcher(input);
@@ -75,9 +76,11 @@ public class ParseUtils {
 		while (m.find()){
 			numberList.add(Integer.parseInt(m.group()));
 		}
-		return (Integer[]) numberList.toArray();
-	}
-	*/
+		for (Integer i: numberList){
+			
+		}
+	}*/
+
 	
 	
 	/**

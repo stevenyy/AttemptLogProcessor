@@ -17,7 +17,8 @@ public class MapMergePhase extends AbstractPhase{
 	public MapMergePhase(String name){
 		super();
 		this.name = name;
-		mergeTime = (long) 0;
+		initialize();
+		
 	}
 	
 	public MapMergePhase(Long time, String name){
@@ -25,6 +26,13 @@ public class MapMergePhase extends AbstractPhase{
 		this.mergeTime = time;
 		this.name = name;
 	}
+	
+	private void initialize(){
+		mergeTime = (long) 0;
+		
+	}
+	
+	
 	
 
 	public void update(String log){

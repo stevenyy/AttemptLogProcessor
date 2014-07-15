@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-
-import com.sun.javafx.scene.EnteredExitedHandler;
 /**
  * Class representation of Spill Phase
  * @author Steve Siyang Wang
@@ -18,11 +16,12 @@ public class SpillPhase extends AbstractPhase{
     protected int hash; // The hash value for this object
     private String inputLog; // the most recent String of input that the phase read in	
 	
-    private int spillLength;
+    private int spillMemory;
+    private int spillRecord;
     private int[] dataBuffer; // The memory buffer array in kB: {80%, full}
     private int[] recordBuffer; // The record buffer in # or records: {80%, full}
     private String spillType; // The cause of spill, buffer full or record full
-	private int spillRecord;
+	private int numSpill;
 	private long spillTime;
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private String myLog;
@@ -31,6 +30,7 @@ public class SpillPhase extends AbstractPhase{
 	private List<HashMap<String, Integer>> bufList; //Map of buffer information 
 	private List<HashMap<String, Integer>> kvList;//Map of kv information
 	
+	private List<Integer> memoryList, recordList;
 	/**
 	 * TODO: SpillPhase, consider changing all the fields to final to restrict later modification 
 	 * @param string 
@@ -46,9 +46,11 @@ public class SpillPhase extends AbstractPhase{
 	 * Invoked in the constructor to set all parameters
 	 */
 	private void initialize(){
-		spillLength = 0;
+		spillMemory = 0;
 		spillRecord = 0;
+		
 		spillTime = (long) 0;
+		numSpill = 0;
 		dataBuffer = new int[2];
 		recordBuffer = new int[2];
 		timeSpanList = null;
@@ -56,20 +58,26 @@ public class SpillPhase extends AbstractPhase{
 		myLog = null;
 		bufList = new ArrayList<HashMap<String, Integer>>();
 		kvList = new ArrayList<HashMap<String, Integer>>();
+		memoryList = new ArrayList<Integer>();
+		recordList = new ArrayList<Integer>();
 	}
 	
-	public SpillPhase(int spillLength, int spillRecord, Long spillTime, String name){
+/*	public SpillPhase(int spillLength, int spillRecord, Long spillTime, String name){
 		super();
 		this.name = name;
 		this.spillLength = spillLength;
 		this.spillRecord = spillRecord;
 		this.spillTime = spillTime;
-	}
+	}*/
 	
-	public void update(Integer length, Integer rec, Long time){
-		spillLength = length;
-		spillRecord = rec;
-		spillTime = time;
+	public void update(List<Integer> memoryList, List<Integer> recordList,
+			int numSpill, Long time) {
+		this.memoryList = memoryList;
+		this.recordList = recordList;
+		this.numSpill = numSpill;
+		this.spillTime = time;
+		getTotalSpillMemory();
+		getTotalSpillRecord();
 	}
 
 	@Override 
@@ -93,11 +101,11 @@ public class SpillPhase extends AbstractPhase{
 	 * @return
 	 */
 	public int getSpillLength() {
-		return spillLength;
+		return spillMemory;
 	}
 
 	public void setSpillLength(int spillLength) {
-		this.spillLength = spillLength;
+		this.spillMemory = spillLength;
 	}
 	
 	public long getSpillTime() {
@@ -129,7 +137,10 @@ public class SpillPhase extends AbstractPhase{
 	}
 
 	public void setSpillType(String spillType) {
-		this.spillType = spillType;
+		if (spillType.equals("record"))
+			this.spillType = "Meta-Spill (record full = true)";
+		if (spillType.equals("buffer"))
+			this.spillType = "KV-Spill (buffer full = true)"; 
 	}
 
 	public int[] getDataBuffer() {
@@ -194,9 +205,49 @@ public class SpillPhase extends AbstractPhase{
 		}
 	}
 
+	public int getNumSpill() {
+		return numSpill;
+	}
+
+	public void setNumSpill(int numSpill) {
+		this.numSpill = numSpill;
+	}
+
+	public List<Integer> getMemoryList() {
+		return memoryList;
+	}
+	
+	public int getTotalSpillMemory(){
+		for (Integer i: memoryList){
+			spillMemory += i.intValue();
+		}
+		return spillMemory;
+	}
+	
+	public int getTotalSpillRecord(){
+		for (Integer i: recordList){
+			spillRecord += i.intValue();
+		}
+		return spillRecord;
+	}
+
+	public void setMemoryList(List<Integer> memoryList) {
+		this.memoryList = memoryList;
+	}
+
+	public List<Integer> getRecordList() {
+		return recordList;
+	}
+
+	public void setRecordList(List<Integer> recordList) {
+		this.recordList = recordList;
+	}
+
 	@Override
 	public String getName(){
 		return name;
 	}
+
+
 
 }

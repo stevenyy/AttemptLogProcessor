@@ -40,6 +40,15 @@ public class TestParseUtils {
 		}
 	}
 	
+/*	!! Incomplete
+ * @Test
+	public void testExtractNumArray(){
+		String message = "kvstart = 0; kvend = 671088; length = 838860";
+		System.out.println();
+		Integer[] numArray = ParseUtils.extractNumberArray(message);
+		System.out.println("Printing from extractNumArray " + numArray);
+	}*/
+	
 	@Test
 	public void testSkipLine(){
 		String message = "2014-07-08 00:43:50,442 INFO org.apache.hadoop.mapred.TaskRunner:"
