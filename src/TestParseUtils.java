@@ -33,8 +33,9 @@ public class TestParseUtils {
 	@Test
 	public void testExtractNumbers(){
 		String message = "kvstart = 0; kvend = 671088; length = 838860";
+		String message2 = "data buffer = 204010960/255013696  3343.35";
 		System.out.println();
-		for (Object obj : ParseUtils.extractNumber(message)){
+		for (Object obj : ParseUtils.extractNumber(message2)){
 			System.out.println("Printing from extractNumbers: " + obj.toString());
 		}
 	}
@@ -59,5 +60,20 @@ public class TestParseUtils {
 //		MRAttemptLogProcessor alp = new MRAttemptLogProcessor();
 		alp.readAndProcessLog(MAP_LONG);
 		
+		String line = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true";
+		String target = "full = true";
+		
+//		System.out.println(line.split(target)[0].split(ParseUtils.SPACE)[7]);
+		
+	}
+	
+	@Test 
+	public void testGetWordBefore(){
+		String line = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true";
+		String target = "full = true";
+		
+		String res = ParseUtils.getWordBefore(line, target);
+		assertEquals("record", res);
+				
 	}
 }

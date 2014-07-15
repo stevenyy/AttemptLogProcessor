@@ -7,6 +7,7 @@ import java.util.Map;
 import edu.duke.starfish.profile.profileinfo.execution.mrtaskattempts.MRTaskAttemptInfo;
 
 /**
+ * TODO: replace all if with reflections
  * SignalDoctor that checks on each line to extract information about spill
  * @author Steve Siyang Wang
  */
@@ -23,14 +24,16 @@ public class SpillDoctor implements SignalDoctor{
 
 	private String log;
 	private int startNum, endNum;
-
+	
+	private SpillPhase sp;
 
 	public SpillDoctor(){
+		sp = new SpillPhase("SpillPhase");
 	}
 
 	public SpillDoctor(String name) {
 		this.name= name;
-		
+		sp = new SpillPhase("SpillPhase");
 	}
 
 	@Override 
@@ -56,31 +59,48 @@ public class SpillDoctor implements SignalDoctor{
 	@Override
 	public void check(Map<String, String> map){
 		// Passing in lines that should not be skipped
-			Boolean flag = false;
-			String length = "length"; // target String
-			String spill = "Finished spill"; // target string
+		Boolean flag = false;
+		String length = "length"; // target String:
+		String spill = "Finished spill"; // target string:
+		String full = "full = true"; // Target: cause of spill
+		String bufStart = "bufStart";
+		String kvStart = "kvStart";
+		String dataBuffer = "data buffer = ";
+		String recordBuffer = "record buffer = ";
+		
 
-			String message = map.get(ParseUtils.MESSAGE);
-			if (message.contains(length)){
-				//			System.out.println("Printing from SpillDoc.check: the spill length is " + ParseUtils.extractNumber(message).get(2));
-				int spillLength = Integer.parseInt(ParseUtils.extractNumber(message).get(2));
-				lengthList.add(spillLength);
-				timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
-				flag = true;
-			}
-			if (message.contains(spill)){
-
-				int spillRecord  = Integer.parseInt(ParseUtils.extractNumber(message).get(0));
-				recordList.add(spillRecord);
-				timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
-				flag = true;
+		String message = map.get(ParseUtils.MESSAGE);
+		if (message.contains(length)){
+			//			System.out.println("Printing from SpillDoc.check: the spill length is " + ParseUtils.extractNumber(message).get(2));
+			int spillLength = Integer.parseInt(ParseUtils.extractNumber(message).get(2));
+			lengthList.add(spillLength);
+			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
+			flag = true;
 		}
+		if (message.contains(spill)){
+
+			int spillRecord  = Integer.parseInt(ParseUtils.extractNumber(message).get(0));
+			recordList.add(spillRecord);
+			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
+			flag = true;
+		}
+		if (message.contains(bufStart))
+			sp.updateBufList(ParseUtils.extractNumber(message));
+		if (message.contains(kvStart))
+			sp.updateKvList(ParseUtils.extractNumber(message));
+		if (message.contains(dataBuffer))
+			sp.setDataBuffer(ParseUtils.extractNumber(message));
+		if (message.contains(recordBuffer))
+			sp.setRecordBuffer(ParseUtils.extractNumber(message));
+		if (message.contains(full))
+			sp.setSpillType(ParseUtils.getWordBefore(message, full));
+
 	}
 
 	@Override
 	public SpillPhase createPhase() {
 //		System.out.println("createPhase in SpillDoctor called");
-		SpillPhase sp = new SpillPhase("SpillPhase");
+		
 		try{
 			calculateTime();
 			//		System.out.println("debugging createPhase and spill time is " + spillTime);

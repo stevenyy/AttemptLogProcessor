@@ -34,6 +34,10 @@ public class ParseUtils {
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	public static final String SPACE = "\\s+";
 	
+	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
+	public static final String END = "End";
+	public static final String CAP = "Cap"; // Used for regex of bufVoid, or length
+	
 	
 	/**
 	 * Util class with static methods to facilitate the LogParser and improves re-usability
@@ -50,6 +54,7 @@ public class ParseUtils {
 	 * @param intput
 	 * @return 
 	 */
+	
 	public static List<String> extractNumber(String input){
 		List<String> numberList = new ArrayList<String>();
 		Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
@@ -59,8 +64,21 @@ public class ParseUtils {
 			numberList.add(m.group());
 		}
 		return numberList;
-
 	}
+	
+/*// returns the Integer array version. Consider updating to this in the future refactoring	
+ * public static Integer[] extractNumber(String input){
+		List<Integer> numberList = new ArrayList<Integer>();
+		Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
+		Matcher m = numRegex.matcher(input);
+		
+		while (m.find()){
+			numberList.add(Integer.parseInt(m.group()));
+		}
+		return (Integer[]) numberList.toArray();
+	}
+	*/
+	
 	
 	/**
 	 * Return a particular line of log given the string log and integer line number
@@ -169,6 +187,25 @@ public class ParseUtils {
 			return true;
 		}
 		return false;
+	}
+	
+	/**
+	 * Returns a word or phrase before a particular pattern 
+	 * @param s
+	 * @return
+	 */
+	public static String getWordBefore(String line, String s){
+		try{
+			String[] split = line.split(s);
+			String[] truncatedArray = split[0].split(ParseUtils.SPACE);
+			return truncatedArray[truncatedArray.length - 1];
+
+		}catch(Throwable t){
+			t.printStackTrace();
+			System.err.println("getWordBefore failed, the lind here is " + line + ENTER_RETURN +
+					"the target split is " + s);
+		}
+		return null;
 	}
 	
 	/*	*//**

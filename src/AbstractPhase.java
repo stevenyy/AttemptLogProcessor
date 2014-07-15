@@ -19,10 +19,18 @@ public abstract class AbstractPhase {
         internalId = -1;
         hash = -1;
         inputLog = null;
+        initialize();
         start();
     }
-
+    
     /**
+     * Called in the constructor; initialize all parameters
+     */
+    private void initialize() {
+		
+	}
+
+	/**
      * The start of a phase. This will be called in the constructor
      */
     public void start(){
