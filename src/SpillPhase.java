@@ -100,12 +100,8 @@ public class SpillPhase extends AbstractPhase{
 	 * Getters and setters for accessing and setting field values
 	 * @return
 	 */
-	public int getSpillLength() {
-		return spillMemory;
-	}
-
-	public void setSpillLength(int spillLength) {
-		this.spillMemory = spillLength;
+	public int getNumSpill() {
+		return numSpill;
 	}
 	
 	public long getSpillTime() {
@@ -116,14 +112,6 @@ public class SpillPhase extends AbstractPhase{
 		this.spillTime = spillTime;
 	}
 	
-	public int getSpillRecord() {
-		return spillRecord;
-	}
-
-	public void setSpillRecord(int spillRecord) {
-		this.spillRecord = spillRecord;
-	}
-
 	public List<String[]> getTimeSpanList() {
 		return timeSpanList;
 	}
@@ -205,10 +193,6 @@ public class SpillPhase extends AbstractPhase{
 		}
 	}
 
-	public int getNumSpill() {
-		return numSpill;
-	}
-
 	public void setNumSpill(int numSpill) {
 		this.numSpill = numSpill;
 	}
@@ -218,6 +202,8 @@ public class SpillPhase extends AbstractPhase{
 	}
 	
 	public int getTotalSpillMemory(){
+//		System.out.println("Printing from SP: getTotalSpillMemory called");
+//		System.out.println("Printing from SP: size of the memoryList " + memoryList.size());
 		for (Integer i: memoryList){
 			spillMemory += i.intValue();
 		}

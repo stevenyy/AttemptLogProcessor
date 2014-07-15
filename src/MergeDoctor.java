@@ -19,6 +19,7 @@ public class MergeDoctor implements SignalDoctor{
 	private List<Integer> mergeRecordList = new ArrayList<Integer>();
 	private List<String> timeList = new ArrayList<String>();
 	private Long mergeTime = (long) 0;
+	private int mNumRedTask = 0;
 	
 	private String log;
 	private int startNum, endNum;
@@ -62,6 +63,7 @@ public class MergeDoctor implements SignalDoctor{
 			String mapTask = "MapTask";
 			String reduceTask = "ReduceTask";
 			String merge = "Merging"; // target string
+			String redTask = "numReduceTasks"; // target String
 
 			String message = map.get(ParseUtils.MESSAGE);
 			if (message.contains(merge)){
@@ -73,10 +75,13 @@ public class MergeDoctor implements SignalDoctor{
 				flag = true;
 
 			}
+			if (message.contains(redTask)){
+				mNumRedTask = Integer.parseInt(ParseUtils.extractNumber(message).get(0));
+			}
 			if(map.get(ParseUtils.LOCATION).contains(mapTask)) 
 				mapMerge = true;
 			if(map.get(ParseUtils.LOCATION).contains(reduceTask))
-				reduceMerge = true;
+				reduceMerge = true;	
 	}
 
 	@Override
@@ -85,7 +90,7 @@ public class MergeDoctor implements SignalDoctor{
 		try{
 			calculateTime();
 			if (mapMerge){
-				MapMergePhase mmp = new MapMergePhase(mergeTime, "MapMergePhase");
+				MapMergePhase mmp = new MapMergePhase(mergeTime, "MapMergePhase", mNumRedTask);
 				return mmp;
 			}
 			if (reduceMerge){

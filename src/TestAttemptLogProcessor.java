@@ -39,6 +39,7 @@ public class TestAttemptLogProcessor{
 	
 	public static final String SPILL = "/Users/Hadoop/Desktop/TestData/Spill/"; 
 	public static final String RECORD_SPILL = SPILL + "RecordSpill.txt";
+	public static final String TEST_SPILL = SPILL + "TestSpill.txt";
 	
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
 
@@ -48,7 +49,9 @@ public class TestAttemptLogProcessor{
 		//ProfileDBManager dao = new ProfileDBManager("org.postgresql.Driver", url);
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		//dao = ProfileDBManager.instance();
+		
 		alp.readAndProcessLog(RECORD_SPILL);
+//		alp.readAndProcessLog(TEST_SPILL);
 	}
 
 	@After
@@ -157,13 +160,14 @@ public class TestAttemptLogProcessor{
 		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
 		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
 				"SpillType is " + sp.getSpillType() + ENTER_RETURN+
-				"Max spill length " + sp.getSpillLength() +  ENTER_RETURN + 
-				"Total spill record " + sp.getSpillRecord() +  ENTER_RETURN + 
-				"Spilled time" + sp.getSpillTime() + ENTER_RETURN + 
+				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
+				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
+				"Total spill memory " + sp.getTotalSpillMemory()+  ENTER_RETURN +
+				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
 				" ");
 	}
 	
-//	@Test
+	@Test
 	public void testMergeDoctor(){
 		
 //		alp.readAndProcessLog(MAP_LONG);
@@ -172,7 +176,8 @@ public class TestAttemptLogProcessor{
 		System.out.println();
 		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
 		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
-				mmp.getMergeTime() + " is the the merge time it takes");
+				mmp.getMergeTime() + " is the the merge time it takes" + ENTER_RETURN +
+				mmp.getNumRedTasks() + " is the number of reduce tasks");
 	}
 	
 //	@Test 

@@ -144,7 +144,8 @@ public class TestLogParser{
 		}
 	}
 	
-	@Test 
+/* NOW Defunct	
+ * @Test 
 	public void testSpillDoctor(){
 		
 		lp.readAndProcessLog(MAP_LONG);
@@ -156,7 +157,7 @@ public class TestLogParser{
 				sp.getSpillLength() + " is the max spill length " + ENTER_RETURN 
 				+ sp.getSpillRecord() + " is the total spill record " + ENTER_RETURN + 
 				sp.getSpillTime() + " is the spilled time");
-	}
+	}*/
 	
 //	@Test
 	public void testMergeDoctor(){

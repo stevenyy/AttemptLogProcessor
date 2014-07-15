@@ -62,9 +62,10 @@ public class SpillDoctor implements SignalDoctor{
 		// Passing in lines that should not be skipped
 		Boolean flag = false;
 		String length = "length"; // target String:
-		String finish = "Finished spill"; // target string:
+		String finish = "Finished spill"; // target string: end
+		String flush = "Starting flush"; //end
 		String full = "full = true"; // Target: cause of spill
-		String bufStart = "bufStart";
+		String bufStart = "bufstart";
 		String dataBuffer = "data buffer = ";
 		String recordBuffer = "record buffer = ";
 		
@@ -93,6 +94,8 @@ public class SpillDoctor implements SignalDoctor{
 			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
 			flag = true;
 		}
+		if (message.contains(flush))
+			timeList.add(map.get(ParseUtils.DATE)  + " " + map.get(ParseUtils.TIME));
 		if (message.contains(dataBuffer))
 			sp.setDataBuffer(list);
 		if (message.contains(recordBuffer))
@@ -119,14 +122,14 @@ public class SpillDoctor implements SignalDoctor{
 	@Override
 	public SpillPhase createPhase() {
 //		System.out.println("createPhase in SpillDoctor called");
-		
+//		System.out.println("SD: Checking the size of memoryList" + memoryList.size());
 		try{
 			calculateTime();
 			//		System.out.println("debugging createPhase and spill time is " + spillTime);
 			sp.update(
 					memoryList,
 					recordList,
-					Collections.max(numSpillList),
+					numSpillList.size(),
 					spillTime);
 			return sp;
 		} catch (Throwable T){
@@ -144,6 +147,7 @@ public class SpillDoctor implements SignalDoctor{
 	 */
 	private void calculateTime() {
 		//		System.out.println("debugging calculateTime");
+//		System.out.println("The size of time list is " + timeList.size());
 		int size = timeList.size();
 		if (size%2 != 0){
 			size = size - 1;

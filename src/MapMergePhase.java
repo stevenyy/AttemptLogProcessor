@@ -7,6 +7,7 @@ public class MapMergePhase extends AbstractPhase{
     
     private Long mergeTime;
     private String name;
+    private int numReduceTasks;
 	
     
 	/**
@@ -21,22 +22,23 @@ public class MapMergePhase extends AbstractPhase{
 		
 	}
 	
-	public MapMergePhase(Long time, String name){
+	public MapMergePhase(Long time, String name, int num){
 		super();
 		this.mergeTime = time;
 		this.name = name;
+		this.numReduceTasks = num;
 	}
 	
 	private void initialize(){
 		mergeTime = (long) 0;
+		numReduceTasks = 0;
 		
 	}
 	
-	
-	
 
-	public void update(String log){
-		
+	public void update(Long time, int num){
+		this.mergeTime = time;
+		this.numReduceTasks = num;
 	}
 	
 	@Override 
@@ -64,6 +66,10 @@ public class MapMergePhase extends AbstractPhase{
 	@Override
 	public String getName(){
 		return name;
+	}
+	
+	public int getNumRedTasks(){
+		return numReduceTasks;
 	}
 
 }
