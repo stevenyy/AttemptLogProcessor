@@ -45,6 +45,10 @@ public class TestAttemptLogProcessor{
 	public static final String EXP2SM = SPILL + "job_201405200258_413832_SM.txt";
 	public static final String EXP3SM = SPILL + "job_201405200258_407819_SM.txt";
 	public static final String EXP4SM = SPILL + "job_201405200258_425512_SM.txt";
+	public static final String EXP5SM = SPILL + "job_201405200258_417851_SM.txt";
+	public static final String EXP6SM = SPILL + "job_201405200258_420850_SM.txt";
+	public static final String EXP7SM = SPILL + "job_201405200258_420817_SM.txt";
+	
 	
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
 
@@ -55,7 +59,7 @@ public class TestAttemptLogProcessor{
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		//dao = ProfileDBManager.instance();
 		
-		alp.readAndProcessLog(EXP4SM);
+		alp.readAndProcessLog(RECORD_SPILL);
 //		alp.readAndProcessLog(TEST_SPILL);
 	}
 

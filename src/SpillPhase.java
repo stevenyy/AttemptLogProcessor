@@ -203,13 +203,11 @@ public class SpillPhase extends AbstractPhase{
 	}
 	
 	private long calculateTotalSpillMemory(){
-		//		System.out.println("Printing from SP: getTotalSpillMemory called");
-		//		System.out.println("Printing from SP: size of the memoryList " + memoryList.size());
 		if (spillMemory == 0){
 			for (Long i: memoryList){
-				System.out.println("SP.CalTotalSM: Each element in memory list is " + i.longValue());
+//				System.out.println("SP.CalTotalSM: Each element in memory list is " + i.longValue());
 				spillMemory += i.longValue();
-				System.out.println("SP: the spillMemory here is " + spillMemory);
+//				System.out.println("SP: the spillMemory here is " + spillMemory);
 //				spillMemory = spillMemory + i;
 			}
 		}
