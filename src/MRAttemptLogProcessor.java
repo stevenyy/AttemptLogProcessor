@@ -39,14 +39,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	private Map<String, AbstractPhase> phaseMap; // List of phases created
 	private PhasesResult phasesResult; // Class that stores all the phases as field/instance, 
 
-	// See: http://eventuallyconsistent.net/2011/08/02/working-with-urlconnection-and-timeouts/
-	private static final int TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS = 5000; // 5 seconds
-	private static final int TASKLOG_FETCH_READ_TIMEOUT_MILLIS = 10000; // 10 seconds
-
 	private static final Log LOG = LogFactory.getLog(LogParser.class);
-	private static final String DOT_XML = ".xml";
-	private static final Pattern NAME_PATTERN = Pattern
-			.compile(".*(job_[0-9]+_[0-9]+).*");
 
 	//Instance of SignalDoctors: Instantiated at the constructor of LogParser
 	private SpillDoctor sd;
@@ -87,7 +80,6 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 
 	//	public String readAndProcessLog(MRTaskAttemptInfo attemptInfo, String attemptID){
 	public PhasesResult readAndProcessLog(String filePath){
-		//		Map<String, String> lineStructureMap = new HashMap<String, String>();
 		// Read and parse from the local file directory with small file size
 		InputStream in;
 		StringBuilder out = new StringBuilder();
@@ -101,29 +93,25 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 			while ((line = reader.readLine()) != null) {
 				out.append(line + ParseUtils.ENTER_RETURN);
 				
-//				lineStructureMap = ParseUtils.extractInfo(line, lineNum, logSoFar);
-				//				System.out.println("The current line at which it stopped " + lineCounter);
-				if (ParseUtils.skipLine(line, 0)){
-//					System.out.println("Printing the skipped line: " + line);
-				}
 				for (SignalDoctor doctor : doctorMap.values()) {
 					doctor.check(line, lineNum);
-//											System.out.println("printing from SignalDoc loop");
 				}				
 				previous = line;
 				lineNum++;
+				
+				/*	// To see which lines are being skipped 			
+				 * 					if (ParseUtils.skipLine(line, 0)){
+//									System.out.println("Printing the skipped line: " + line);
+								}*/
 			}
 			// Ask SignalDoctors to create Phases
 			for (SignalDoctor doctor : doctorMap.values()) {
 				AbstractPhase p = doctor.createPhase();
-//				System.out.println("Checking the name " + p.getName());
 				phaseMap.put(p.getName(), p);
-//				System.out.println("Checking the size of map " + phaseMap.size());
 				phasesResult.registerPhase(p.getName(), p);
 			}
 
 			logSoFar = out.toString();
-//			            System.out.println("Printing from main loop log so far is "+ logSoFar);   //Prints the string content read from input stream
 			reader.close();
 
 		} catch (FileNotFoundException e) {
@@ -181,8 +169,8 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 		try {
 
 			URLConnection c = taskAttemptLogUrl.openConnection();
-			c.setConnectTimeout(TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS);
-			c.setReadTimeout(TASKLOG_FETCH_READ_TIMEOUT_MILLIS);
+			c.setConnectTimeout(ParseUtils.TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS);
+			c.setReadTimeout(ParseUtils.TASKLOG_FETCH_READ_TIMEOUT_MILLIS);
 
 			//            System.out.println("printing the header title here: " + c.getHeaderField("title"));
 			in = c.getInputStream();		

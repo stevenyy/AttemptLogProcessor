@@ -34,9 +34,18 @@ public class ParseUtils {
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	public static final String SPACE = "\\s+";
 	
+	private static final String DOT_XML = ".xml";
+	private static final Pattern NAME_PATTERN = Pattern
+			.compile(".*(job_[0-9]+_[0-9]+).*");
+	
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
 	public static final String END = "End";
 	public static final String CAP = "Cap"; // Used for regex of bufVoid, or length
+	
+	//Data Connection Timeouts
+	// See: http://eventuallyconsistent.net/2011/08/02/working-with-urlconnection-and-timeouts/
+	public static final int TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS = 5000; // 5 seconds
+	public static final int TASKLOG_FETCH_READ_TIMEOUT_MILLIS = 10000; // 10 seconds
 	
 	
 	/**
