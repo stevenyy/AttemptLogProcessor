@@ -37,9 +37,14 @@ public class TestAttemptLogProcessor{
 	public static final String REDUCE_INCOMPLETE = FOLDER + "ReduceIncomplete.txt";
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	
+	
 	public static final String SPILL = "/Users/Hadoop/Desktop/TestData/Spill/"; 
 	public static final String RECORD_SPILL = SPILL + "RecordSpill.txt";
 	public static final String TEST_SPILL = SPILL + "TestSpill.txt";
+	
+	public static final String EXP2SM = SPILL + "job_201405200258_413832_SM.txt";
+	public static final String EXP3SM = SPILL + "job_201405200258_407819_SM.txt";
+	public static final String EXP4SM = SPILL + "job_201405200258_425512_SM.txt";
 	
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
 
@@ -50,13 +55,60 @@ public class TestAttemptLogProcessor{
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		//dao = ProfileDBManager.instance();
 		
-		alp.readAndProcessLog(RECORD_SPILL);
+		alp.readAndProcessLog(EXP4SM);
 //		alp.readAndProcessLog(TEST_SPILL);
 	}
 
 	@After
 	public void tearDown() throws Exception {
 
+	}
+	
+
+	@Test 
+	public void testSpillDoctor(){
+		
+//		alp.readAndProcessLog(RECORD_SPILL);
+//		alp.readAndProcessLog(MAP_VERY_SHORT);
+		SpillPhase sp =  (SpillPhase) alp.getPhaseMap().get("SpillPhase");
+		SpillPhase sp2 =  (SpillPhase) alp.getPhasesResult().getSpillPhase();
+		
+		assertEquals(sp, sp2);
+
+		System.out.println();
+		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
+		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
+				"SpillType is " + sp.getSpillType() + ENTER_RETURN+
+				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
+				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
+				"Total spill memory " + sp.getTotalSpillMemory() +  ENTER_RETURN +
+				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
+				" ");
+	}
+	
+	@Test
+	public void testMergeDoctor(){
+		
+//		alp.readAndProcessLog(MAP_LONG);
+		MapMergePhase mmp =  (MapMergePhase) alp.getPhaseMap().get("MapMergePhase");
+
+		System.out.println();
+		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
+		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
+				mmp.getMergeTime() + " is the the merge time it takes" + ENTER_RETURN +
+				mmp.getNumRedTasks() + " is the number of reduce tasks");
+	}
+	
+//	@Test 
+	public void testInfoDoctor(){
+//		alp.readAndProcessLog(MAP_LONG);
+		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
+		
+		System.out.println();
+		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
+		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
+				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN);
+		
 	}
 	
 //	@Test
@@ -144,52 +196,6 @@ public class TestAttemptLogProcessor{
 		for (String message: alp.getExceptionMap().values()){
 			System.out.println("The message at the exception is: " + message);
 		}
-	}
-	
-	@Test 
-	public void testSpillDoctor(){
-		
-//		alp.readAndProcessLog(RECORD_SPILL);
-//		alp.readAndProcessLog(MAP_VERY_SHORT);
-		SpillPhase sp =  (SpillPhase) alp.getPhaseMap().get("SpillPhase");
-		SpillPhase sp2 =  (SpillPhase) alp.getPhasesResult().getSpillPhase();
-		
-		assertEquals(sp, sp2);
-
-		System.out.println();
-		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
-		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
-				"SpillType is " + sp.getSpillType() + ENTER_RETURN+
-				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
-				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
-				"Total spill memory " + sp.getTotalSpillMemory()+  ENTER_RETURN +
-				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
-				" ");
-	}
-	
-	@Test
-	public void testMergeDoctor(){
-		
-//		alp.readAndProcessLog(MAP_LONG);
-		MapMergePhase mmp =  (MapMergePhase) alp.getPhaseMap().get("MapMergePhase");
-
-		System.out.println();
-		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
-		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
-				mmp.getMergeTime() + " is the the merge time it takes" + ENTER_RETURN +
-				mmp.getNumRedTasks() + " is the number of reduce tasks");
-	}
-	
-//	@Test 
-	public void testInfoDoctor(){
-//		alp.readAndProcessLog(MAP_LONG);
-		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
-		
-		System.out.println();
-		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
-		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
-				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN);
-		
 	}
 	
 //	@Test 

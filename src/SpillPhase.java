@@ -16,21 +16,22 @@ public class SpillPhase extends AbstractPhase{
     protected int hash; // The hash value for this object
     private String inputLog; // the most recent String of input that the phase read in	
 	
-    private int spillMemory;
-    private int spillRecord;
-    private int[] dataBuffer; // The memory buffer array in kB: {80%, full}
-    private int[] recordBuffer; // The record buffer in # or records: {80%, full}
+    private long spillMemory;
+    private long spillRecord;
+    private long[] dataBuffer; // The memory buffer array in kB: {80%, full}
+    private long[] recordBuffer; // The record buffer in # or records: {80%, full}
     private String spillType; // The cause of spill, buffer full or record full
-	private int numSpill;
+	private long numSpill;
 	private long spillTime;
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private String myLog;
 	private String name;
 	
-	private List<HashMap<String, Integer>> bufList; //Map of buffer information 
-	private List<HashMap<String, Integer>> kvList;//Map of kv information
+	private List<HashMap<String, Long>> bufList; //Map of buffer information 
+	private List<HashMap<String, Long>> kvList;//Map of kv information
 	
-	private List<Integer> memoryList, recordList;
+	private List<Long> memoryList;
+	private List<Long> recordList;
 	/**
 	 * TODO: SpillPhase, consider changing all the fields to final to restrict later modification 
 	 * @param string 
@@ -51,15 +52,15 @@ public class SpillPhase extends AbstractPhase{
 		
 		spillTime = (long) 0;
 		numSpill = 0;
-		dataBuffer = new int[2];
-		recordBuffer = new int[2];
+		dataBuffer = new long[2];
+		recordBuffer = new long[2];
 		timeSpanList = null;
 		spillType = "No Spill Occured";
 		myLog = null;
-		bufList = new ArrayList<HashMap<String, Integer>>();
-		kvList = new ArrayList<HashMap<String, Integer>>();
-		memoryList = new ArrayList<Integer>();
-		recordList = new ArrayList<Integer>();
+		bufList = new ArrayList<HashMap<String, Long>>();
+		kvList = new ArrayList<HashMap<String, Long>>();
+		memoryList = new ArrayList<Long>();
+		recordList = new ArrayList<Long>();
 	}
 	
 /*	public SpillPhase(int spillLength, int spillRecord, Long spillTime, String name){
@@ -70,14 +71,14 @@ public class SpillPhase extends AbstractPhase{
 		this.spillTime = spillTime;
 	}*/
 	
-	public void update(List<Integer> memoryList, List<Integer> recordList,
+	public void update(List<Long> memoryList, List<Long> recordList,
 			int numSpill, Long time) {
 		this.memoryList = memoryList;
 		this.recordList = recordList;
 		this.numSpill = numSpill;
 		this.spillTime = time;
-		getTotalSpillMemory();
-		getTotalSpillRecord();
+		calculateTotalSpillMemory();
+		calculateTotalSpillRecord();
 	}
 
 	@Override 
@@ -100,7 +101,7 @@ public class SpillPhase extends AbstractPhase{
 	 * Getters and setters for accessing and setting field values
 	 * @return
 	 */
-	public int getNumSpill() {
+	public long getNumSpill() {
 		return numSpill;
 	}
 	
@@ -131,13 +132,13 @@ public class SpillPhase extends AbstractPhase{
 			this.spillType = "KV-Spill (buffer full = true)"; 
 	}
 
-	public int[] getDataBuffer() {
+	public long[] getDataBuffer() {
 		if (dataBuffer == null)
 			System.err.println("DataBuffer is not populated. Spill did not happen");
 		return dataBuffer;
 	}
 	
-	public int[] getRecordBuffer() {
+	public long[] getRecordBuffer() {
 		if (recordBuffer == null)
 			System.err.println("RecordBuffer is not populated. Spill did not happen");
 		return recordBuffer;
@@ -145,21 +146,21 @@ public class SpillPhase extends AbstractPhase{
 
 	public void setRecordBuffer(List<String> list) {
 		// Better Use try catch and check size of list 
-		this.recordBuffer = new int[]{Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1))};
+		this.recordBuffer = new long[]{Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1))};
 	}
 	
 	public void setDataBuffer(List<String> list) {
 		// Better to Use Try Catch and Check size of List
-		this.dataBuffer = new int[]{Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1))};
+		this.dataBuffer = new long[]{Integer.parseInt(list.get(0)), Integer.parseInt(list.get(1))};
 	}
 	
-	public List<HashMap<String, Integer>> getBufList(){
+	public List<HashMap<String, Long>> getBufList(){
 		if (bufList == null)
 			System.err.println("bufList not populated");
 		return bufList;
 	}
 	
-	public List<HashMap<String, Integer>> getKvList(){
+	public List<HashMap<String, Long>> getKvList(){
 		if (kvList == null)
 			System.err.println("kvList not populated");
 		return kvList;
@@ -167,10 +168,10 @@ public class SpillPhase extends AbstractPhase{
 	
 	public void updateBufList(List<String> list){
 		try{
-			HashMap<String, Integer> bufMap = new HashMap<String, Integer>();
-			bufMap.put(ParseUtils.START, Integer.parseInt(list.get(0)));
-			bufMap.put(ParseUtils.END, Integer.parseInt(list.get(1)));
-			bufMap.put(ParseUtils.CAP, Integer.parseInt(list.get(2)));
+			HashMap<String, Long> bufMap = new HashMap<String, Long>();
+			bufMap.put(ParseUtils.START, Long.parseLong(list.get(0)));
+			bufMap.put(ParseUtils.END, Long.parseLong(list.get(1)));
+			bufMap.put(ParseUtils.CAP, Long.parseLong(list.get(2)));
 			bufList.add(bufMap);} 
 		catch(Throwable t){
 			t.printStackTrace();
@@ -181,10 +182,10 @@ public class SpillPhase extends AbstractPhase{
 	
 	public void updateKvList(List<String> list){
 		try{
-			HashMap<String, Integer> kvMap = new HashMap<String, Integer>();
-			kvMap.put(ParseUtils.START, Integer.parseInt(list.get(0)));
-			kvMap.put(ParseUtils.END, Integer.parseInt(list.get(1)));
-			kvMap.put(ParseUtils.CAP, Integer.parseInt(list.get(2)));
+			HashMap<String, Long> kvMap = new HashMap<String, Long>();
+			kvMap.put(ParseUtils.START, Long.parseLong(list.get(0)));
+			kvMap.put(ParseUtils.END, Long.parseLong(list.get(1)));
+			kvMap.put(ParseUtils.CAP, Long.parseLong(list.get(2)));
 			kvList.add(kvMap);} 
 		catch(Throwable t){
 			t.printStackTrace();
@@ -197,35 +198,52 @@ public class SpillPhase extends AbstractPhase{
 		this.numSpill = numSpill;
 	}
 
-	public List<Integer> getMemoryList() {
+	public List<Long> getMemoryList() {
 		return memoryList;
 	}
 	
-	public int getTotalSpillMemory(){
-//		System.out.println("Printing from SP: getTotalSpillMemory called");
-//		System.out.println("Printing from SP: size of the memoryList " + memoryList.size());
-		for (Integer i: memoryList){
-			spillMemory += i.intValue();
+	private long calculateTotalSpillMemory(){
+		//		System.out.println("Printing from SP: getTotalSpillMemory called");
+		//		System.out.println("Printing from SP: size of the memoryList " + memoryList.size());
+		if (spillMemory == 0){
+			for (Long i: memoryList){
+				System.out.println("SP.CalTotalSM: Each element in memory list is " + i.longValue());
+				spillMemory += i.longValue();
+				System.out.println("SP: the spillMemory here is " + spillMemory);
+//				spillMemory = spillMemory + i;
+			}
 		}
+		
+		return spillMemory;
+
+	}
+	
+	public long getTotalSpillMemory(){
 		return spillMemory;
 	}
 	
-	public int getTotalSpillRecord(){
-		for (Integer i: recordList){
-			spillRecord += i.intValue();
+	public long getTotalSpillRecord(){
+		return spillRecord;
+	}
+	
+	private long calculateTotalSpillRecord(){
+		if (spillRecord == 0){
+			for (Long i: recordList){
+				spillRecord += i.longValue();
+			}
 		}
 		return spillRecord;
 	}
 
-	public void setMemoryList(List<Integer> memoryList) {
+	public void setMemoryList(List<Long> memoryList) {
 		this.memoryList = memoryList;
 	}
 
-	public List<Integer> getRecordList() {
+	public List<Long> getRecordList() {
 		return recordList;
 	}
 
-	public void setRecordList(List<Integer> recordList) {
+	public void setRecordList(List<Long> recordList) {
 		this.recordList = recordList;
 	}
 

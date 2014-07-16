@@ -156,6 +156,7 @@ public class ParseUtils {
 			d = format.parse(dayAndTime);
 		} catch (ParseException e) {
 			System.err.println("The dayAndTime it tried to convert to Long is " + dayAndTime);
+			System.err.println("The line is " + line);
 			e.printStackTrace();
 		}
 
