@@ -8,6 +8,7 @@
 	<classpathentry kind="lib" path="/starfish-core/lib/common/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="/hive-hook/lib/common/commons-logging-1.0.4.jar"/>
 	<classpathentry kind="lib" path="/starfish-core/webui/lib/hadoop-core-1.0.3.jar"/>
+	<classpathentry kind="lib" path="dependencies/poi-3.10-FINAL.jar" sourcepath="/Users/Hadoop/Downloads/poi-3.10-FINAL"/>
 	<classpathentry kind="src" path="/starfish-core"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="/Users/Hadoop/Downloads/poi-3.10-FINAL"/>

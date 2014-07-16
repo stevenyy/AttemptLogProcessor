@@ -9,7 +9,7 @@ import java.util.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertEquals;
 
-/**
+/**RENDERED OBSOLETE. FOR WORKING WITH LATEST MRATTEMPTLOGPROCESSOR, GO TO TESTATTEMPTLOGPROCESSOR
  * Test the LogParser
  *
  * @author Steve Siyang Wang

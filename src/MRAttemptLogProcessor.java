@@ -19,7 +19,8 @@ import com.sun.javafx.scene.EnteredExitedHandler;
 
 /**
  * TODO: create generic Interface for a generic parser to parse the log.
- *
+ *	Parse Log by reading line by line, and feed line to list of Doctors, who each is responsible 
+ *	creating the corresponding Phase objects. 
  * @author Steve Siyang Wang
  * Created on 6/30/14.
  */
@@ -27,6 +28,7 @@ import com.sun.javafx.scene.EnteredExitedHandler;
 public class MRAttemptLogProcessor implements LogAnnotator {
 
 	private String logSoFar; // The last log it read
+	private ExcelWriter ew; // The ExcelWriter 
 	
 	private Map<String, String> lineStructureMap; // Structure of each line in log, updated per extractInfo call
 	private Map<Integer, String> exceptionMap; // Map of exceptions occurred
@@ -37,7 +39,6 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	private Map<String, AbstractPhase> phaseMap; // List of phases created
 	private PhasesResult phasesResult; // Class that stores all the phases as field/instance, 
 
-	
 	// See: http://eventuallyconsistent.net/2011/08/02/working-with-urlconnection-and-timeouts/
 	private static final int TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS = 5000; // 5 seconds
 	private static final int TASKLOG_FETCH_READ_TIMEOUT_MILLIS = 10000; // 10 seconds
@@ -60,6 +61,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	 */
 
 	public MRAttemptLogProcessor(){
+		ew = new ExcelWriter();
 		logSoFar = null;
 		lineStructureMap = new HashMap<String, String>(); 
 		exceptionMap = new HashMap<Integer, String>();
@@ -131,6 +133,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 			e.printStackTrace();
 		}
 		
+		ew.writeAndSave(phasesResult);
 		return phasesResult;
 
 		// Read and parse from HTTP request
