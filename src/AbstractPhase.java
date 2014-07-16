@@ -12,6 +12,7 @@ public abstract class AbstractPhase {
     protected int hash; // The hash value for this object
     private String inputLog; // the most recent String of input that the phase read in
     private String name;
+    private long duration;
     /**
      * The default constructor
      */
@@ -27,7 +28,7 @@ public abstract class AbstractPhase {
      * Called in the constructor; initialize all parameters
      */
     private void initialize() {
-		
+		duration = 0;
 	}
 
 	/**
@@ -51,6 +52,10 @@ public abstract class AbstractPhase {
     
     public void setName(String name){
     	this.name = name;
+    }
+    
+    public long getDuration(){
+    	return duration;
     }
 
     /**

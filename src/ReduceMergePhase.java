@@ -7,7 +7,7 @@ public class ReduceMergePhase extends AbstractPhase {
 	protected int hash; // The hash value for this object
 	private String inputLog; // the most recent String of input that the phase read in	
 
-	private Long mergeTime;
+	private long duration;
 	private String name;
 
 	/**
@@ -22,13 +22,22 @@ public class ReduceMergePhase extends AbstractPhase {
 	public ReduceMergePhase(Long time, String name){
 		super();
 		this.name = name;
-		this.mergeTime = time;
+		this.duration = time;
 	}
 
 
 	@Override
 	public String getName(){
 		return name;
+	}
+	
+	@Override 
+	public long getDuration(){
+		return duration;
+	}
+	
+	public void setDuration(long mergeTime){
+		this.duration = mergeTime;
 	}
 
 

@@ -168,7 +168,7 @@ public class TestLogParser{
 		System.out.println();
 		System.out.println("Printing Test MergeDoctor: the phase name is " + mmp.getName());
 		System.out.println("Printing Test SignalDoctor: " + ENTER_RETURN +
-				mmp.getMergeTime() + " is the the merge time it takes");
+				mmp.getDuration()+ " is the the merge time it takes");
 	}
 	
 

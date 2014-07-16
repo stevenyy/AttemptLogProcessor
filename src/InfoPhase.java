@@ -23,6 +23,8 @@ public class InfoPhase extends AbstractPhase {
 	private Map<String, String> codecMap; // Map of CodecPool
 	private Map<String, String> obsoleteOutputMap; // Map of obsolete output that's ignored during the log
 	
+	//TODO: better to store Some Overall Informations
+	//Job-ID, attemptID, totalTime, etc
 	
 	public InfoPhase(){
 		super();

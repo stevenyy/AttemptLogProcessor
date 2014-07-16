@@ -5,7 +5,7 @@ public class MapMergePhase extends AbstractPhase{
     protected int hash; // The hash value for this object
     private String inputLog; // the most recent String of input that the phase read in	
     
-    private Long mergeTime;
+    private long duration;
     private String name;
     private int numReduceTasks;
 	
@@ -24,20 +24,20 @@ public class MapMergePhase extends AbstractPhase{
 	
 	public MapMergePhase(Long time, String name, int num){
 		super();
-		this.mergeTime = time;
+		this.duration = time;
 		this.name = name;
 		this.numReduceTasks = num;
 	}
 	
 	private void initialize(){
-		mergeTime = (long) 0;
+		duration = (long) 0;
 		numReduceTasks = 0;
 		
 	}
 	
 
 	public void update(Long time, int num){
-		this.mergeTime = time;
+		this.duration = time;
 		this.numReduceTasks = num;
 	}
 	
@@ -59,8 +59,13 @@ public class MapMergePhase extends AbstractPhase{
 	/**
 	 * Getters for the sake of testing
 	 */
-	public Long getMergeTime(){
-		return mergeTime;
+	@Override
+	public long getDuration(){
+		return duration;
+	}
+	
+	public void setDuration(long mergeTime){
+		this.duration = mergeTime;
 	}
 	
 	@Override

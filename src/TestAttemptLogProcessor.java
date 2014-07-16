@@ -86,7 +86,7 @@ public class TestAttemptLogProcessor{
 				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
 				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
 				"Total spill memory " + sp.getTotalSpillMemory() +  ENTER_RETURN +
-				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
+				"Spilled time " + sp.getDuration() + ENTER_RETURN + 
 				" ");
 	}
 	
@@ -99,7 +99,7 @@ public class TestAttemptLogProcessor{
 		System.out.println();
 		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
 		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
-				mmp.getMergeTime() + " is the the merge time it takes" + ENTER_RETURN +
+				mmp.getDuration() + " is the the merge time it takes" + ENTER_RETURN +
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 	}
 	

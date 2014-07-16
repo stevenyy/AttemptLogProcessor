@@ -22,7 +22,7 @@ public class SpillPhase extends AbstractPhase{
     private long[] recordBuffer; // The record buffer in # or records: {80%, full}
     private String spillType; // The cause of spill, buffer full or record full
 	private long numSpill;
-	private long spillTime;
+	private long duration;
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private String myLog;
 	private String name;
@@ -50,7 +50,7 @@ public class SpillPhase extends AbstractPhase{
 		spillMemory = 0;
 		spillRecord = 0;
 		
-		spillTime = (long) 0;
+		duration = (long) 0;
 		numSpill = 0;
 		dataBuffer = new long[2];
 		recordBuffer = new long[2];
@@ -76,7 +76,7 @@ public class SpillPhase extends AbstractPhase{
 		this.memoryList = memoryList;
 		this.recordList = recordList;
 		this.numSpill = numSpill;
-		this.spillTime = time;
+		this.duration = time;
 		calculateTotalSpillMemory();
 		calculateTotalSpillRecord();
 	}
@@ -103,14 +103,6 @@ public class SpillPhase extends AbstractPhase{
 	 */
 	public long getNumSpill() {
 		return numSpill;
-	}
-	
-	public long getSpillTime() {
-		return spillTime;
-	}
-
-	public void setSpillTime(long spillTime) {
-		this.spillTime = spillTime;
 	}
 	
 	public List<String[]> getTimeSpanList() {
@@ -248,6 +240,15 @@ public class SpillPhase extends AbstractPhase{
 	@Override
 	public String getName(){
 		return name;
+	}
+	
+	@Override
+	public long getDuration() {
+		return duration;
+	}
+
+	public void setDuration(long spillTime) {
+		this.duration = spillTime;
 	}
 
 

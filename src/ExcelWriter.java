@@ -29,7 +29,6 @@ public class ExcelWriter {
 	private static final String ADDRESS = "";
 	
 	public ExcelWriter(){
-		
 		initialize();
 	}
 	
@@ -74,9 +73,9 @@ public class ExcelWriter {
 		Object[] res = new Object[]{"ID", "aID", "IO", 
 				sp.getNumSpill(), kv, sp.getNumSpill()-kv,
 				sp.getTotalSpillMemory(), sp.getTotalSpillRecord(),
-				sp.getSpillTime(), (double) sp.getSpillTime()/1000/60, 
-				(double) sp.getTotalSpillMemory()/sp.getNumSpill(), (double) sp.getSpillTime()/sp.getNumSpill(), 
-				mmp.getNumRedTasks(), mmp.getMergeTime(), (double) mmp.getMergeTime()/1000/60, sp.getSpillTime()+mmp.getMergeTime()}; 
+				sp.getDuration(), (double) sp.getDuration()/1000/60, 
+				(double) sp.getTotalSpillMemory()/sp.getNumSpill(), (double) sp.getDuration()/sp.getNumSpill(), 
+				mmp.getNumRedTasks(), mmp.getDuration(), (double) mmp.getDuration()/1000/60, sp.getDuration()+mmp.getDuration()}; 
 		//TODO: improve this automatic casting
 		
 		System.out.println("EW: it proceeds to here");
@@ -131,7 +130,7 @@ public class ExcelWriter {
 				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
 				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
 				"Total spill memory " + sp.getTotalSpillMemory() +  ENTER_RETURN +
-				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
+				"Spilled time " + sp.getDuration() + ENTER_RETURN + 
 				" ");*/
 		
 	}
