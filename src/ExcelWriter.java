@@ -61,6 +61,7 @@ public class ExcelWriter {
 		MapMergePhase mmp = phasesResult.getmMergePhase();
 		
 		System.out.println("EW.write testing the size of data map " + data.size());
+		
 		Object[] title = new Object[]{"Job_ID", "TaskAttempt_ID", "IO.SORT.MB", 
 				"Total# Spill",	"# of KV Spills", "# of Meta Spills", 
 				"Spilled Memory", "Spilled Record", 
@@ -73,10 +74,12 @@ public class ExcelWriter {
 		Object[] res = new Object[]{"ID", "aID", "IO", 
 				sp.getNumSpill(), kv, sp.getNumSpill()-kv,
 				sp.getTotalSpillMemory(), sp.getTotalSpillRecord(),
-				sp.getSpillTime(), sp.getSpillTime()/1000/60, 
-				sp.getTotalSpillMemory()/sp.getNumSpill(), sp.getSpillTime()/sp.getNumSpill(), 
-				mmp.getNumRedTasks(), mmp.getMergeTime(), mmp.getMergeTime()/1000/60};
+				sp.getSpillTime(), (double) sp.getSpillTime()/1000/60, 
+				(double) sp.getTotalSpillMemory()/sp.getNumSpill(), (double) sp.getSpillTime()/sp.getNumSpill(), 
+				mmp.getNumRedTasks(), mmp.getMergeTime(), (double) mmp.getMergeTime()/1000/60, sp.getSpillTime()+mmp.getMergeTime()}; 
+		//TODO: improve this automatic casting
 		
+		System.out.println("EW: it proceeds to here");
 		data.put(Integer.toString(data.size() + 1), title);
 		data.put(Integer.toString(data.size() + 1), res);
 		
@@ -84,7 +87,7 @@ public class ExcelWriter {
 		try{
 			int rowCounter = 0;
 			for (String key : data.keySet()) {
-				Row row = sheet.createRow(rowCounter++);
+				Row row = smStudy.createRow(rowCounter++);
 				Object [] objArr = data.get(key);
 				int colCounter = 0;
 				for (Object obj : objArr) {
@@ -92,11 +95,13 @@ public class ExcelWriter {
 					if(obj instanceof Boolean)
 						cell.setCellValue((Boolean)obj);
 					else if (obj instanceof Long)
-						cell.setCellValue((Long) obj); 
+						cell.setCellValue((String) obj.toString()); 
 					else if(obj instanceof String)
-						cell.setCellValue((String)obj);
+						cell.setCellValue((String) obj);
 					else if(obj instanceof Double)
 						cell.setCellValue((Double)obj);
+					else if(obj instanceof Integer)
+						cell.setCellValue((String) obj.toString());
 				}
 			}
 		}
@@ -108,7 +113,7 @@ public class ExcelWriter {
 		// Extract Helper Method. File Write Out
 		try {
 		    FileOutputStream out = 
-		            new FileOutputStream(new File("/Users/Hadoop/Desktop/SpillMergeStudy.xls"));
+		            new FileOutputStream(new File("/Users/Hadoop/Desktop/TestData/Auto/SpillMergeStudy.xls"));
 		    workbook.write(out);
 		    out.close();
 		    System.out.println("Excel written successfully..");

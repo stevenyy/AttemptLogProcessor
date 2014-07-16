@@ -25,7 +25,7 @@ public class TestExcelWriter {
 
 	@Before
 	public void setUp() throws Exception {
-		alp.readAndProcessLog(RECORD_SPILL);
+		alp.readAndProcessLog(EXP2SM);
 	}
 
 	@After
@@ -50,6 +50,16 @@ public class TestExcelWriter {
 				"Total spill memory " + sp.getTotalSpillMemory() +  ENTER_RETURN +
 				"Spilled time " + sp.getSpillTime() + ENTER_RETURN + 
 				" ");
+		
+		MapMergePhase mmp =  (MapMergePhase) alp.getPhaseMap().get("MapMergePhase");
+
+		System.out.println();
+		System.out.println("Test MergeDoctor: the phase name is " + mmp.getName());
+		System.out.println("Test SignalDoctor: " + ENTER_RETURN +
+				mmp.getMergeTime() + " is the the merge time it takes" + ENTER_RETURN +
+				mmp.getNumRedTasks() + " is the number of reduce tasks");
+		
+		
 	}
 
 }
