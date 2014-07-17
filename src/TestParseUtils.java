@@ -1,5 +1,7 @@
 import static org.junit.Assert.assertEquals;
 
+import javax.sound.midi.MidiDevice.Info;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +24,17 @@ public class TestParseUtils {
 	@After
 	public void tearDown() throws Exception {
 
+	}
+	
+	/**
+	 * Technically speaking this is a test on InfoDoctor
+	 */
+	@Test 
+	public void testCheckJobInfo(){
+		String line = "2014-07-12 22:58:18,362 INFO org.apache.hadoop.mapred.TaskRunner: "
+				+ "Creating symlink: /srv/data/disk11/hadoop/mapred/local/taskTracker/mobile/distcache/3821883628819521061_-461103763_765966555/inw-hercules-ha/srv/grid-tmp/hive-mobile/hive_2014-07-12_22-57-45_957_7469990397307196607-1/-mr-10008/dd1569db-69c2-4620-83f3-aa1f0a5a5b5e/map.xml <- /srv/data/disk11/hadoop/mapred/local/taskTracker/mobile/jobcache/job_201405200258_412345/attempt_201405200258_412345_m_000185_0/work/map.xml";
+		InfoDoctor id = new InfoDoctor("InfoDoctor");
+		id.checkJobInfo(line);
 	}
 	
 	@Test
@@ -85,4 +98,6 @@ public class TestParseUtils {
 		assertEquals("record", res);
 				
 	}
+	
+
 }

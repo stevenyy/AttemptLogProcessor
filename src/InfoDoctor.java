@@ -1,3 +1,4 @@
+import edu.duke.starfish.profile.profileinfo.execution.mrtaskattempts.MRTaskAttemptInfo;
 
 import java.awt.image.MemoryImageSource;
 import java.text.ParseException;
@@ -12,8 +13,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.sun.javafx.scene.EnteredExitedHandler;
-
-import edu.duke.starfish.profile.profileinfo.execution.mrtaskattempts.MRTaskAttemptInfo;
 
 /**
  * Info Doctor that checks on each line to extract information about spill
@@ -85,13 +84,35 @@ public class InfoDoctor implements SignalDoctor{
 	// WORK ON HERE
 	@Override
 	public void check(Map<String, String> map){
-
+			
+			checkJobInfo(line); // checks both JobID, and JobAttemptID
 			checkTimeSpan(line, previousLine, lineNum);
 			checkCompressionLibrary(map.get(ParseUtils.MESSAGE));
 			checkMemoryUsage(map, line, lineNum);
 			checkTag(map);
 			checkCodecPool(map);
 			checkObsoleteOutput(map);
+
+	}
+
+	/**
+	 * Extract out the JOBIDs and JOBAttemtpIDs by using pattern matching 
+	 * @param line
+	 */
+	public void checkJobInfo(String line) {
+		Matcher mapAttempt = ParseUtils.MAPATTEMPT_PATTERN.matcher(line);
+		Matcher reduceAttempt = ParseUtils.REDUCEATTEMPT_PATTERN.matcher(line);
+		Matcher jobID = ParseUtils.JOB_PATTERN.matcher(line);
+		
+		if(jobID.find()){
+			ip.setJobID(jobID.group());
+			System.out.println("ID.checkJobInfo job id is " + jobID.group());}
+		if(mapAttempt.find()){
+			ip.setAttemptID(mapAttempt.group());
+			System.out.println("ID.checkJobInfo map Attempt id is " + mapAttempt.group());}	
+		if(reduceAttempt.find()){
+			ip.setAttemptID(reduceAttempt.group());
+			System.out.println("ID.checkJobInfo reduce Attempt id is " + reduceAttempt.group());}
 
 	}
 
@@ -295,6 +316,12 @@ public class InfoDoctor implements SignalDoctor{
 					+ "returning null");
 			return null;}
 		else{return name;}
+	}
+
+	@Override
+	public MRTaskAttemptInfo getAttemptInfo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

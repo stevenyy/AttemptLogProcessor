@@ -33,10 +33,16 @@ public class ParseUtils {
 	public static final String MESSAGE = "Message";
 	public static final String ENTER_RETURN = System.getProperty("line.separator");
 	public static final String SPACE = "\\s+";
-	
+	public static final String DOT_TXT = ".txt"; 
 	private static final String DOT_XML = ".xml";
-	private static final Pattern NAME_PATTERN = Pattern
+	
+	public static final Pattern JOB_PATTERN = Pattern
 			.compile(".*(job_[0-9]+_[0-9]+).*");
+	public static final Pattern MAPATTEMPT_PATTERN = Pattern
+			.compile(".*(attempt_[0-9]+_[0-9]+_m_[0-9]+_[0-9]+).*");
+	public static final Pattern REDUCEATTEMPT_PATTERN = Pattern
+			.compile(".*(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+).*");
+	
 	
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
 	public static final String END = "End";

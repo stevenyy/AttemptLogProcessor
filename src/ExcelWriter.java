@@ -42,7 +42,7 @@ public class ExcelWriter {
 		data = new HashMap<String, Object[]>();
 	}
 	
-	public void createSMTimeTable(List<PhasesResult> list){
+	public void createSMTimeTable(List<PhasesResult> list, List<String> ioSort){
 		Map<String, Object[]> spillMergeMap = new HashMap<String, Object[]>();
 		HSSFSheet smStudy = makeNewSheet("Spill Merge Study");
 		
@@ -55,8 +55,8 @@ public class ExcelWriter {
 		}; // size 17
 		spillMergeMap.put("1", title);
 		
-		for (PhasesResult pr: list){
-			addEntry(pr, spillMergeMap);
+		for (int i = 0; i<list.size(); i++){
+			addEntry(list.get(i), spillMergeMap, ioSort.get(i));
 		}
 		convertToTable(smStudy, spillMergeMap);
 		saveWorkBook(workbook, "SpillMergeStudy.xls");
@@ -65,16 +65,17 @@ public class ExcelWriter {
 /*	private void makeMap(PhasesResult phasesResult, Map<String, Object[]> map){
 		
 	}*/
-	private Map<String, Object[]> addEntry(PhasesResult phasesResult, Map<String, Object[]> data) {
+	private Map<String, Object[]> addEntry(PhasesResult phasesResult, Map<String, Object[]> data, String ioSort) {
 		
 //		HSSFSheet smStudy = workbook.createSheet("Spill Merge Study");
 		SpillPhase sp = phasesResult.getSpillPhase();
 		MapMergePhase mmp = phasesResult.getmMergePhase();
+		InfoPhase ip = phasesResult.getInfoPhase();
 		
 		System.out.println("EW.write testing the size of data map " + data.size());
 		
 		long kv = sp.getSpillType().contains("KV") ? sp.getNumSpill():0 ;
-		Object[] res = new Object[]{"ID", "aID", "IO", 
+		Object[] res = new Object[]{ip.getJobID(), ip.getAttemptID(), ioSort, 
 				sp.getNumSpill(), kv, sp.getNumSpill()-kv,
 				sp.getTotalSpillMemory(), sp.getTotalSpillRecord(),
 				sp.getDuration(), (double) sp.getDuration()/1000/60, 
@@ -147,7 +148,7 @@ public class ExcelWriter {
 	//TODO: Other general multi-purpose write
 	public void writeAndSave(PhasesResult phasesResult){
 		
-		addEntry(phasesResult, data);
+		addEntry(phasesResult, data, null);
 		// other writeXXStudy here
 		
 	}

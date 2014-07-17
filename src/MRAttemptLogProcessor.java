@@ -92,7 +92,9 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 		lineNum = 1;
 
 		try{
-			in = new FileInputStream(new File(filePath));
+			if (filePath.contains(ParseUtils.DOT_TXT));
+				in = new FileInputStream(new File(filePath));
+			in = new ByteArrayInputStream(filePath.getBytes());
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 			while ((line = reader.readLine()) != null) {
 				out.append(line + ParseUtils.ENTER_RETURN);

@@ -13,6 +13,9 @@ public class InfoPhase extends AbstractPhase {
     private String inputLog; // The attempt log as a String
 	private String name; // Name of this InfoPhase
 	
+	private String jobID;
+	private String attemptID;
+	
     private String compressLib;
 	private List<String[]> timeSpanList; // Map of big time-spans
 	private List<HashMap<String, String>> memoryList; // Map that details Memory Usages
@@ -46,6 +49,10 @@ public class InfoPhase extends AbstractPhase {
 	private void initialize(){
 		
 		name = " ";
+		jobID = " ";
+		mapAttemptID = " ";
+		reduceAttemptID = " ";
+		
 		compressLib = " ";
 		timeSpanList = new ArrayList<String[]>();
 		memoryList = new ArrayList<HashMap<String, String>>();
@@ -186,5 +193,22 @@ public class InfoPhase extends AbstractPhase {
 	public void updateObsoleteOutputMap(String s1, String s2){
 		obsoleteOutputMap.put(s1, s2);
 	}
+
+	public void setJobID(String id) {
+		this.jobID = id;
+	}
+	
+	public String getJobID(){
+		return jobID;
+	}
+
+	public String getAttemptID() {
+		return attemptID;
+	}
+
+	public void setAttemptID(String AttemptID) {
+		this.attemptID = AttemptID;
+	}
+
 
 }
