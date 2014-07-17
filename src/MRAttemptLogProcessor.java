@@ -16,7 +16,6 @@ import org.apache.hadoop.http.HtmlQuoting;
 import com.sun.javafx.scene.EnteredExitedHandler;
 
 
-
 /**
  * TODO: create generic Interface for a generic parser to parse the log.
  *	Parse Log by reading line by line, and feed line to list of Doctors, who each is responsible 
@@ -28,7 +27,7 @@ import com.sun.javafx.scene.EnteredExitedHandler;
 public class MRAttemptLogProcessor implements LogAnnotator {
 
 	private String logSoFar; // The last log it read
-	private ExcelWriter ew; // The ExcelWriter 
+	/*private ExcelWriter ew; // The ExcelWriter  */
 	
 	private Map<String, String> lineStructureMap; // Structure of each line in log, updated per extractInfo call
 	private Map<Integer, String> exceptionMap; // Map of exceptions occurred
@@ -54,7 +53,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	 */
 
 	public MRAttemptLogProcessor(){
-		ew = new ExcelWriter();
+		/*ew = new ExcelWriter();*/
 		logSoFar = null;
 		lineStructureMap = new HashMap<String, String>(); 
 		exceptionMap = new HashMap<Integer, String>();
@@ -78,6 +77,11 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 		doctorMap.put("InfoDoctor", id);
 	}
 
+	/**
+	 * Main method in the MRAttemptLogProcessor
+	 * @param filePath
+	 * @return
+	 */
 	//	public String readAndProcessLog(MRTaskAttemptInfo attemptInfo, String attemptID){
 	public PhasesResult readAndProcessLog(String filePath){
 		// Read and parse from the local file directory with small file size
@@ -121,7 +125,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 			e.printStackTrace();
 		}
 		
-		ew.writeAndSave(phasesResult);
+		/*ew.writeAndSave(phasesResult); Constructing map during each construction of PhasesResult aborted*/ 
 		return phasesResult;
 
 		// Read and parse from HTTP request

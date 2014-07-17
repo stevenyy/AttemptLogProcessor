@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -20,13 +21,12 @@ public class ExcelWriter {
 	// Members
 	private HSSFWorkbook workbook; // The main workbook, which later becomes the excel file 
 	private HSSFSheet sheet;// The work sheet
-	
-	private Map<String, Object[]> data;
+	private Map<String, Object[]> data; // default data map
 	
 	// Constant Strings
 	private static final String NAME_DEFAULT = "Time Sheet"; 
 	private static final String FOLDER = "";
-	private static final String ADDRESS = "";
+	private static final String ADDRESS = "/Users/Hadoop/Desktop/TestData/Auto/";
 	
 	public ExcelWriter(){
 		initialize();
@@ -40,26 +40,11 @@ public class ExcelWriter {
 		workbook = new HSSFWorkbook();
 //		sheet = workbook.createSheet(NAME_DEFAULT);
 		data = new HashMap<String, Object[]>();
-		
-		
-		
 	}
 	
-	public void writeAndSave(PhasesResult phasesResult){
-		
-		writeSpillMergeStudy(phasesResult);
-		// other writeXXStudy here
-		
-	}
-	
-	//TODO: improve this so that it can be called repeatedly
-	private void writeSpillMergeStudy(PhasesResult phasesResult) {
-		
-		HSSFSheet smStudy = workbook.createSheet("Spill Merge Study");
-		SpillPhase sp = phasesResult.getSpillPhase();
-		MapMergePhase mmp = phasesResult.getmMergePhase();
-		
-		System.out.println("EW.write testing the size of data map " + data.size());
+	public void createSMTimeTable(List<PhasesResult> list){
+		Map<String, Object[]> spillMergeMap = new HashMap<String, Object[]>();
+		HSSFSheet smStudy = makeNewSheet("Spill Merge Study");
 		
 		Object[] title = new Object[]{"Job_ID", "TaskAttempt_ID", "IO.SORT.MB", 
 				"Total# Spill",	"# of KV Spills", "# of Meta Spills", 
@@ -68,6 +53,25 @@ public class ExcelWriter {
 				"Avg Data Size per Spill", "Avg Time per Spill", 
 				"# of Reduce Tasks", "Ttl MergeTime(mili)", "Ttl MergeTime (min)", "Spill&Merge in Total(mili)"
 		}; // size 17
+		spillMergeMap.put("1", title);
+		
+		for (PhasesResult pr: list){
+			addEntry(pr, spillMergeMap);
+		}
+		convertToTable(smStudy, spillMergeMap);
+		saveWorkBook(workbook, "SpillMergeStudy.xls");
+	}
+	
+/*	private void makeMap(PhasesResult phasesResult, Map<String, Object[]> map){
+		
+	}*/
+	private Map<String, Object[]> addEntry(PhasesResult phasesResult, Map<String, Object[]> data) {
+		
+//		HSSFSheet smStudy = workbook.createSheet("Spill Merge Study");
+		SpillPhase sp = phasesResult.getSpillPhase();
+		MapMergePhase mmp = phasesResult.getmMergePhase();
+		
+		System.out.println("EW.write testing the size of data map " + data.size());
 		
 		long kv = sp.getSpillType().contains("KV") ? sp.getNumSpill():0 ;
 		Object[] res = new Object[]{"ID", "aID", "IO", 
@@ -78,16 +82,22 @@ public class ExcelWriter {
 				mmp.getNumRedTasks(), mmp.getDuration(), (double) mmp.getDuration()/1000/60, sp.getDuration()+mmp.getDuration()}; 
 		//TODO: improve this automatic casting
 		
-		System.out.println("EW: it proceeds to here");
-		data.put(Integer.toString(data.size() + 1), title);
 		data.put(Integer.toString(data.size() + 1), res);
-		
+		return data;
+	}
+	
+	/**
+	 * Convert the DataMap to a table, writing each cell by cell by using loop
+	 * @param smStudy
+	 * @param dataMap
+	 */
+	private void convertToTable(HSSFSheet smStudy, Map<String, Object[]> dataMap) {
 		//Extract this as a helper method
 		try{
 			int rowCounter = 0;
-			for (String key : data.keySet()) {
+			for (String key : dataMap.keySet()) {
 				Row row = smStudy.createRow(rowCounter++);
-				Object [] objArr = data.get(key);
+				Object [] objArr = dataMap.get(key);
 				int colCounter = 0;
 				for (Object obj : objArr) {
 					Cell cell = row.createCell(colCounter++);
@@ -108,33 +118,41 @@ public class ExcelWriter {
 			T.printStackTrace();
 			System.err.println("The casting of cell value failed. Check the object array casting again");
 		}
-
-		// Extract Helper Method. File Write Out
+	}
+	
+	/**
+	 * Write the file out
+	 * @param workbook
+	 * @param name
+	 */
+	private void saveWorkBook(HSSFWorkbook workbook, String name) {
 		try {
 		    FileOutputStream out = 
-		            new FileOutputStream(new File("/Users/Hadoop/Desktop/TestData/Auto/SpillMergeStudy.xls"));
+		            new FileOutputStream(new File(ADDRESS + name));
 		    workbook.write(out);
 		    out.close();
-		    System.out.println("Excel written successfully..");
+		    System.out.println("Excel written successfully");
 		     
 		} catch (FileNotFoundException e) {
+			// Should not reach here
 		    e.printStackTrace();
+		    System.err.println("Save process failed. Target not found");
 		} catch (IOException e) {
+			// Should not reach here...
 		    e.printStackTrace();
+		    System.err.println("Save process failed. Consider checking EW.save method");
 		}
-
-		/*		System.out.println();
-		System.out.println("Test SpillDoctor: the phase name is " + sp.getName());
-		System.out.println("Test SpillDoctor: " + ENTER_RETURN +
-				"SpillType is " + sp.getSpillType() + ENTER_RETURN+
-				"Number of spill happened " + sp.getNumSpill()+  ENTER_RETURN + 
-				"Total spill record " + sp.getTotalSpillRecord() +  ENTER_RETURN +
-				"Total spill memory " + sp.getTotalSpillMemory() +  ENTER_RETURN +
-				"Spilled time " + sp.getDuration() + ENTER_RETURN + 
-				" ");*/
+	}
+	
+	//TODO: Other general multi-purpose write
+	public void writeAndSave(PhasesResult phasesResult){
+		
+		addEntry(phasesResult, data);
+		// other writeXXStudy here
 		
 	}
-
+	
+	//TODO:
 	public void update(PhasesResult phasesResult){
 		
 	}
@@ -143,7 +161,6 @@ public class ExcelWriter {
 	public HSSFSheet makeNewSheet(String name){
 		return workbook.createSheet(name);
 	}
-	
 	
 	
 	

@@ -1,5 +1,8 @@
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +25,7 @@ public class TestExcelWriter {
 	public static final String EXP7SM = SPILL + "job_201405200258_420817_SM.txt";
 	
 	private MRAttemptLogProcessor alp = new MRAttemptLogProcessor();
+	private ExcelWriter ew = new ExcelWriter();
 
 	@Before
 	public void setUp() throws Exception {
@@ -60,6 +64,9 @@ public class TestExcelWriter {
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 		
 		
+		List<PhasesResult> list = new ArrayList<PhasesResult>();
+		list.add(alp.getPhasesResult());
+		ew.createSMTimeTable(list);
 	}
 
 }
