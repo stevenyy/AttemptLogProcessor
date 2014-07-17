@@ -103,7 +103,7 @@ public class TestAttemptLogProcessor{
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 	}
 	
-//	@Test 
+	@Test 
 	public void testInfoDoctor(){
 //		alp.readAndProcessLog(MAP_LONG);
 		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
@@ -111,7 +111,8 @@ public class TestAttemptLogProcessor{
 		System.out.println();
 		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
 		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
-				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN);
+				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN
+				+ "attemptId is " + ip.getAttemptID()+ ENTER_RETURN );
 		
 	}
 	

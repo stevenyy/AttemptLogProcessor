@@ -50,8 +50,7 @@ public class InfoPhase extends AbstractPhase {
 		
 		name = " ";
 		jobID = " ";
-		mapAttemptID = " ";
-		reduceAttemptID = " ";
+		attemptID = " ";
 		
 		compressLib = " ";
 		timeSpanList = new ArrayList<String[]>();

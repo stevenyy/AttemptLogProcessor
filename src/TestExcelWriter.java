@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.IO;
+
 
 public class TestExcelWriter {
 	
@@ -63,10 +65,11 @@ public class TestExcelWriter {
 				mmp.getDuration() + " is the the merge time it takes" + ENTER_RETURN +
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 		
-		
+		List<String> imSort = new ArrayList<String>();
+		imSort.add("100mb");
 		List<PhasesResult> list = new ArrayList<PhasesResult>();
 		list.add(alp.getPhasesResult());
-		ew.createSMTimeTable(list);
+		ew.createSMTimeTable(list, imSort);
 	}
 
 }
