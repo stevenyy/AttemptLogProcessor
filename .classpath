@@ -4,13 +4,23 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/AttemptLogProcessor/dependencies/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="/starfish-core/lib/mybatis/slf4j-api-1.7.5.jar"/>
-	<classpathentry kind="lib" path="/starfish-core/lib/common/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="/hive-hook/lib/common/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="/starfish-core/webui/lib/hadoop-core-1.0.3.jar"/>
 	<classpathentry kind="lib" path="dependencies/poi-3.10-FINAL.jar" sourcepath="/Users/Hadoop/Downloads/poi-3.10-FINAL"/>
-	<classpathentry kind="src" path="/starfish-core"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="/Users/Hadoop/Downloads/poi-3.10-FINAL"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/target/unravel-1.0.0.245-dataflow.jar" sourcepath="/Users/Hadoop/Documents/Workspace/starfish-core/bin/target"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/target/unravel-1.0.0.245-job-optimizer.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/target/unravel-1.0.0.245-profiler.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/target/unravel-1.0.0.245-whatif.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/target/unravel-1.0.0.245-workload.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/hadoop/hadoop-core-0.20.203.0.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/hadoop/hadoop-core-1.1.2.21.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/jackson-annotations-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/jackson-core-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/jackson-databind-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Hadoop/Documents/Workspace/starfish-core/lib/common/JSON.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

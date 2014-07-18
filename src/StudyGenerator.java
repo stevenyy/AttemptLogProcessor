@@ -10,20 +10,24 @@ import java.util.List;
  */
 public class StudyGenerator {
 
-	public static void EXCEL(List<String> ioList, List<String> logList){
+	public static void EXCEL(List<String> attemptLogList, List<String> idList, List<Integer> ioSortMB){
 		ExcelWriter ew = new ExcelWriter();
 		MRAttemptLogProcessor alp = new MRAttemptLogProcessor();
 		List<PhasesResult> prList = new ArrayList<PhasesResult>();
 
 		try{
-			if (ioList.size() == logList.size()){
-				for (int i = 0; i<logList.size(); i++){
-					prList.add(alp.readAndProcessLog(logList.get(i)));
+			if (attemptLogList.size() == ioSortMB.size()){
+				for (int i = 0; i<ioSortMB.size(); i++){
+					prList.add(alp.readAndProcessLog(attemptLogList.get(i)));
 				}
-
-				ew.createSMTimeTable(prList, ioList);
+				ew.createSMTimeTable(prList, idList, ioSortMB);
+				System.err.println("Size of attemptLogList is " + attemptLogList.size());
+				System.err.println("Size of phasesResultList is " + prList.size());
+				System.err.println("Size of ioSortMB list is " + ioSortMB.size());
 			}
-			System.err.println("Size of two inputs to EXCEl does not match");
+			else {
+				System.err.println("Size of two inputs to EXCEl does not match");
+			}
 		}
 		catch (Throwable T){
 			T.printStackTrace();

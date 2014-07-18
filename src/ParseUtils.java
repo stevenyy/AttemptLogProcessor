@@ -1,7 +1,6 @@
 
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,11 +36,11 @@ public class ParseUtils {
 	private static final String DOT_XML = ".xml";
 	
 	public static final Pattern JOB_PATTERN = Pattern
-			.compile(".*(job_[0-9]+_[0-9]+).*");
+			.compile("(job_[0-9]+_[0-9]+)");
 	public static final Pattern MAPATTEMPT_PATTERN = Pattern
-			.compile(".*(attempt_[0-9]+_[0-9]+_m_[0-9]+_[0-9]+).*");
+			.compile("(attempt_[0-9]+_[0-9]+_m_[0-9]+_[0-9]+)");
 	public static final Pattern REDUCEATTEMPT_PATTERN = Pattern
-			.compile(".*(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+).*");
+			.compile("(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+)");
 	
 	
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart

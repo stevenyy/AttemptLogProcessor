@@ -65,8 +65,8 @@ public class TestExcelWriter {
 				mmp.getDuration() + " is the the merge time it takes" + ENTER_RETURN +
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 		
-		List<String> imSort = new ArrayList<String>();
-		imSort.add("100mb");
+		List<Integer> imSort = new ArrayList<Integer>();
+		imSort.add(100);
 		List<PhasesResult> list = new ArrayList<PhasesResult>();
 		list.add(alp.getPhasesResult());
 		ew.createSMTimeTable(list, imSort);

@@ -28,7 +28,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 
 	private String logSoFar; // The last log it read
 	/*private ExcelWriter ew; // The ExcelWriter  */
-	
+
 	private Map<String, String> lineStructureMap; // Structure of each line in log, updated per extractInfo call
 	private Map<Integer, String> exceptionMap; // Map of exceptions occurred
 	private List<HashMap<String, String>> memoryList; // Map of memory-usage
@@ -54,19 +54,21 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 
 	public MRAttemptLogProcessor(){
 		/*ew = new ExcelWriter();*/
-		logSoFar = null;
+		
 		lineStructureMap = new HashMap<String, String>(); 
 		exceptionMap = new HashMap<Integer, String>();
 		memoryList = new ArrayList<HashMap<String, String>>();
 		timeSpanList = new ArrayList<String[]>();
 		phaseMap= new HashMap<String, AbstractPhase>();
-		phasesResult = new PhasesResult();
+		
 
 		//Initializign SignalDoctors
-		initializeDoctors();
+		
 	}
 
 	private void initializeDoctors() {
+		logSoFar = null;
+		
 		doctorMap= new HashMap<String, SignalDoctor>();
 		sd = new SpillDoctor("SpillDoctor");
 		md = new MergeDoctor("MergeDoctor");
@@ -75,6 +77,8 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 		doctorMap.put("SpillDoctor", sd);
 		doctorMap.put("MergeDoctor", md);
 		doctorMap.put("InfoDoctor", id);
+		
+		phasesResult = new PhasesResult(); 
 	}
 
 	/**
@@ -84,27 +88,35 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	 */
 	//	public String readAndProcessLog(MRTaskAttemptInfo attemptInfo, String attemptID){
 	public PhasesResult readAndProcessLog(String filePath){
-		// Read and parse from the local file directory with small file size
-		InputStream in;
+		initializeDoctors();
+		InputStream in = null;
 		StringBuilder out = new StringBuilder();
-		String line;
+		String line = null;
 		String previous = null;
 		lineNum = 1;
+		boolean localTxt = false;
 
 		try{
-			if (filePath.contains(ParseUtils.DOT_TXT));
+			if (filePath.contains(ParseUtils.DOT_TXT)){
 				in = new FileInputStream(new File(filePath));
-			in = new ByteArrayInputStream(filePath.getBytes());
+				localTxt = true; }
+			else{
+				in = new ByteArrayInputStream(filePath.getBytes());		
+			}
+			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-			while ((line = reader.readLine()) != null) {
+//			while ((inputLine = HtmlQuoting.unquoteHtmlChars(reader.readLine())) != null) {
+			while ((line =  reader.readLine()) != null ) {
+				if(!localTxt) line = HtmlQuoting.unquoteHtmlChars(line);// added to convert HTML chars 
 				out.append(line + ParseUtils.ENTER_RETURN);
-				
+//				System.out.println("The current line that it stopped is "+ line);
+
 				for (SignalDoctor doctor : doctorMap.values()) {
 					doctor.check(line, lineNum);
 				}				
 				previous = line;
 				lineNum++;
-				
+
 				/*	// To see which lines are being skipped 			
 				 * 					if (ParseUtils.skipLine(line, 0)){
 //									System.out.println("Printing the skipped line: " + line);
@@ -126,7 +138,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		/*ew.writeAndSave(phasesResult); Constructing map during each construction of PhasesResult aborted*/ 
 		return phasesResult;
 
@@ -218,11 +230,11 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 	 * Getters and setters created for the purpose of testing
 	 * @return
 	 */
-	
+
 	public PhasesResult getPhasesResult(){
 		return phasesResult;
 	}
-	
+
 	public List<String[]> getTimeSpanList() {
 		return timeSpanList;
 	}
