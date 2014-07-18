@@ -65,11 +65,13 @@ public class TestExcelWriter {
 				mmp.getDuration() + " is the the merge time it takes" + ENTER_RETURN +
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 		
+		List<String> idList = new ArrayList<String>();
 		List<Integer> imSort = new ArrayList<Integer>();
 		imSort.add(100);
+		idList.add("testID");
 		List<PhasesResult> list = new ArrayList<PhasesResult>();
 		list.add(alp.getPhasesResult());
-		ew.createSMTimeTable(list, imSort);
+		ew.createSMTimeTable(list, idList,imSort);
 	}
 
 }

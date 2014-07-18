@@ -31,29 +31,27 @@ public class PhasesResult {
 
 	public void registerPhase(String name, AbstractPhase phase){
 		try{ // Uses switch case with string for better performance 
-			switch (name){
-			case "SpillPhase" : 
-				spillPhase = (SpillPhase) phase;
-				break;
-			case "MapMergePhase" : 
-				mMergePhase = (MapMergePhase) phase;
-				break;
-			case "ShufflePhase" : 
-				shufflePhase = (ShufflePhase) phase;
-				break;
-			case "ReduceMergePhase" : 
-				rMergePhase = (ReduceMergePhase) phase;
-				break;
-			case "ReducePhase" : 
-				reducePhase = (ReducePhase) phase;
-				break;
-			case "WritePhase" : 
-				writePhase = (WritePhase) phase;
-				break;
 
-			case "InfoPhase" : 
+			if(name.equals("SpillPhase")) {
+                spillPhase = (SpillPhase) phase;
+            }
+			else if(name.equals("MapMergePhase" )) {
+                mMergePhase = (MapMergePhase) phase;
+            }
+			else if (name.equals("ShufflePhase")) {
+                shufflePhase = (ShufflePhase) phase;
+            }
+			else if (name.equals("ReduceMergePhase")) {
+                rMergePhase = (ReduceMergePhase) phase;
+            }
+			else if (name.equals("ReducePhase")) {
+                reducePhase = (ReducePhase) phase;
+            }
+			else if (name.equals("WritePhase")) {
+                writePhase = (WritePhase) phase;
+            }
+            else if (name.equals("InfoPhase" )){
 				infoPhase = (InfoPhase) phase;
-				break;
 			}
 		}
 		catch (Throwable T){
@@ -63,6 +61,7 @@ public class PhasesResult {
 			T.printStackTrace();
 		}
 	}
+	
 	
 	
 	/**

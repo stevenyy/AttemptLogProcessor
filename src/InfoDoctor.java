@@ -22,9 +22,9 @@ import com.sun.javafx.scene.EnteredExitedHandler;
 public class InfoDoctor implements SignalDoctor {
 
 	public static final Long MAX_INTERVAL = (long) 30000; // The maxi time
-															// interval between
-															// two lines should
-															// be half a minute
+	// interval between
+	// two lines should
+	// be half a minute
 	private String name = null;
 	private MRTaskAttemptInfo attemptInfo = null;
 	private int lineNum = 0;
@@ -110,21 +110,21 @@ public class InfoDoctor implements SignalDoctor {
 		Matcher reduceAttempt = ParseUtils.REDUCEATTEMPT_PATTERN.matcher(line);
 		Matcher jobID = ParseUtils.JOB_PATTERN.matcher(line);
 
-//		ip.getJobID().equals(" ")
+		//		ip.getJobID().equals(" ")
 		if (true) {
 			if (jobID.find(1)) {
 				ip.setJobID(jobID.group(1));
-//				System.out.println("ID.checkJobInfo job id is " + jobID.group());
+				//				System.out.println("ID.checkJobInfo job id is " + jobID.group());
 			}
 		}
 		if (ip.getAttemptID().equals(" ")) {
 			if (mapAttempt.find(1)) {
 				ip.setAttemptID(mapAttempt.group());
-//				System.out.println("ID.checkJobInfo map Attempt id is "+ mapAttempt.group());
+				//				System.out.println("ID.checkJobInfo map Attempt id is "+ mapAttempt.group());
 			}
 			if (reduceAttempt.find(1)) {
 				ip.setAttemptID(reduceAttempt.group());
-//				System.out.println("ID.checkJobInfo reduce Attempt id is " + reduceAttempt.group());
+				//				System.out.println("ID.checkJobInfo reduce Attempt id is " + reduceAttempt.group());
 			}
 		}
 	}
@@ -185,7 +185,7 @@ public class InfoDoctor implements SignalDoctor {
 	private void logException(String line, int previous, int current) {
 
 		if (current - previous > 2) { // The gap in line number indicates a new
-										// Exception excerpt
+			// Exception excerpt
 			if (exceptionLog != null) {
 				ip.updateExceptionMap(current, exceptionLog);
 				exceptionLog = null; // clears the exceptionLog once it is saved
@@ -235,138 +235,143 @@ public class InfoDoctor implements SignalDoctor {
 	 * @return warnMap
 	 */
 	private void checkTag(Map<String, String> map) {
-		switch (map.get(ParseUtils.MESSAGE_TYPE)) {
+		String message = map.get(ParseUtils.MESSAGE_TYPE);
+
 		// TODO: need test if warnMap and errorMap is updated interanlly
 
-		case ParseUtils.WARN:
+		if (message.equals(ParseUtils.WARN)) {
 			ip.updateWarnMap(
 					lineNum,
 					map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME)
-							+ " " + map.get(ParseUtils.LOCATION) + " "
-							+ map.get(ParseUtils.MESSAGE));
-			break;
-		case ParseUtils.ERROR:
+					+ " " + map.get(ParseUtils.LOCATION) + " "
+					+ map.get(ParseUtils.MESSAGE));
+		}
+		if (message.equals(ParseUtils.ERROR)) {
 			ip.updateErrorMap(
 					lineNum,
 					map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME)
-							+ " " + map.get(ParseUtils.LOCATION) + " "
-							+ map.get(ParseUtils.MESSAGE));
-			break;
+					+ " " + map.get(ParseUtils.LOCATION) + " "
+					+ map.get(ParseUtils.MESSAGE));
 		}
 
+
 	}
 
-	/**
-	 * Check the memory-usage information reflected in the log being parsed, and
-	 * then save that information to InfoPhase class object NEED to cast String
-	 * to number type when using
-	 * 
-	 * @param List
-	 *            of Maps
-	 * @return
-	 */
-	private void checkMemoryUsage(Map<String, String> map, String line,
-			int lineNum) {
 
-		String message = map.get(ParseUtils.MESSAGE);
-		// System.out.println("CheckMemoryUsage message is " + message );
-		if (message.contains("used memory")) {
-			HashMap<String, String> memoryInfo = new HashMap<String, String>();
-			// Key stored in the sequence of: Line, Rows, Memory, Message
 
-			List<String> numList = ParseUtils.extractNumber(message);
-			memoryInfo.put("Line", Integer.toString(lineNum));
-			memoryInfo.put("Rows", numList.get(0));
-			memoryInfo.put("Memory", numList.get(1));
-			memoryInfo.put("Message", line);
-			// For debug:
-			// System.out.println("Print from checkMemoryUsage : ");
-			// System.out.println("CheckMemoryUsage: the size of mr is " +
-			// mr.size());
 
-			ip.updateMemoryList(memoryInfo);
+
+/**
+ * Check the memory-usage information reflected in the log being parsed, and
+ * then save that information to InfoPhase class object NEED to cast String
+ * to number type when using
+ * 
+ * @param List
+ *            of Maps
+ * @return
+ */
+private void checkMemoryUsage(Map<String, String> map, String line,
+		int lineNum) {
+
+	String message = map.get(ParseUtils.MESSAGE);
+	// System.out.println("CheckMemoryUsage message is " + message );
+	if (message.contains("used memory")) {
+		HashMap<String, String> memoryInfo = new HashMap<String, String>();
+		// Key stored in the sequence of: Line, Rows, Memory, Message
+
+		List<String> numList = ParseUtils.extractNumber(message);
+		memoryInfo.put("Line", Integer.toString(lineNum));
+		memoryInfo.put("Rows", numList.get(0));
+		memoryInfo.put("Memory", numList.get(1));
+		memoryInfo.put("Message", line);
+		// For debug:
+		// System.out.println("Print from checkMemoryUsage : ");
+		// System.out.println("CheckMemoryUsage: the size of mr is " +
+		// mr.size());
+
+		ip.updateMemoryList(memoryInfo);
+	}
+}
+
+/**
+ * TODO: make this more robust Check the compression format
+ * 
+ * @param message
+ * @return String compressionFormat
+ */
+private String checkCompressionLibrary(String message) {
+	// System.out.println("ID.checkCL: the message here is " + message);
+
+	String compressLib = null;
+	if (message.contains(ParseUtils.LIBRARY)) {
+		String[] splitArray = message.split(ParseUtils.SPACE);
+		compressLib = splitArray[splitArray.length - 2];
+		System.out
+		.println("Printing from infoDoctor : the compressionLib is "
+				+ compressLib);
+		ip.setCompressLib(compressLib);
+	}
+	return compressLib;
+}
+
+/**
+ * 
+ * Check the interval between two line in log, and return those
+ * 
+ * @param current
+ * @param logCounter
+ * @return List of String Array with format line#, duration, message
+ */
+private void checkTimeSpan(String current, String previous, int lineNum) {
+	// Make sure previous is not null or un-parsable
+	if (previous != null && !skipLine(previous, lineNum)) {
+		// System.out.println("Printing the current line " + current);
+		// System.out.println("Printing the previous line " + previous);
+		long diff = ParseUtils.getTime(current)
+				- ParseUtils.getTime(previous);
+		if (diff > MAX_INTERVAL) {
+			// Construct a feedback String array with format: line#,
+			// duration, message
+			String[] feedback = { Integer.toString(lineNum),
+					Long.toString(diff), current };
+			ip.updateTimeSpanList(feedback);
 		}
 	}
+}
 
-	/**
-	 * TODO: make this more robust Check the compression format
-	 * 
-	 * @param message
-	 * @return String compressionFormat
-	 */
-	private String checkCompressionLibrary(String message) {
-		// System.out.println("ID.checkCL: the message here is " + message);
+@Override
+public MRTaskAttemptInfo getAttemptInfo() {
+	return attemptInfo;
+}
 
-		String compressLib = null;
-		if (message.contains(ParseUtils.LIBRARY)) {
-			String[] splitArray = message.split(ParseUtils.SPACE);
-			compressLib = splitArray[splitArray.length - 2];
-			System.out
-					.println("Printing from infoDoctor : the compressionLib is "
-							+ compressLib);
-			ip.setCompressLib(compressLib);
-		}
-		return compressLib;
+@Override
+public boolean reset() {
+	this.attemptInfo = null;
+	return true;
+}
+
+@Override
+public boolean open(MRTaskAttemptInfo attemptInfo) {
+	this.attemptInfo = attemptInfo;
+	return true;
+}
+
+@Override
+public boolean close() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public String getName() {
+	if (name == null) {
+		System.out
+		.println("SpillDoctor: you have not set the name of spillDoctor, thus "
+				+ "returning null");
+		return null;
+	} else {
+		return name;
 	}
-
-	/**
-	 * 
-	 * Check the interval between two line in log, and return those
-	 * 
-	 * @param current
-	 * @param logCounter
-	 * @return List of String Array with format line#, duration, message
-	 */
-	private void checkTimeSpan(String current, String previous, int lineNum) {
-		// Make sure previous is not null or un-parsable
-		if (previous != null && !skipLine(previous, lineNum)) {
-			// System.out.println("Printing the current line " + current);
-			// System.out.println("Printing the previous line " + previous);
-			long diff = ParseUtils.getTime(current)
-					- ParseUtils.getTime(previous);
-			if (diff > MAX_INTERVAL) {
-				// Construct a feedback String array with format: line#,
-				// duration, message
-				String[] feedback = { Integer.toString(lineNum),
-						Long.toString(diff), current };
-				ip.updateTimeSpanList(feedback);
-			}
-		}
-	}
-
-	@Override
-	public MRTaskAttemptInfo getAttemptInfo() {
-		return attemptInfo;
-	}
-
-	@Override
-	public boolean reset() {
-		this.attemptInfo = null;
-		return true;
-	}
-
-	@Override
-	public boolean open(MRTaskAttemptInfo attemptInfo) {
-		this.attemptInfo = attemptInfo;
-		return true;
-	}
-
-	@Override
-	public boolean close() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public String getName() {
-		if (name == null) {
-			System.out
-					.println("SpillDoctor: you have not set the name of spillDoctor, thus "
-							+ "returning null");
-			return null;
-		} else {
-			return name;
-		}
-	}
+}
 
 }
