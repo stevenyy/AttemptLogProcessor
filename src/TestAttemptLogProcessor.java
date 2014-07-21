@@ -60,7 +60,7 @@ public class TestAttemptLogProcessor{
 	public static final String EXP7SM = SPILL + "job_201405200258_420817_SM.txt";
 
 	static String jdbcUrl = "jdbc:mysql://172.22.24.97:3306/starfish_production?user=rfi_test&password=90f55b33e"; // RF
-	static ProfileDBManager dao;
+//	static ProfileDBManager dao;
 
 
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
@@ -70,7 +70,9 @@ public class TestAttemptLogProcessor{
 		//ToDo: get connection info from properties instead of hard-wiring
 		//ProfileDBManager dao = new ProfileDBManager("org.postgresql.Driver", url);
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
-		dao = ProfileDBManager.instance();
+		
+		
+//		dao = ProfileDBManager.instance();
 
 //		alp.readAndProcessLog(RECORD_SPILL);
 		//		alp.readAndProcessLog(TEST_SPILL);
@@ -107,9 +109,9 @@ public class TestAttemptLogProcessor{
 
 		return ret;
 	}
+/*
 
-
-	@Test
+//	@Test
 	public void testStudyGenerator() {
 		long startTime = 1404950400;
 //		long endTime = 1404950450;
@@ -160,7 +162,7 @@ public class TestAttemptLogProcessor{
 		System.out.println(Arrays.toString(ioSortMB.toArray()));
 		System.out.println(Arrays.toString(idList.toArray()));
 		StudyGenerator.EXCEL(taskLogList, idList, ioSortMB);
-	}
+	}*/
 
 	//	@Test 
 	public void testSpillDoctor(){
@@ -196,9 +198,9 @@ public class TestAttemptLogProcessor{
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 	}
 
-//	@Test 
+	@Test 
 	public void testInfoDoctor(){
-		//		alp.readAndProcessLog(MAP_LONG);
+				alp.readAndProcessLog(ERROR);
 		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
 
 		System.out.println();
@@ -206,6 +208,8 @@ public class TestAttemptLogProcessor{
 		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
 				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN
 				+ "attemptId is " + ip.getAttemptID()+ ENTER_RETURN );
+		
+		System.out.println("Test InfoDoctor: the exception message is " + ip.getExceptionLog());
 
 	}
 
@@ -284,11 +288,11 @@ public class TestAttemptLogProcessor{
 	}
 
 
-	//	@Test 
+//		@Test 
 	public void testException(){
-		//		lp.readAndProcessLog(ERROR);
+				alp.readAndProcessLog(ERROR);
 		//		lp.readAndProcessLog(VERY_LONG);
-		alp.readAndProcessLog(LINE_RETURN);
+//		alp.readAndProcessLog(LINE_RETURN);
 		System.out.println();
 		System.out.println("Printing Test Exception: ");
 		for (String message: alp.getExceptionMap().values()){

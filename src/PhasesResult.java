@@ -32,6 +32,9 @@ public class PhasesResult {
 	public void registerPhase(String name, AbstractPhase phase){
 		try{ // Uses switch case with string for better performance 
 
+            if (name.equals("InfoPhase" )){
+				infoPhase = (InfoPhase) phase;
+			}
 			if(name.equals("SpillPhase")) {
                 spillPhase = (SpillPhase) phase;
             }
@@ -50,9 +53,7 @@ public class PhasesResult {
 			else if (name.equals("WritePhase")) {
                 writePhase = (WritePhase) phase;
             }
-            else if (name.equals("InfoPhase" )){
-				infoPhase = (InfoPhase) phase;
-			}
+
 		}
 		catch (Throwable T){
 			// Should not reach here... 

@@ -15,6 +15,7 @@ public class InfoPhase extends AbstractPhase {
 	
 	private String jobID;
 	private String attemptID;
+	private String exceptionLog;
 	
     private String compressLib;
 	private List<String[]> timeSpanList; // Map of big time-spans
@@ -51,6 +52,7 @@ public class InfoPhase extends AbstractPhase {
 		name = " ";
 		jobID = " ";
 		attemptID = " ";
+		exceptionLog = " ";
 		
 		compressLib = " ";
 		timeSpanList = new ArrayList<String[]>();
@@ -207,6 +209,15 @@ public class InfoPhase extends AbstractPhase {
 
 	public void setAttemptID(String AttemptID) {
 		this.attemptID = AttemptID;
+	}
+
+	public void setExceptionLog(String exceptionLog) {
+		this.exceptionLog = exceptionLog;
+		
+	}
+	
+	public String getExceptionLog(){
+		return exceptionLog;
 	}
 
 

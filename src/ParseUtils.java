@@ -34,25 +34,26 @@ public class ParseUtils {
 	public static final String SPACE = "\\s+";
 	public static final String DOT_TXT = ".txt"; 
 	private static final String DOT_XML = ".xml";
-	
+
 	public static final Pattern JOB_PATTERN = Pattern
 			.compile("(job_[0-9]+_[0-9]+)");
 	public static final Pattern MAPATTEMPT_PATTERN = Pattern
 			.compile("(attempt_[0-9]+_[0-9]+_m_[0-9]+_[0-9]+)");
 	public static final Pattern REDUCEATTEMPT_PATTERN = Pattern
 			.compile("(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+)");
-	
-	
+	public static final Pattern LINE_PATTERN = Pattern.compile("^(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (\\S+) ((\\[.*])?(\\s)?\\S+) (.+?)");
+
+
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
 	public static final String END = "End";
 	public static final String CAP = "Cap"; // Used for regex of bufVoid, or length
-	
+
 	//Data Connection Timeouts
 	// See: http://eventuallyconsistent.net/2011/08/02/working-with-urlconnection-and-timeouts/
 	public static final int TASKLOG_FETCH_CONNECTION_TIMEOUT_MILLIS = 5000; // 5 seconds
 	public static final int TASKLOG_FETCH_READ_TIMEOUT_MILLIS = 10000; // 10 seconds
-	
-	
+
+
 	/**
 	 * Util class with static methods to facilitate the LogParser and improves re-usability
 	 * @auther Steve Siyang Wang
@@ -60,7 +61,7 @@ public class ParseUtils {
 	public ParseUtils(){
 		// maybe unnecessary 
 	}
-	
+
 	/**
 	 * Returns the generic list of numbers, whether it is long, or int or double
 	 * given a input string 
@@ -68,35 +69,35 @@ public class ParseUtils {
 	 * @param intput
 	 * @return 
 	 */
-	
+
 	public static List<String> extractNumber(String input){
 		List<String> numberList = new ArrayList<String>();
 		Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
 		Matcher m = numRegex.matcher(input);
-		
+
 		while (m.find()){
 			numberList.add(m.group());
 		}
 		return numberList;
 	}
-	
-/*// returns the Integer array version. Consider updating to this in the future refactoring
+
+	/*// returns the Integer array version. Consider updating to this in the future refactoring
 	// !!! uncomplete
 	public static int[] extractNumberArray(String input){
 		List<Integer> numberList = new ArrayList<Integer>();
 		Pattern numRegex = Pattern.compile("(\\d+)"); // The '\\d' for digit and '+' for one or more
 		Matcher m = numRegex.matcher(input);
-		
+
 		while (m.find()){
 			numberList.add(Integer.parseInt(m.group()));
 		}
 		for (Integer i: numberList){
-			
+
 		}
 	}*/
 
-	
-	
+
+
 	/**
 	 * Return a particular line of log given the string log and integer line number
 	 * @param log
@@ -113,7 +114,7 @@ public class ParseUtils {
 		}
 		return null;		
 	}
-	
+
 	/**
 	 * 
 	 * Take in input string line, and return Map of structured info
@@ -121,22 +122,25 @@ public class ParseUtils {
 	 * @param Variable argument method, default first argument is the line
 	 * @return Map<String, String> Structure
 	 */
+
+	//TODO: note: some times the log structure can be different, look Arjun's email
+
 	public static Map<String, String> extractInfo(Object ... args){
 		String line = (String) args[0]; // default first argument is the line
 		Map<String, String> map = new HashMap<String, String>();
 		try{
-			String[] tokens = line.split(SPACE);
-			map.put(DATE, tokens[0]);
-			map.put(TIME, tokens[1]);
-			map.put(MESSAGE_TYPE, tokens[2]);
-			map.put(LOCATION, tokens[3]);
-			
-//			System.out.println("Print extractInfo: the token[2] + token[3] is " + tokens[2] + " "+ tokens[3]);
-			String message = line.split(tokens[2] + " "+ tokens[3])[1];
-			map.put(MESSAGE, message);
-//			System.out.println("Print extractInfo: the message here is " + message);
-		} catch (IndexOutOfBoundsException e){
-			e.printStackTrace();
+			Matcher matcher = LINE_PATTERN.matcher(line);
+			if (matcher.matches()){
+				map.put(DATE, matcher.group(1));
+				map.put(TIME, matcher.group(2));
+				map.put(MESSAGE_TYPE, matcher.group(3));
+				map.put(LOCATION, matcher.group(4));
+				map.put(MESSAGE, matcher.group(matcher.groupCount()));
+				System.out.println("Print ParseUtil.ExtractInfo: the message is" + matcher.group(matcher.groupCount()));
+			}
+		} catch (Throwable T){
+			T.printStackTrace();
+			System.err.println("ExtractInfo failed Check Log line structure");
 			if (args.length == 3){
 				int counter = Integer.parseInt((String) args[1]);
 				String logTillNow = (String) args[2];
@@ -146,8 +150,9 @@ public class ParseUtils {
 			}
 		}
 		return map;
-	} 
-	
+	}
+
+
 	/**
 	 * Given a line of log, returns the time in Long data format.
 	 * Used for calculating time difference
@@ -165,7 +170,7 @@ public class ParseUtils {
 		else{
 			dayAndTime = line;
 		}
-//		System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
+		//		System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
 		try {
 			d = format.parse(dayAndTime);
 		} catch (ParseException e) {
@@ -176,7 +181,7 @@ public class ParseUtils {
 
 		return d.getTime();
 	}
-	
+
 	/**
 	 * return true if the line matches regex, and is in need of skipping 
 	 * @param line
@@ -185,7 +190,7 @@ public class ParseUtils {
 	 */
 	public static boolean skipLine(String line, int lineCounter) {
 		Pattern skipRegex = Pattern.compile("(\\s*)(<)");
-//		Pattern skipRegex = Pattern.compile("(\\s*)(<)(\\D+)(>)");
+		//		Pattern skipRegex = Pattern.compile("(\\s*)(<)(\\D+)(>)");
 		Pattern exceptionRegex = Pattern.compile("(Exception)"); // 
 		Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
 		Pattern dateRegex = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})(\\s{1})(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})");
@@ -198,7 +203,7 @@ public class ParseUtils {
 		}
 		if (em.find() || elm.find()){
 			// Do something here
-//			checkException(line, lineCounter);
+			//			checkException(line, lineCounter);
 			return true;
 		}
 		if (line.isEmpty()){
@@ -206,7 +211,7 @@ public class ParseUtils {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Returns a word or phrase before a particular pattern 
 	 * @param s
@@ -225,7 +230,7 @@ public class ParseUtils {
 		}
 		return null;
 	}
-	
+
 	/*	*//**
 	 * Returns the date in long format given a line of log input
 	 * @param line
@@ -234,7 +239,7 @@ public class ParseUtils {
 	public static Long extractDate(String line){
 		Pattern dateRegex = Pattern.compile("(\\d+)-(\\d+)-(\\d+)" + SPACE + "(\\d+):(\\d+):(\\d+),(\\d+)"); // The '\\d' for digit and '+' for one or more
 		Matcher m = dateRegex.matcher(line);
-		
+
 		String date =  m.group();
 	}*/
 

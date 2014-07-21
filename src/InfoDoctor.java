@@ -33,7 +33,7 @@ public class InfoDoctor implements SignalDoctor {
 	private String line = null;
 	private String previousLine = null;
 	private InfoPhase ip;
-	private String exceptionLog;
+	private String exceptionLog = null;
 
 	private List<Integer> lengthList = new ArrayList<Integer>(),
 			recordList = new ArrayList<Integer>();
@@ -94,7 +94,7 @@ public class InfoDoctor implements SignalDoctor {
 		checkTimeSpan(line, previousLine, lineNum);
 		checkCompressionLibrary(map.get(ParseUtils.MESSAGE));
 		checkMemoryUsage(map, line, lineNum);
-		checkTag(map);
+		checkTag(map);	
 		checkCodecPool(map);
 		checkObsoleteOutput(map);
 
@@ -133,6 +133,7 @@ public class InfoDoctor implements SignalDoctor {
 	public InfoPhase createPhase() {
 		// System.out.println("debugging createPhase and spill time is " +
 		// spillTime);
+		ip.setExceptionLog(exceptionLog);
 		return ip;
 	}
 
@@ -166,6 +167,7 @@ public class InfoDoctor implements SignalDoctor {
 		}
 		if (em.find() || elm.find()) {
 			// Do something here
+			System.out.println("ID.skipLine for testing if the skip is triggered");
 			logException(line, previousExceptionNum, lineNum);
 			previousExceptionNum = lineNum;
 			return true;

@@ -97,6 +97,9 @@ public class MergeDoctor implements SignalDoctor{
 				ReduceMergePhase rmp = new ReduceMergePhase(mergeTime, "ReduceMergePhase");
 				return rmp;
 			}
+			else{
+				
+			}
 		}catch (Throwable T){
 			System.err.println("MergeDoctor.createPhase failed, with possible reason "
 					+ "that log parsing incomplete");

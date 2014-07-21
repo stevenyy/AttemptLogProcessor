@@ -125,6 +125,7 @@ public class MRAttemptLogProcessor implements LogAnnotator {
 			// Ask SignalDoctors to create Phases
 			for (SignalDoctor doctor : doctorMap.values()) {
 				AbstractPhase p = doctor.createPhase();
+				System.out.println("Engine print the name of phase" + p.getName());
 				phaseMap.put(p.getName(), p);
 				phasesResult.registerPhase(p.getName(), p);
 			}
