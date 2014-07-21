@@ -44,9 +44,9 @@ public class ParseUtils {
 	public static final Pattern REDUCEATTEMPT_PATTERN = Pattern
 			.compile("(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+)");
 	public static final Pattern LINE_PATTERN = Pattern.
-			compile("^(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (\\S+) ((\\[.*])?(\\s)?\\S+) (.+?)");
+			compile("^(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (\\S+) ((\\[.*])?(\\s)?\\S+)(.+?)");
 	public static final Pattern DATE_PATTERN = Pattern.
-			compile("^((\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3})) (.+?)");
+			compile("^((\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}))(.*?)");
 
 
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
@@ -120,43 +120,6 @@ public class ParseUtils {
 		return null;		
 	}
 
-	/**
-	 * 
-	 * Take in input string line, and return Map of structured info
-	 * Every line is structured as below: "DATE TIME MESSAGE_TYPE LOCATION MESSAGE"
-	 * @param Variable argument method, default first argument is the line
-	 * @return Map<String, String> Structure
-	 */
-
-	//TODO: note: some times the log structure can be different, look Arjun's email
-
-	public static Map<String, String> extractInfo(Object ... args){
-		String line = (String) args[0]; // default first argument is the line
-		Map<String, String> map = new HashMap<String, String>();
-		try{
-			Matcher matcher = LINE_PATTERN.matcher(line);
-			if (matcher.matches()){
-				map.put(DATE, matcher.group(1));
-				map.put(TIME, matcher.group(2));
-				map.put(MESSAGE_TYPE, matcher.group(3));
-				map.put(LOCATION, matcher.group(4));
-				map.put(MESSAGE, matcher.group(matcher.groupCount()));
-				System.out.println("Print ParseUtil.ExtractInfo: the message is" + matcher.group(matcher.groupCount()));
-			}
-		} catch (Throwable T){
-			T.printStackTrace();
-			System.err.println("ExtractInfo failed Check Log line structure");
-			if (args.length == 3){
-				int counter = Integer.parseInt((String) args[1]);
-				String logTillNow = (String) args[2];
-				System.out.println("The line number is " + counter);
-				System.out.println("The file processed so far " + ENTER_RETURN
-						+ logTillNow);
-			}
-		}
-		return map;
-	}
-
 
 	/**
 	 * Given any String, extract the time information and returns that 
@@ -173,9 +136,8 @@ public class ParseUtils {
 			Matcher matcher = DATE_PATTERN.matcher(line);
 			matcher.matches();
 			dayAndTime = matcher.group(1); // no 0 becuz we just need date time info, instead of the entire pattern
-			
 			//Finished pattern matching. Start converting the format
-			System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
+//			System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
 			d = format.parse(dayAndTime);
 
 		} catch (Throwable T){
@@ -237,6 +199,51 @@ public class ParseUtils {
 		}
 		return null;
 	}
+
+
+	/**
+	 * 
+	 * Take in input string line, and return Map of structured info
+	 * Every line is structured as below: "DATE TIME MESSAGE_TYPE LOCATION MESSAGE"
+	 * @param Variable argument method, default first argument is the line
+	 * @return Map<String, String> Structure
+	 */
+
+	//TODO: note: some times the log structure can be different, look Arjun's email
+
+	public static Map<String, String> extractInfo(Object ... args){
+		String line = (String) args[0]; // default first argument is the line
+		Map<String, String> map = new HashMap<String, String>();
+		try{
+			Matcher matcher = LINE_PATTERN.matcher(line);
+			if (matcher.matches()){
+				map.put(DATE, matcher.group(1));
+				map.put(TIME, matcher.group(2));
+				map.put(MESSAGE_TYPE, matcher.group(3));
+				map.put(LOCATION, matcher.group(4));
+				// should not reach here...
+				String message = matcher.group(matcher.groupCount());
+				if (message.isEmpty() || message.equals(null)){
+					message = "empty";
+					map.put(MESSAGE, message);
+				}else{
+					map.put(MESSAGE, message);	
+				}
+			}
+		} catch (Throwable T){
+			T.printStackTrace();
+			System.err.println("ExtractInfo failed Check Log line structure");
+			if (args.length == 3){
+				int counter = Integer.parseInt((String) args[1]);
+				String logTillNow = (String) args[2];
+				System.out.println("The line number is " + counter);
+				System.out.println("The file processed so far " + ENTER_RETURN
+						+ logTillNow);
+			}
+		}
+		return map;
+	}
+
 
 	/*	*//**
 	 * Returns the date in long format given a line of log input

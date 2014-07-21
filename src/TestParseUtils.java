@@ -43,9 +43,9 @@ public class TestParseUtils {
 		@Test
 	public void testGetDate(){
 		String line = "2014-07-08 00:43:49,637 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead";
-		String line2 = "2014-07-08 00:43:49,637 WARN sdfsf ";
+		String line2 = "2014-07-08 00:43:49,637";
 		
-		System.out.println("TestGetDate: " + ParseUtils.getTime(line2));
+		System.out.println("TestGetDate: " + ParseUtils.getTime(line));
 //		String dateRegex = "^((\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3})) (.+?)";
 //		Pattern dp = Pattern.compile(dateRegex);
 //		Matcher matcher = dp.matcher(line2);
@@ -102,23 +102,29 @@ public class TestParseUtils {
 
 	}
 
-	//	@Test 
+//		@Test 
 	public void testGetWordBefore(){
 		String line = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true";
 		String target = "full = true";
 
 		String res = ParseUtils.getWordBefore(line, target);
+		System.out.println("The word before is "+ res);
 		assertEquals("record", res);
 
 	}
 
 
-//	@Test
+	@Test
 	public void testExtractInfo(){
-		String line = "2014-07-13 08:05:56,146 INFO [main-EventThread] state.ConnectionStateManager(194): State change: CONNECTED";
-		String std = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true";
+		String line = "2014-07-13 08:05:56,146 INFO [main-EventThread] state.ConnectionStateManager(194):";
+		String std = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: ";
 
-		System.out.println("Overall: " + ParseUtils.extractInfo(std).get("Message"));
+		
+		System.out.println("Date: " + ParseUtils.extractInfo(line).get(ParseUtils.DATE));
+		System.out.println("Time: " + ParseUtils.extractInfo(line).get(ParseUtils.TIME));
+		System.out.println("Type: " + ParseUtils.extractInfo(line).get(ParseUtils.MESSAGE_TYPE));
+		System.out.println("Location: " + ParseUtils.extractInfo(line).get(ParseUtils.LOCATION));
+		System.out.println("Message: " + ParseUtils.extractInfo(line).get("Message"));
 /*
 		String logEntryPattern = "^([\\d.]+) (\\S+) (\\S+) \\[([\\w:/]+\\s[+\\-]\\d{4})] \"(.+?)\" (\\d{3}) (\\d+) \"([^\"]+)\" \"([^\"]+)\"";
 		String logEntryLine = "123.45.67.89 - - [27/Oct/2000:09:27:09 -0400] \"GET /java/javaResources.html HTTP/1.0\" 200 10450 \"-\" \"Mozilla/4.6 [en] (X11; U; OpenBSD 2.8 i386; Nav)\"";

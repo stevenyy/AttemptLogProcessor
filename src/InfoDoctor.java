@@ -88,7 +88,7 @@ public class InfoDoctor implements SignalDoctor {
 	// WORK ON HERE
 	@Override
 	public void check(Map<String, String> map) {
-		// System.out.println("ID.check: printing the line " + line);
+//		 System.out.println("ID.check: printing the line " + line);
 
 		checkJobInfo(line); // checks both JobID, and JobAttemptID
 		checkTimeSpan(line, previousLine, lineNum);
@@ -167,7 +167,7 @@ public class InfoDoctor implements SignalDoctor {
 		}
 		if (em.find() || elm.find()) {
 			// Do something here
-			System.out.println("ID.skipLine for testing if the skip is triggered");
+//			System.out.println("ID.skipLine for testing if the skip is triggered");
 			logException(line, previousExceptionNum, lineNum);
 			previousExceptionNum = lineNum;
 			return true;
@@ -304,13 +304,12 @@ private void checkMemoryUsage(Map<String, String> map, String line,
 private String checkCompressionLibrary(String message) {
 	// System.out.println("ID.checkCL: the message here is " + message);
 
-	String compressLib = null;
+	String compressLib = "empty";
+//	System.out.println("The message passed in checkCompressionLibrary is " + message);
 	if (message.contains(ParseUtils.LIBRARY)) {
 		String[] splitArray = message.split(ParseUtils.SPACE);
 		compressLib = splitArray[splitArray.length - 2];
-		System.out
-		.println("Printing from infoDoctor : the compressionLib is "
-				+ compressLib);
+//		System.out.println("Printing from infoDoctor : the compressionLib is "+ compressLib);
 		ip.setCompressLib(compressLib);
 	}
 	return compressLib;
