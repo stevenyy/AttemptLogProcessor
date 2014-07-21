@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import jdk.nashorn.internal.runtime.Context.ThrowErrorManager;
+
 import org.apache.commons.io.IOUtils;
 
 
@@ -41,7 +43,10 @@ public class ParseUtils {
 			.compile("(attempt_[0-9]+_[0-9]+_m_[0-9]+_[0-9]+)");
 	public static final Pattern REDUCEATTEMPT_PATTERN = Pattern
 			.compile("(attempt_[0-9]+_[0-9]+_r_[0-9]+_[0-9]+)");
-	public static final Pattern LINE_PATTERN = Pattern.compile("^(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (\\S+) ((\\[.*])?(\\s)?\\S+) (.+?)");
+	public static final Pattern LINE_PATTERN = Pattern.
+			compile("^(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3}) (\\S+) ((\\[.*])?(\\s)?\\S+) (.+?)");
+	public static final Pattern DATE_PATTERN = Pattern.
+			compile("^((\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3})) (.+?)");
 
 
 	public static final String START = "Start"; // Used for regex of bufStart, or KVStart
@@ -154,31 +159,33 @@ public class ParseUtils {
 
 
 	/**
-	 * Given a line of log, returns the time in Long data format.
+	 * Given any String, extract the time information and returns that 
+	 * in Long data format.
 	 * Used for calculating time difference
-	 * @param line
+	 * @param Any String
 	 * @return Long representation of the date 
 	 */
 	public static Long getTime(String line){
 		Date d = null;
+		String dayAndTime = "none";
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss,SSS");
-		Map<String, String> map = new HashMap<String, String>();
-		String dayAndTime;
-		if (line.split(SPACE).length > 3){
-			map = extractInfo(line);
-			dayAndTime = map.get(ParseUtils.DATE) + " " + map.get(ParseUtils.TIME);}
-		else{
-			dayAndTime = line;
-		}
-		//		System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
-		try {
+		try{
+			Matcher matcher = DATE_PATTERN.matcher(line);
+			matcher.matches();
+			dayAndTime = matcher.group(1); // no 0 becuz we just need date time info, instead of the entire pattern
+			
+			//Finished pattern matching. Start converting the format
+			System.out.println("ParseUtils.getTime: Printing the date and time : " + dayAndTime);
 			d = format.parse(dayAndTime);
-		} catch (ParseException e) {
+
+		} catch (Throwable T){
+			//should not reach here...
+			System.err.println("PU.getTime failed. Check the string passed in "
+					+ "or check if the group is wrong");
 			System.err.println("The dayAndTime it tried to convert to Long is " + dayAndTime);
 			System.err.println("The line is " + line);
-			e.printStackTrace();
-		}
-
+			T.printStackTrace();
+		} 
 		return d.getTime();
 	}
 

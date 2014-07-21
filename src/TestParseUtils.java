@@ -40,10 +40,19 @@ public class TestParseUtils {
 		id.checkJobInfo(line);
 	}
 
-	//	@Test
+		@Test
 	public void testGetDate(){
 		String line = "2014-07-08 00:43:49,637 WARN mapreduce.Counters: Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead";
-		System.out.println("printing the time in long " + ParseUtils.getTime(line));
+		String line2 = "2014-07-08 00:43:49,637 WARN sdfsf ";
+		
+		System.out.println("TestGetDate: " + ParseUtils.getTime(line2));
+//		String dateRegex = "^((\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}:\\d{2},\\d{3})) (.+?)";
+//		Pattern dp = Pattern.compile(dateRegex);
+//		Matcher matcher = dp.matcher(line2);
+//		matcher.matches();
+//		System.out.println("Getting the date and time " + matcher.group());
+//		System.out.println("Getting the date and time " + matcher.group(1));
+//		System.out.println("Getting the date and time " + matcher.group(2));
 	}
 
 	//	@Test
@@ -77,6 +86,7 @@ public class TestParseUtils {
 		boolean result2 = ParseUtils.skipLine(test2, 0);
 		boolean result3 = ParseUtils.skipLine(test3, 0);
 		boolean result4 = ParseUtils.skipLine(test4, 0);
+		
 		assertEquals(false, result);
 		assertEquals(false, result2);
 		assertEquals(true, result3);
@@ -103,7 +113,7 @@ public class TestParseUtils {
 	}
 
 
-	@Test
+//	@Test
 	public void testExtractInfo(){
 		String line = "2014-07-13 08:05:56,146 INFO [main-EventThread] state.ConnectionStateManager(194): State change: CONNECTED";
 		String std = "2014-07-13 08:05:56,146 INFO org.apache.hadoop.mapred.MapTask: Spilling map output: record full = true";
