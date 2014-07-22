@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import edu.duke.starfish.profile.profileinfo.execution.mrtaskattempts.MRTaskAttemptInfo;
 
@@ -198,5 +200,44 @@ public class SpillDoctor implements SignalDoctor{
 		else{
 		return name;}
 	}
+	
+
+    /**
+     * Check line against the skip regex: true if the line is to skip
+     * @param line
+     * @return boolean
+     */
+    @Override
+    public boolean skipLine(String line, int lineCounter) {
+        try {
+            System.err.println("SD. the checkLine in SpillDoctor is called");
+//			System.out.println("Print Signal Doctor: the line that stopped is " + line);
+            Pattern skipRegex = Pattern.compile("(\\s*)(<)");
+            Pattern exceptionRegex = Pattern.compile("(Exception)"); //
+            Pattern exceptionLocationRegex = Pattern.compile("(\\t)(at)");
+            Pattern dateRegex = Pattern.compile("(\\d{4})-(\\d{2})-(\\d{2})(\\s{1})(\\d{2}):(\\d{2}):(\\d{2}),(\\d{3})");
+            Matcher sm = skipRegex.matcher(line);
+            Matcher em = exceptionRegex.matcher(line);
+            Matcher elm = exceptionLocationRegex.matcher(line);
+            Matcher dm = dateRegex.matcher(line);
+            if (sm.find() && !dm.find()){
+                return true;
+            }
+            if (em.find() || elm.find()){
+                // Do something here
+                //			checkException(line, lineCounter);
+                return true;
+            }
+            if (line.isEmpty()){
+                return true;
+            }
+            return false;
+        } catch (Throwable T){
+            T.printStackTrace();
+            System.err.println("The line number is " + lineCounter);
+            System.err.println("The line that caused halt is ：" + line);
+        }
+        return false;
+    }
 
 }

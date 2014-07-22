@@ -24,8 +24,10 @@ public class InfoPhase extends AbstractPhase {
 	private Map<Integer, String> exceptionMap; // Map of exceptions occurred
 	private Map<Integer, String> warnMap; // Map of WARN related message
 	private Map<Integer, String> errorMap; // Map of ERROR related message
+	private Map<Integer, String> fatalMap;
 	private Map<String, String> codecMap; // Map of CodecPool
 	private Map<String, String> obsoleteOutputMap; // Map of obsolete output that's ignored during the log
+	
 	
 	//TODO: better to store Some Overall Informations
 	//Job-ID, attemptID, totalTime, etc
@@ -60,6 +62,7 @@ public class InfoPhase extends AbstractPhase {
 		exceptionMap = new HashMap<Integer, String>();
 		warnMap = new HashMap<Integer, String>();
 		errorMap = new HashMap<Integer, String>();
+		fatalMap = new HashMap<Integer, String>();
 		codecMap = new HashMap<String, String>();
 		obsoleteOutputMap = new HashMap<String, String>();
 		
@@ -219,6 +222,11 @@ public class InfoPhase extends AbstractPhase {
 	public String getExceptionLog(){
 		return exceptionLog;
 	}
+
+    public void updateFatalMap(int lineNum, String s) {
+        fatalMap.put(lineNum, s);
+    }
+    public Map<Integer,String> getFatalMap(){ return fatalMap; }
 
 
 }

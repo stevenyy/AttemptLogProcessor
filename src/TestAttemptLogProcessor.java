@@ -60,7 +60,7 @@ public class TestAttemptLogProcessor{
 	public static final String EXP7SM = SPILL + "job_201405200258_420817_SM.txt";
 
 	static String jdbcUrl = "jdbc:mysql://172.22.24.97:3306/starfish_production?user=rfi_test&password=90f55b33e"; // RF
-	static ProfileDBManager dao;
+//	static ProfileDBManager dao;
 
 
 	private MRAttemptLogProcessor alp= new MRAttemptLogProcessor();
@@ -72,7 +72,7 @@ public class TestAttemptLogProcessor{
 		//dao = new ProfileDBManager("com.mysql.jdbc.Driver", jdbcUrl);
 		
 		
-		dao = ProfileDBManager.instance();
+//		dao = ProfileDBManager.instance();
 
 //		alp.readAndProcessLog(RECORD_SPILL);
 		//		alp.readAndProcessLog(TEST_SPILL);
@@ -198,21 +198,6 @@ public class TestAttemptLogProcessor{
 				mmp.getNumRedTasks() + " is the number of reduce tasks");
 	}
 
-	@Test 
-	public void testInfoDoctor(){
-				alp.readAndProcessLog(EXP2SM);
-		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
-
-		System.out.println();
-		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
-		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
-				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN
-				+ "attemptId is " + ip.getAttemptID()+ ENTER_RETURN );
-		
-//		System.out.println("Test InfoDoctor: the exception message is " + ip.getExceptionLog());
-
-	}
-
 	//	@Test
 	public void testTimeSpan(){
 
@@ -327,6 +312,25 @@ public class TestAttemptLogProcessor{
 				ip.getMemoryList() + ENTER_RETURN +
 				ip.getObsoleteOutputMap() + ENTER_RETURN + 
 				ip.getTimeSpanList());
+
+	}
+
+	@Test 
+	public void testInfoDoctor(){
+				alp.readAndProcessLog(ERROR);
+		InfoPhase ip = (InfoPhase) alp.getPhasesResult().getInfoPhase();
+
+		System.out.println();
+		System.out.println("Test InfoDoctor: the phase name is " + ip.getName());
+		System.out.println("Test InfoDoctor: " + ENTER_RETURN +
+				ip.getCompressLib()+ " is the compressionLib" + ENTER_RETURN
+				+ "attemptId is " + ip.getAttemptID()+ ENTER_RETURN );
+		
+		System.out.println("The exception message is " + Arrays.toString(ip.getExceptionMap().values().toArray()));
+		System.out.println("The exception map is " + Arrays.toString(ip.getExceptionMap().keySet().toArray()));
+		System.out.println("The error map is " + Arrays.toString(ip.getErrorMap().values().toArray()));
+		System.out.println("The error map keySet is " + Arrays.toString(ip.getErrorMap().keySet().toArray()));
+		System.out.println("Test InfoDoctor: the exception message is " + ip.getExceptionLog());
 
 	}
 

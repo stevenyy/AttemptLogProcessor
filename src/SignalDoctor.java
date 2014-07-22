@@ -31,11 +31,13 @@ public interface SignalDoctor{
 	
 	public abstract AbstractPhase createPhase();
 	
-	/**
+	public abstract boolean skipLine(String line, int lineCounter);
+	
+/*	*//**
 	 * Check line against the skip regex: true if the line is to skip
 	 * @param line
 	 * @return boolean 
-	 */
+	 *//*
 	public default boolean skipLine(String line, int lineCounter) {
 		try {
 //			System.out.println("Print Signal Doctor: the line that stopped is " + line);
@@ -65,7 +67,7 @@ public interface SignalDoctor{
 			System.err.println("The line that caused halt is ：" + line);
 		}
 		return false;
-	}
+	}*/
 	
 //	public abstract boolean process(LogLineBuffer buffer, long maxLineNum);
 
